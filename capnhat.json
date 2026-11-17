@@ -1,0 +1,16 @@
+{
+  "ten": "Biên Tập BĐĐC",
+  "phienban": "2026.11.17.2",
+  "ngay": "17/11/2026",
+  "tep": "CaiDat_BienTapBDDC_2026.11.17.2.exe",
+  "kichthuoc": 1878600,
+  "sha256": "f1e6a8ed2cafe809141ab9aaefff80e7d93372c167fb061f180cca2d3a781469",
+  "thaydoi": [
+    "Tách thửa: vẽ ranh tách trên lớp ranh → Tách thửa → chạm vào bên trong các thửa mới → chuột phải. Số thửa mới tự đánh tiếp theo số lớn nhất của tờ (Điều 17 Thông tư 26/2024/TT-BTNMT), thửa gốc lưu vào thửa cũ, thông tin chép tự động, vẽ nhãn thửa mới đúng quy định.",
+    "Hợp thửa: Hợp thửa → chạm vào bên trong các thửa cần hợp → chuột phải. Ranh chung chuyển sang lớp 49, thửa mới nhận số mới, loại đất và diện tích gộp tự động, các thửa cũ lưu vào thửa cũ, vẽ nhãn thửa mới.",
+    "Bản vẽ tách thửa, hợp thửa đất (Mẫu số 22): chạm vào bên trong thửa mới – sơ đồ trước/sau tách, hợp và thông tin thửa gốc lấy tự động từ thửa cũ đã lưu; lập ngay sau khi tách, hợp.",
+    "Nút Ảnh vệ tinh Google đúng toạ độ: chạm vào trong thửa → Google Maps ghim đúng điểm (VN-2000, kinh tuyến trục 105°00′, múi chiếu 3°); có Google Earth Pro thì hiện thêm ranh thửa.",
+    "Chia thửa theo diện tích tách thửa như lệnh Tách thửa (số mới, thửa cũ, nhãn, Mẫu số 22).",
+    "Kinh tuyến trục ghi dạng độ phút (105°00′) trên công cụ và khung bản đồ."
+  ]
+}
