@@ -1,9 +1,9 @@
-# Làm mới trang GitHub Pages khi có bộ cài / capnhat.json mới: so capnhat.json trên trang với bản trong nhánh main,
+# Làm mới trang GitHub Pages (nhánh main và gh-pages giữ giống nhau) khi có bộ cài / capnhat.json mới: so capnhat.json trên trang với bản trong nhánh main,
 # khác nhau thì yêu cầu GitHub dựng lại trang. Chạy khi có đẩy lên main, theo lịch 15 phút một lần, hoặc bấm tay.
 name: Lam moi trang cap nhat
 on:
   push:
-    branches: [main]
+    branches: [main, gh-pages]
   schedule:
     - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
