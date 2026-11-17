@@ -1,29 +1,45 @@
-# Làm mới trang GitHub Pages (nhánh main và gh-pages giữ giống nhau) khi có bộ cài / capnhat.json mới: so capnhat.json trên trang với bản trong nhánh main,
-# khác nhau thì yêu cầu GitHub dựng lại trang. Chạy khi có đẩy lên main, theo lịch 15 phút một lần, hoặc bấm tay.
+# Làm mới trang tải và cập nhật (GitHub Pages) khi có bộ cài / capnhat.json mới trên nhánh main:
+#  - nhánh gh-pages (trang đang dựng từ nhánh này) được đưa theo đúng main;
+#  - capnhat.json trên trang khác bản trong main thì yêu cầu GitHub dựng lại trang.
+# Chạy khi có đẩy lên main (kể cả tải tệp lên bằng trang web GitHub), theo lịch 30 phút một lần, hoặc bấm Run workflow.
 name: Lam moi trang cap nhat
 on:
   push:
-    branches: [main, gh-pages]
+    branches: [main]
   schedule:
-    - cron: '7,22,37,52 * * * *'
+    - cron: '7,37 * * * *'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
   pages: write
+concurrency:
+  group: lam-moi-trang
+  cancel-in-progress: false
 jobs:
   lam-moi:
     runs-on: ubuntu-latest
     steps:
-      - name: So capnhat.json tren trang voi nhanh main, khac thi dung lai trang
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Dua gh-pages theo main, dung lai trang khi trang chua co capnhat.json moi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
           set -u
+          git fetch -q origin '+refs/heads/*:refs/remotes/origin/*'
+          MAIN=$(git rev-parse origin/main)
+          GP=$(git rev-parse -q --verify origin/gh-pages || echo khong-co)
+          if [ "$GP" != "khong-co" ] && [ "$MAIN" != "$GP" ]; then
+            git push -q --force origin "$MAIN:refs/heads/gh-pages" && echo "gh-pages theo main: $MAIN" || echo "Chưa đưa được gh-pages theo main"
+          fi
           OWNER="${REPO%%/*}"; NAME="${REPO#*/}"
-          MOI=$(curl -fsSL "https://raw.githubusercontent.com/$REPO/main/capnhat.json" || true)
+          MOI=$(git show "$MAIN:capnhat.json" 2>/dev/null || true)
           TRANG=$(curl -fsSL "https://$OWNER.github.io/$NAME/capnhat.json?t=$(date +%s)" || true)
           if [ -n "$MOI" ] && [ "$MOI" = "$TRANG" ]; then echo "Trang đã có capnhat.json mới nhất"; exit 0; fi
-          echo "Trang chưa có bản mới – yêu cầu dựng lại trang"
+          sleep 20
+          echo "Yêu cầu GitHub dựng lại trang"
           curl -fsS -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$REPO/pages/builds"
+            "https://api.github.com/repos/$REPO/pages/builds" || echo "Chưa yêu cầu được – trang sẽ dựng lại ở lần chạy sau"
