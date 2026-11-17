@@ -1,0 +1,29 @@
+# Làm mới trang GitHub Pages khi có bộ cài / capnhat.json mới: so capnhat.json trên trang với bản trong nhánh main,
+# khác nhau thì yêu cầu GitHub dựng lại trang. Chạy khi có đẩy lên main, theo lịch 15 phút một lần, hoặc bấm tay.
+name: Lam moi trang cap nhat
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+jobs:
+  lam-moi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: So capnhat.json tren trang voi nhanh main, khac thi dung lai trang
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -u
+          OWNER="${REPO%%/*}"; NAME="${REPO#*/}"
+          MOI=$(curl -fsSL "https://raw.githubusercontent.com/$REPO/main/capnhat.json" || true)
+          TRANG=$(curl -fsSL "https://$OWNER.github.io/$NAME/capnhat.json?t=$(date +%s)" || true)
+          if [ -n "$MOI" ] && [ "$MOI" = "$TRANG" ]; then echo "Trang đã có capnhat.json mới nhất"; exit 0; fi
+          echo "Trang chưa có bản mới – yêu cầu dựng lại trang"
+          curl -fsS -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/pages/builds"
