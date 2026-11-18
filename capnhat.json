@@ -1,16 +1,15 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.17.2",
-  "ngay": "17/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.17.2.exe",
-  "kichthuoc": 1878600,
-  "sha256": "f1e6a8ed2cafe809141ab9aaefff80e7d93372c167fb061f180cca2d3a781469",
+  "phienban": "2026.11.18",
+  "ngay": "18/11/2026",
+  "tep": "CaiDat_BienTapBDDC_2026.11.18.exe",
+  "kichthuoc": 1895885,
+  "sha256": "706a156989a840f99cd7a24edd9cd7b45ae713a48ce3bef8665ab7c3262414c3",
   "thaydoi": [
-    "Tách thửa: vẽ ranh tách trên lớp ranh → Tách thửa → chạm vào bên trong các thửa mới → chuột phải. Số thửa mới tự đánh tiếp theo số lớn nhất của tờ (Điều 17 Thông tư 26/2024/TT-BTNMT), thửa gốc lưu vào thửa cũ, thông tin chép tự động, vẽ nhãn thửa mới đúng quy định.",
-    "Hợp thửa: Hợp thửa → chạm vào bên trong các thửa cần hợp → chuột phải. Ranh chung chuyển sang lớp 49, thửa mới nhận số mới, loại đất và diện tích gộp tự động, các thửa cũ lưu vào thửa cũ, vẽ nhãn thửa mới.",
-    "Bản vẽ tách thửa, hợp thửa đất (Mẫu số 22): chạm vào bên trong thửa mới – sơ đồ trước/sau tách, hợp và thông tin thửa gốc lấy tự động từ thửa cũ đã lưu; lập ngay sau khi tách, hợp.",
-    "Nút Ảnh vệ tinh Google đúng toạ độ: chạm vào trong thửa → Google Maps ghim đúng điểm (VN-2000, kinh tuyến trục 105°00′, múi chiếu 3°); có Google Earth Pro thì hiện thêm ranh thửa.",
-    "Chia thửa theo diện tích tách thửa như lệnh Tách thửa (số mới, thửa cũ, nhãn, Mẫu số 22).",
-    "Kinh tuyến trục ghi dạng độ phút (105°00′) trên công cụ và khung bản đồ."
+    "Ảnh vệ tinh nền ngay trong MicroStation: bấm nút quả địa cầu là ảnh vệ tinh hiện dưới nền bản đồ DGN, đúng toạ độ VN-2000 (kinh tuyến trục 105°00′, múi chiếu 3°); bấm lần nữa là tắt, ảnh tự gỡ khỏi bản vẽ.",
+    "Thu phóng, di chuyển khung nhìn: ảnh tự dựng lại đúng độ nét màn hình; phóng hết cỡ ảnh được nội suy mượt, không vỡ ô, không gãy. Tải trên luồng nền, giữ ảnh cũ tới khi ảnh mới xong – MicroStation không bị đơ.",
+    "Nguồn ảnh: Esri World Imagery (miễn phí, không cần khoá) hoặc Google Maps bằng khoá Map Tiles API riêng – Bản đồ → Thiết lập ảnh vệ tinh…",
+    "Ảnh nền không in ra và không nằm lại trong tệp DGN (tự gỡ khi tắt, đóng tệp); ảnh raster khác của bản vẽ không bị đụng tới.",
+    "Mở Google Maps trong trình duyệt tại thửa chuyển vào Bản đồ → Mở Google Maps tại thửa (trình duyệt). Các chức năng khác giữ nguyên."
   ]
 }
