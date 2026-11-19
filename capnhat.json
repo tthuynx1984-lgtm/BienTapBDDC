@@ -1,14 +1,15 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.19.5",
-  "ngay": "19/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.19.5.exe",
-  "kichthuoc": 1941739,
-  "sha256": "26faf23cf9d68967e1a104f69ff0ff0e0be7945df6ac6e0224bd851e5e71fcb1",
+  "phienban": "2026.11.20",
+  "ngay": "20/11/2026",
+  "tep": "CaiDat_BienTapBDDC_2026.11.20.exe",
+  "kichthuoc": 1957524,
+  "sha256": "9f305ce99d3567d235390773b2c29d52edef65476bc04785860a6f6f20f54576",
   "thaydoi": [
-    "Sửa lỗi tự động chỉ ngắt đường tại điểm cắt: đường cũ được ngắt đúng tại điểm đường mới chạm / cắt qua, hai phần nối liền và nối đúng vào đầu đường mới; không kéo, không xén, không xoá đoạn nào của đường cũ.",
-    "Nối đầu hở, cắt phần thừa, xoá đoạn trùng nay mặc định tắt; khi bật chỉ sửa đầu đường đang hở (kéo dài theo hướng của đường, cắt phần thò quá trên đoạn cuối), không lấy chính đường đó làm đích, không gộp đỉnh.",
-    "Ô nhãn N_THUA cũ chắc chắn sang lớp 49: ô được dựng lại trên lớp 49 với đủ gạch ngang, số thửa, diện tích, loại đất (ô cũ xoá), có quét lại bản vẽ kiểm tra; tách / hợp thửa tìm thêm ô nhãn cũ theo hình thửa gốc.",
-    "Gộp CSDL bản đồ và thuộc tính toàn xã (Hệ thống): chọn nhiều tờ .dgn, .gtp ở nhiều thư mục, gộp thành một bản đồ và một tệp thuộc tính toàn xã, giữ đúng liên kết thửa – chủ – mục đích sử dụng, tệp gốc không bị sửa."
+    "Nền màu loại đất (Bản đồ → Nền màu loại đất, nút mới trên thanh công cụ, gõ M8PRO NENMAU): tô mỗi thửa đúng màu loại đất theo bảng ký hiệu chuẩn, nằm dưới mọi đối tượng của bản đồ như ảnh vệ tinh nền, bật / tắt một chạm.",
+    "Nền màu không phải phần tử của bản vẽ: không thêm, sửa, xoá phần tử nào trong tệp DGN, không vào Undo, không chọn, không bắt điểm, không tính vào Fit View, không in; ranh, nhãn luôn nằm trên nền.",
+    "Cập nhật loại đất đến đâu nền màu tô lại đến đó: sửa ở bảng thuộc tính, phiếu thửa, nhập Excel, tách / hợp, tạo lại thửa – chỉ thửa thay đổi được tô lại. Bật cùng ảnh vệ tinh: màu tô trong mờ.",
+    "Bảng màu loại đất (chú giải): mã, tên, màu, số thửa từng loại trên tờ; đổi màu từng mã, trả về màu chuẩn; thửa chưa có loại đất, ký hiệu lạ để trống và được liệt kê.",
+    "Menu Hồ sơ toàn xã: sổ địa chính, sổ mục kê, sổ cấp GCN, sổ biến động, kê khai đăng ký Excel, danh sách công khai, bảng tổng hợp PL16, danh sách thửa và thống kê Excel cho cả xã – lấy thẳng từ tệp thuộc tính toàn xã (.gtp), không cần mở bản đồ."
   ]
 }

@@ -7,4 +7,4 @@ Trang tải và cập nhật phiên bản mới của công cụ **Biên Tập B
 
 Kho này chỉ chứa bộ cài, `capnhat.json` và trang tải — không chứa bản đồ, tệp thuộc tính hay hồ sơ.
 
-Phiên bản mới nhất: **2026.11.19.5** (19/11/2026) – sửa lỗi tự động chỉ ngắt đường tại điểm cắt (nối đầu hở, cắt phần thừa mặc định tắt); ô nhãn N_THUA cũ chắc chắn sang lớp 49; menu gộp CSDL bản đồ và thuộc tính toàn xã (nhiều tờ, nhiều thư mục).
+Phiên bản mới nhất: **2026.11.20** (20/11/2026) – nền màu loại đất bật / tắt dưới bản đồ DGN (theo bảng ký hiệu loại đất chuẩn, không ghi vào bản vẽ, loại đất đổi đến đâu tô lại đến đó, có bảng màu – chú giải); menu Hồ sơ toàn xã lập sổ sách, Excel thống kê từ tệp thuộc tính toàn xã.
