@@ -7,4 +7,4 @@ Trang tải và cập nhật phiên bản mới của công cụ **Biên Tập B
 
 Kho này chỉ chứa bộ cài, `capnhat.json` và trang tải — không chứa bản đồ, tệp thuộc tính hay hồ sơ.
 
-Phiên bản mới nhất: **2026.11.19.2** (19/11/2026) – vẽ nhãn mới thì nhãn cũ chuyển sang lớp 49 (không xoá), giữ nguyên chữ, màu, vị trí.
+Phiên bản mới nhất: **2026.11.19.3** (19/11/2026) – sửa lỗi tự động cắt ranh đúng tại giao điểm (gCadas tạo thửa không phải cắt lại); hộp Thông tin thửa đất chọn thửa tiếp theo trên bản đồ; bảng thuộc tính chọn số tờ.

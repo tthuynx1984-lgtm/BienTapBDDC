@@ -1,12 +1,14 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.19.2",
+  "phienban": "2026.11.19.3",
   "ngay": "19/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.19.2.exe",
-  "kichthuoc": 1907761,
-  "sha256": "84b6679979b9338c7779e91a03cfc6d36b831b8d8ece360b37a24f45133be945",
+  "tep": "CaiDat_BienTapBDDC_2026.11.19.3.exe",
+  "kichthuoc": 1918749,
+  "sha256": "4a9bd50b706b6c49f49c02d0aa9a1ed76f4c840ff48ce8e725a489e608e2d60f",
   "thaydoi": [
-    "Vẽ nhãn mới thì nhãn cũ chuyển sang lớp 49 (không xoá): Vẽ nhãn, tách thửa, hợp thửa, ghi thông tin thửa có vẽ lại nhãn – chữ nhãn và gạch ngang của nhãn cũ giữ nguyên chữ, màu, vị trí trên lớp 49; địa danh, ghi chú trong thửa không đổi.",
-    "Vẽ lại nhãn nhiều lần không chồng thêm bản giống hệt lên lớp 49. Đổi lớp nhãn cũ: Thiết lập → 3. Nhãn thửa → “Nhãn cũ khi vẽ nhãn mới – lớp” (ghi 0 để xoá như trước)."
+    "Sửa lỗi tự động cắt ranh đúng tại giao điểm: hai đường cắt chéo, đầu đường chạm giữa đường khác, đường tự cắt, chạm trong dung sai – các đoạn dùng chung đúng một toạ độ nút, đầu đường lệch được dời khớp đúng điểm. Mở bằng gCadas tạo thửa không phải cắt lại ranh, không mất dữ liệu.",
+    "Đường mới giữ nguyên lớp, màu, nét của đường cũ; liên kết thửa – đường ranh trong tệp .gtp tự ghi lại theo đường mới. Tìm và sửa lỗi báo các chỗ chưa cắt; Tạo thửa hỏi cắt trước; Tách thửa, chia thửa tự cắt tại đầu ranh tách.",
+    "Thông tin thửa đất: hộp đang mở thì nhấp vào trong thửa khác trên bản đồ là chuyển sang thửa đó (đang sửa dở thì hỏi ghi trước; chuột phải để thôi).",
+    "Bảng thông tin thuộc tính: nút “Tờ …” để chọn, chuyển số tờ – theo tên tờ bản đồ hoặc tờ khác có trong tệp .gtp; nhớ cho từng tệp bản đồ."
   ]
 }
