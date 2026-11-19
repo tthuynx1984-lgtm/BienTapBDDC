@@ -1,14 +1,14 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.19.4",
+  "phienban": "2026.11.19.5",
   "ngay": "19/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.19.4.exe",
-  "kichthuoc": 1929645,
-  "sha256": "74081a089a1a8ae278e355c15588824fd918f4603f45ae5544e6eaef97b1a3dc",
+  "tep": "CaiDat_BienTapBDDC_2026.11.19.5.exe",
+  "kichthuoc": 1941739,
+  "sha256": "26faf23cf9d68967e1a104f69ff0ff0e0be7945df6ac6e0224bd851e5e71fcb1",
   "thaydoi": [
-    "Cắt ranh chỉ đúng tại giao điểm, áp dụng cho cả line và line string: mọi đỉnh khác của đường gấp khúc giữ đúng toạ độ, không bỏ đỉnh, không xoá đoạn nào; đường đi qua chỗ giao không bị bẻ gãy; đỉnh cách đường khác vài cm không bị kéo, không bị cắt. Mỗi đường được kiểm tra lại trước khi ghi.",
-    "Vùng (shape), chuỗi phức, cung tròn và đoạn vẽ chồng lên nhau không bị cắt – công cụ báo vị trí để xử lý tay; đầu đường nằm sát nhưng chạy gần song song với đường khác cũng được báo, không tự nối.",
-    "Tách thửa, hợp thửa: nhãn cũ của thửa gốc luôn chuyển sang lớp 49 (kể cả khi không vẽ nhãn mới); nhãn dạng ô (gạch ngang + số thửa, diện tích, loại đất) chuyển cả ô và mọi thành phần, có kiểm tra lại trên bản vẽ.",
-    "Chuyển số tờ trong tệp thuộc tính .gtp theo tên tờ bản đồ (DC226; dc101(dc07) – số trong ngoặc là số tờ cũ): từng tờ hoặc nhiều tờ một lần (chọn nhiều tệp, cả thư mục); thửa sẽ trùng số được giữ lại và báo; mỗi tệp giữ bản gốc .gtp.bak."
+    "Sửa lỗi tự động chỉ ngắt đường tại điểm cắt: đường cũ được ngắt đúng tại điểm đường mới chạm / cắt qua, hai phần nối liền và nối đúng vào đầu đường mới; không kéo, không xén, không xoá đoạn nào của đường cũ.",
+    "Nối đầu hở, cắt phần thừa, xoá đoạn trùng nay mặc định tắt; khi bật chỉ sửa đầu đường đang hở (kéo dài theo hướng của đường, cắt phần thò quá trên đoạn cuối), không lấy chính đường đó làm đích, không gộp đỉnh.",
+    "Ô nhãn N_THUA cũ chắc chắn sang lớp 49: ô được dựng lại trên lớp 49 với đủ gạch ngang, số thửa, diện tích, loại đất (ô cũ xoá), có quét lại bản vẽ kiểm tra; tách / hợp thửa tìm thêm ô nhãn cũ theo hình thửa gốc.",
+    "Gộp CSDL bản đồ và thuộc tính toàn xã (Hệ thống): chọn nhiều tờ .dgn, .gtp ở nhiều thư mục, gộp thành một bản đồ và một tệp thuộc tính toàn xã, giữ đúng liên kết thửa – chủ – mục đích sử dụng, tệp gốc không bị sửa."
   ]
 }

@@ -7,4 +7,4 @@ Trang tải và cập nhật phiên bản mới của công cụ **Biên Tập B
 
 Kho này chỉ chứa bộ cài, `capnhat.json` và trang tải — không chứa bản đồ, tệp thuộc tính hay hồ sơ.
 
-Phiên bản mới nhất: **2026.11.19.4** (19/11/2026) – cắt ranh chỉ đúng tại giao điểm, giữ nguyên mọi đỉnh của line string; tách / hợp thửa luôn chuyển nhãn cũ (cả nhãn dạng ô) sang lớp 49; chuyển số tờ trong tệp .gtp theo tên tờ bản đồ (một hoặc nhiều tệp).
+Phiên bản mới nhất: **2026.11.19.5** (19/11/2026) – sửa lỗi tự động chỉ ngắt đường tại điểm cắt (nối đầu hở, cắt phần thừa mặc định tắt); ô nhãn N_THUA cũ chắc chắn sang lớp 49; menu gộp CSDL bản đồ và thuộc tính toàn xã (nhiều tờ, nhiều thư mục).
