@@ -1,14 +1,14 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.19.3",
+  "phienban": "2026.11.19.4",
   "ngay": "19/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.19.3.exe",
-  "kichthuoc": 1918749,
-  "sha256": "4a9bd50b706b6c49f49c02d0aa9a1ed76f4c840ff48ce8e725a489e608e2d60f",
+  "tep": "CaiDat_BienTapBDDC_2026.11.19.4.exe",
+  "kichthuoc": 1929645,
+  "sha256": "74081a089a1a8ae278e355c15588824fd918f4603f45ae5544e6eaef97b1a3dc",
   "thaydoi": [
-    "Sửa lỗi tự động cắt ranh đúng tại giao điểm: hai đường cắt chéo, đầu đường chạm giữa đường khác, đường tự cắt, chạm trong dung sai – các đoạn dùng chung đúng một toạ độ nút, đầu đường lệch được dời khớp đúng điểm. Mở bằng gCadas tạo thửa không phải cắt lại ranh, không mất dữ liệu.",
-    "Đường mới giữ nguyên lớp, màu, nét của đường cũ; liên kết thửa – đường ranh trong tệp .gtp tự ghi lại theo đường mới. Tìm và sửa lỗi báo các chỗ chưa cắt; Tạo thửa hỏi cắt trước; Tách thửa, chia thửa tự cắt tại đầu ranh tách.",
-    "Thông tin thửa đất: hộp đang mở thì nhấp vào trong thửa khác trên bản đồ là chuyển sang thửa đó (đang sửa dở thì hỏi ghi trước; chuột phải để thôi).",
-    "Bảng thông tin thuộc tính: nút “Tờ …” để chọn, chuyển số tờ – theo tên tờ bản đồ hoặc tờ khác có trong tệp .gtp; nhớ cho từng tệp bản đồ."
+    "Cắt ranh chỉ đúng tại giao điểm, áp dụng cho cả line và line string: mọi đỉnh khác của đường gấp khúc giữ đúng toạ độ, không bỏ đỉnh, không xoá đoạn nào; đường đi qua chỗ giao không bị bẻ gãy; đỉnh cách đường khác vài cm không bị kéo, không bị cắt. Mỗi đường được kiểm tra lại trước khi ghi.",
+    "Vùng (shape), chuỗi phức, cung tròn và đoạn vẽ chồng lên nhau không bị cắt – công cụ báo vị trí để xử lý tay; đầu đường nằm sát nhưng chạy gần song song với đường khác cũng được báo, không tự nối.",
+    "Tách thửa, hợp thửa: nhãn cũ của thửa gốc luôn chuyển sang lớp 49 (kể cả khi không vẽ nhãn mới); nhãn dạng ô (gạch ngang + số thửa, diện tích, loại đất) chuyển cả ô và mọi thành phần, có kiểm tra lại trên bản vẽ.",
+    "Chuyển số tờ trong tệp thuộc tính .gtp theo tên tờ bản đồ (DC226; dc101(dc07) – số trong ngoặc là số tờ cũ): từng tờ hoặc nhiều tờ một lần (chọn nhiều tệp, cả thư mục); thửa sẽ trùng số được giữ lại và báo; mỗi tệp giữ bản gốc .gtp.bak."
   ]
 }
