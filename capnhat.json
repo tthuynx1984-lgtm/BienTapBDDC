@@ -1,14 +1,12 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.19",
+  "phienban": "2026.11.19.2",
   "ngay": "19/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.19.exe",
-  "kichthuoc": 1907093,
-  "sha256": "9fd1b652313016fe5a41a1ef05ca786db0c835f31eb3bd1cef1e3d6bb0f59dcf",
+  "tep": "CaiDat_BienTapBDDC_2026.11.19.2.exe",
+  "kichthuoc": 1907761,
+  "sha256": "84b6679979b9338c7779e91a03cfc6d36b831b8d8ece360b37a24f45133be945",
   "thaydoi": [
-    "Sửa lỗi gCadas báo “Object cannot be cast from DBNull to other types” khi mở bảng thuộc tính sau khi cập nhật thuộc tính bằng công cụ: mọi lần ghi vào tệp .gtp nay theo đúng cách gCadas lưu dữ liệu, không để trống ô gCadas luôn cần.",
-    "Chủ mới thêm có loại đối tượng sử dụng, đăng ký trên từng loại đất chi tiết; thửa luôn có loại đất chi tiết đủ mã và diện tích; tách, hợp thửa chép chủ sử dụng, nguồn gốc sử dụng sang đúng loại đất chi tiết của thửa mới.",
-    "Kết nối tệp .gtp đã bị bản trước ghi thiếu: công cụ tự sửa, báo những gì đã sửa và lưu lại (bản trước khi sửa giữ ở .gtp.bak) – mở lại bằng gCadas là dùng bình thường.",
-    "Đổi màu chủ đề thanh ứng dụng: Hệ thống → Màu chủ đề thanh ứng dụng… (hoặc chuột phải lên thanh) – 17 màu có sẵn hoặc màu tuỳ chọn, xem ngay, nhớ cho lần sau."
+    "Vẽ nhãn mới thì nhãn cũ chuyển sang lớp 49 (không xoá): Vẽ nhãn, tách thửa, hợp thửa, ghi thông tin thửa có vẽ lại nhãn – chữ nhãn và gạch ngang của nhãn cũ giữ nguyên chữ, màu, vị trí trên lớp 49; địa danh, ghi chú trong thửa không đổi.",
+    "Vẽ lại nhãn nhiều lần không chồng thêm bản giống hệt lên lớp 49. Đổi lớp nhãn cũ: Thiết lập → 3. Nhãn thửa → “Nhãn cũ khi vẽ nhãn mới – lớp” (ghi 0 để xoá như trước)."
   ]
 }
