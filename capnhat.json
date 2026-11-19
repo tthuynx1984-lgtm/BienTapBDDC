@@ -1,15 +1,14 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.18",
-  "ngay": "18/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.18.exe",
-  "kichthuoc": 1895885,
-  "sha256": "706a156989a840f99cd7a24edd9cd7b45ae713a48ce3bef8665ab7c3262414c3",
+  "phienban": "2026.11.19",
+  "ngay": "19/11/2026",
+  "tep": "CaiDat_BienTapBDDC_2026.11.19.exe",
+  "kichthuoc": 1907093,
+  "sha256": "9fd1b652313016fe5a41a1ef05ca786db0c835f31eb3bd1cef1e3d6bb0f59dcf",
   "thaydoi": [
-    "Ảnh vệ tinh nền ngay trong MicroStation: bấm nút quả địa cầu là ảnh vệ tinh hiện dưới nền bản đồ DGN, đúng toạ độ VN-2000 (kinh tuyến trục 105°00′, múi chiếu 3°); bấm lần nữa là tắt, ảnh tự gỡ khỏi bản vẽ.",
-    "Thu phóng, di chuyển khung nhìn: ảnh tự dựng lại đúng độ nét màn hình; phóng hết cỡ ảnh được nội suy mượt, không vỡ ô, không gãy. Tải trên luồng nền, giữ ảnh cũ tới khi ảnh mới xong – MicroStation không bị đơ.",
-    "Nguồn ảnh: Esri World Imagery (miễn phí, không cần khoá) hoặc Google Maps bằng khoá Map Tiles API riêng – Bản đồ → Thiết lập ảnh vệ tinh…",
-    "Ảnh nền không in ra và không nằm lại trong tệp DGN (tự gỡ khi tắt, đóng tệp); ảnh raster khác của bản vẽ không bị đụng tới.",
-    "Mở Google Maps trong trình duyệt tại thửa chuyển vào Bản đồ → Mở Google Maps tại thửa (trình duyệt). Các chức năng khác giữ nguyên."
+    "Sửa lỗi gCadas báo “Object cannot be cast from DBNull to other types” khi mở bảng thuộc tính sau khi cập nhật thuộc tính bằng công cụ: mọi lần ghi vào tệp .gtp nay theo đúng cách gCadas lưu dữ liệu, không để trống ô gCadas luôn cần.",
+    "Chủ mới thêm có loại đối tượng sử dụng, đăng ký trên từng loại đất chi tiết; thửa luôn có loại đất chi tiết đủ mã và diện tích; tách, hợp thửa chép chủ sử dụng, nguồn gốc sử dụng sang đúng loại đất chi tiết của thửa mới.",
+    "Kết nối tệp .gtp đã bị bản trước ghi thiếu: công cụ tự sửa, báo những gì đã sửa và lưu lại (bản trước khi sửa giữ ở .gtp.bak) – mở lại bằng gCadas là dùng bình thường.",
+    "Đổi màu chủ đề thanh ứng dụng: Hệ thống → Màu chủ đề thanh ứng dụng… (hoặc chuột phải lên thanh) – 17 màu có sẵn hoặc màu tuỳ chọn, xem ngay, nhớ cho lần sau."
   ]
 }

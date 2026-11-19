@@ -7,4 +7,4 @@ Trang tải và cập nhật phiên bản mới của công cụ **Biên Tập B
 
 Kho này chỉ chứa bộ cài, `capnhat.json` và trang tải — không chứa bản đồ, tệp thuộc tính hay hồ sơ.
 
-Phiên bản mới nhất: **2026.11.18** (18/11/2026) – ảnh vệ tinh nền dưới bản đồ DGN trong MicroStation (bật / tắt, đúng toạ độ VN-2000, kinh tuyến trục 105°00′, múi chiếu 3°).
+Phiên bản mới nhất: **2026.11.19** (19/11/2026) – sửa lỗi gCadas báo DBNull khi mở bảng thuộc tính sau khi cập nhật thuộc tính bằng công cụ (tự sửa tệp .gtp đã bị ghi thiếu); đổi màu chủ đề thanh ứng dụng.
