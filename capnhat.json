@@ -1,15 +1,15 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.20",
+  "phienban": "2026.11.20.2",
   "ngay": "20/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.20.exe",
-  "kichthuoc": 1957524,
-  "sha256": "9f305ce99d3567d235390773b2c29d52edef65476bc04785860a6f6f20f54576",
+  "tep": "CaiDat_BienTapBDDC_2026.11.20.2.exe",
+  "kichthuoc": 1961984,
+  "sha256": "3d411bf77a988aedd0859bfd4ce7b1dcd3714c9eae41aed1870f0025aa8b1201",
   "thaydoi": [
-    "Nền màu loại đất (Bản đồ → Nền màu loại đất, nút mới trên thanh công cụ, gõ M8PRO NENMAU): tô mỗi thửa đúng màu loại đất theo bảng ký hiệu chuẩn, nằm dưới mọi đối tượng của bản đồ như ảnh vệ tinh nền, bật / tắt một chạm.",
-    "Nền màu không phải phần tử của bản vẽ: không thêm, sửa, xoá phần tử nào trong tệp DGN, không vào Undo, không chọn, không bắt điểm, không tính vào Fit View, không in; ranh, nhãn luôn nằm trên nền.",
-    "Cập nhật loại đất đến đâu nền màu tô lại đến đó: sửa ở bảng thuộc tính, phiếu thửa, nhập Excel, tách / hợp, tạo lại thửa – chỉ thửa thay đổi được tô lại. Bật cùng ảnh vệ tinh: màu tô trong mờ.",
-    "Bảng màu loại đất (chú giải): mã, tên, màu, số thửa từng loại trên tờ; đổi màu từng mã, trả về màu chuẩn; thửa chưa có loại đất, ký hiệu lạ để trống và được liệt kê.",
+    "Sửa lỗi bản 2026.11.20 không dựng được công cụ trên máy (bấm cập nhật mà công cụ vẫn là bản cũ). Từ bản này công cụ tự báo khi bản mới chưa dựng được và mở báo cáo cập nhật để xem lý do.",
+    "Sửa lỗi tự động: phá đường gấp khúc (line string) thành đoạn thẳng (line) rồi mới cắt ranh đúng tại giao điểm – giữ đúng toạ độ mọi đỉnh, lớp, màu, nét, kiểu đường.",
+    "Tạo thửa: nối các đoạn ranh liền nhau (cùng lớp, màu, nét, kiểu đường) thành đường gấp khúc từ nút giao tới nút giao, hình thửa và diện tích không đổi; liên kết thửa – đường ranh trong .gtp ghi theo đường mới (bỏ được bằng ô trong bảng chọn lớp).",
+    "Nền màu loại đất bật / tắt (Bản đồ → Nền màu loại đất, nút mới trên thanh công cụ): tô thửa theo bảng màu loại đất chuẩn dưới mọi đối tượng; không phải phần tử của bản vẽ (không thêm, sửa phần tử nào trong DGN, không vào Undo, không chọn, không bắt điểm, không in); loại đất đổi đến đâu tô lại đến đó; có bảng màu – chú giải, đổi màu từng mã.",
     "Menu Hồ sơ toàn xã: sổ địa chính, sổ mục kê, sổ cấp GCN, sổ biến động, kê khai đăng ký Excel, danh sách công khai, bảng tổng hợp PL16, danh sách thửa và thống kê Excel cho cả xã – lấy thẳng từ tệp thuộc tính toàn xã (.gtp), không cần mở bản đồ."
   ]
 }

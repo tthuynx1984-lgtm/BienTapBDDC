@@ -7,4 +7,4 @@ Trang tải và cập nhật phiên bản mới của công cụ **Biên Tập B
 
 Kho này chỉ chứa bộ cài, `capnhat.json` và trang tải — không chứa bản đồ, tệp thuộc tính hay hồ sơ.
 
-Phiên bản mới nhất: **2026.11.20** (20/11/2026) – nền màu loại đất bật / tắt dưới bản đồ DGN (theo bảng ký hiệu loại đất chuẩn, không ghi vào bản vẽ, loại đất đổi đến đâu tô lại đến đó, có bảng màu – chú giải); menu Hồ sơ toàn xã lập sổ sách, Excel thống kê từ tệp thuộc tính toàn xã.
+Phiên bản mới nhất: **2026.11.20.2** (20/11/2026) – sửa lỗi bản 2026.11.20 không dựng được công cụ trên máy; sửa lỗi tự động phá đường gấp khúc thành đoạn thẳng rồi cắt tại giao điểm, tạo thửa nối lại thành đường gấp khúc từ nút giao tới nút giao; nền màu loại đất bật / tắt; menu Hồ sơ toàn xã.
