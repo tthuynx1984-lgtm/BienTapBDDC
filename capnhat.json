@@ -1,14 +1,18 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.20.3",
+  "phienban": "2026.11.20.4",
   "ngay": "20/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.20.3.exe",
-  "kichthuoc": 1961888,
-  "sha256": "897a5ccbd2f2b6e668d90ef81d43b65f8a26d9cf9f6f391a0556d98b56f4e23e",
+  "tep": "CaiDat_BienTapBDDC_2026.11.20.4.exe",
+  "kichthuoc": 1973738,
+  "sha256": "574f750295286f203f3ceabfab98597ba8e3df880e66cca00112eddc872316f6",
   "thaydoi": [
-    "Tạo thửa: bỏ chức năng nối các đoạn ranh liền nhau thành đường gấp khúc – các đoạn ranh giữ nguyên như đã vẽ / đã cắt.",
-    "Sơ đồ thửa đất (DGN): mỗi nhãn thửa là ô N_THUA đúng 3 lớp 3 màu – số thửa và gạch ngang lớp 13 màu 1, loại đất lớp 2 màu 2 bên trái gạch, diện tích lớp 4 màu 3 dưới gạch; đặt trọn trong thửa, xoay theo hướng thửa như Vẽ nhãn. Sơ đồ cả tờ lớn vẫn xuất trọn một tệp.",
-    "Nền màu loại đất: bộ màu dịu, dễ nhìn làm mặc định (lúa vàng nhạt, cây hằng năm cam nhạt, cây lâu năm xanh lá nhạt, rừng xanh lá, đất ở hồng, giao thông xám, thủy lợi – mặt nước xanh trời, nghĩa trang tím nhạt…); chọn lại màu chuẩn bản đồ hiện trạng ở ô Bộ màu trong Bảng màu loại đất; quy đổi thêm nhiều mã loại đất cũ.",
-    "Vẫn giữ từ bản trước: Sửa lỗi tự động phá đường gấp khúc thành đoạn thẳng rồi cắt ranh đúng tại giao điểm; công cụ tự báo khi bản mới chưa dựng được; menu Hồ sơ toàn xã."
+    "Giao diện các hộp thoại làm lại: chia nhóm có tiêu đề, bảng chọn lớp nhiều cột, thanh chuyển về đầu / lùi / tới / về cuối ở chân hộp. Lệnh và dữ liệu giữ nguyên như bản trước.",
+    "Sửa lỗi tự động: thẻ Lớp ranh thửa (bảng lớp kèm số đối tượng đường) và thẻ Tuỳ chọn sửa (cắt ranh tại giao điểm, sửa thêm đầu đường); khoảng sửa tối đa ở chân hộp.",
+    "Tìm và sửa lỗi: hộp Tìm lỗi dữ liệu mới – chọn loại lỗi cần tìm (9 loại), ngưỡng vùng rất nhỏ và dung sai bắt nối; bảng Duyệt và sửa lỗi có ô ẩn / hiện từng loại lỗi kèm số lỗi.",
+    "Tạo thửa: nhóm Thông tin gán cho thửa (tờ bản đồ số, số lẻ diện tích, bỏ vùng nhỏ hơn diện tích đặt, dung sai, ghi vào tệp thuộc tính, hỏi cắt ranh trước) và nhóm Đọc nhãn thửa.",
+    "Bảng thông tin thuộc tính: thanh lệnh mới (menu Hồ sơ thửa, Tiện ích, Xuất dữ liệu, ô Tìm), hàng lọc dưới tiêu đề từng cột, dòng Cộng diện tích, thanh chuyển dòng.",
+    "Thông tin thửa đất: bố cục mới theo nhóm – thông tin thửa (thêm mã định danh), mục đích sử dụng (bảng và chi tiết mục đang chọn), chủ sử dụng.",
+    "Bảng hồ sơ thửa đất (mới, menu Kết xuất hoặc nút trên thanh công cụ): gom các mẫu hồ sơ theo nhóm – thửa lập hồ sơ, định dạng tệp, hồ sơ của thửa, hồ sơ cả tờ, thư mục lưu.",
+    "Vẫn giữ từ bản trước: Tạo thửa không nối đoạn ranh; Sơ đồ thửa đất xuất ô N_THUA đúng 3 lớp 3 màu; nền màu loại đất bộ màu dịu."
   ]
 }

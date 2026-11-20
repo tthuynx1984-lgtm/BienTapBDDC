@@ -7,4 +7,4 @@ Trang tải và cập nhật phiên bản mới của công cụ **Biên Tập B
 
 Kho này chỉ chứa bộ cài, `capnhat.json` và trang tải — không chứa bản đồ, tệp thuộc tính hay hồ sơ.
 
-Phiên bản mới nhất: **2026.11.20.3** (20/11/2026) – tạo thửa bỏ nối đoạn ranh (giữ nguyên các đoạn ranh); sơ đồ thửa đất (DGN) xuất nhãn thửa là ô N_THUA đúng 3 lớp 3 màu; nền màu loại đất phối màu dịu dễ nhìn (chọn lại được màu chuẩn bản đồ hiện trạng).
+Phiên bản mới nhất: **2026.11.20.4** (20/11/2026) – giao diện các hộp thoại làm lại theo nhóm: Sửa lỗi tự động, Tìm lỗi dữ liệu (chọn loại lỗi cần tìm), Duyệt và sửa lỗi, Tạo thửa (bỏ vùng nhỏ), Bảng thông tin thuộc tính (hàng lọc từng cột, dòng cộng), Thông tin thửa đất; thêm Bảng hồ sơ thửa đất gom các mẫu hồ sơ theo nhóm.
