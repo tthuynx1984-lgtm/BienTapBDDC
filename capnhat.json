@@ -1,15 +1,14 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.20.2",
+  "phienban": "2026.11.20.3",
   "ngay": "20/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.20.2.exe",
-  "kichthuoc": 1961984,
-  "sha256": "3d411bf77a988aedd0859bfd4ce7b1dcd3714c9eae41aed1870f0025aa8b1201",
+  "tep": "CaiDat_BienTapBDDC_2026.11.20.3.exe",
+  "kichthuoc": 1961888,
+  "sha256": "897a5ccbd2f2b6e668d90ef81d43b65f8a26d9cf9f6f391a0556d98b56f4e23e",
   "thaydoi": [
-    "Sửa lỗi bản 2026.11.20 không dựng được công cụ trên máy (bấm cập nhật mà công cụ vẫn là bản cũ). Từ bản này công cụ tự báo khi bản mới chưa dựng được và mở báo cáo cập nhật để xem lý do.",
-    "Sửa lỗi tự động: phá đường gấp khúc (line string) thành đoạn thẳng (line) rồi mới cắt ranh đúng tại giao điểm – giữ đúng toạ độ mọi đỉnh, lớp, màu, nét, kiểu đường.",
-    "Tạo thửa: nối các đoạn ranh liền nhau (cùng lớp, màu, nét, kiểu đường) thành đường gấp khúc từ nút giao tới nút giao, hình thửa và diện tích không đổi; liên kết thửa – đường ranh trong .gtp ghi theo đường mới (bỏ được bằng ô trong bảng chọn lớp).",
-    "Nền màu loại đất bật / tắt (Bản đồ → Nền màu loại đất, nút mới trên thanh công cụ): tô thửa theo bảng màu loại đất chuẩn dưới mọi đối tượng; không phải phần tử của bản vẽ (không thêm, sửa phần tử nào trong DGN, không vào Undo, không chọn, không bắt điểm, không in); loại đất đổi đến đâu tô lại đến đó; có bảng màu – chú giải, đổi màu từng mã.",
-    "Menu Hồ sơ toàn xã: sổ địa chính, sổ mục kê, sổ cấp GCN, sổ biến động, kê khai đăng ký Excel, danh sách công khai, bảng tổng hợp PL16, danh sách thửa và thống kê Excel cho cả xã – lấy thẳng từ tệp thuộc tính toàn xã (.gtp), không cần mở bản đồ."
+    "Tạo thửa: bỏ chức năng nối các đoạn ranh liền nhau thành đường gấp khúc – các đoạn ranh giữ nguyên như đã vẽ / đã cắt.",
+    "Sơ đồ thửa đất (DGN): mỗi nhãn thửa là ô N_THUA đúng 3 lớp 3 màu – số thửa và gạch ngang lớp 13 màu 1, loại đất lớp 2 màu 2 bên trái gạch, diện tích lớp 4 màu 3 dưới gạch; đặt trọn trong thửa, xoay theo hướng thửa như Vẽ nhãn. Sơ đồ cả tờ lớn vẫn xuất trọn một tệp.",
+    "Nền màu loại đất: bộ màu dịu, dễ nhìn làm mặc định (lúa vàng nhạt, cây hằng năm cam nhạt, cây lâu năm xanh lá nhạt, rừng xanh lá, đất ở hồng, giao thông xám, thủy lợi – mặt nước xanh trời, nghĩa trang tím nhạt…); chọn lại màu chuẩn bản đồ hiện trạng ở ô Bộ màu trong Bảng màu loại đất; quy đổi thêm nhiều mã loại đất cũ.",
+    "Vẫn giữ từ bản trước: Sửa lỗi tự động phá đường gấp khúc thành đoạn thẳng rồi cắt ranh đúng tại giao điểm; công cụ tự báo khi bản mới chưa dựng được; menu Hồ sơ toàn xã."
   ]
 }
