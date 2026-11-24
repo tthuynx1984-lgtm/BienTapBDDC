@@ -1,0 +1,14 @@
+﻿# Điểm mới của phiên bản (mỗi dòng một điểm; dòng bắt đầu bằng # là ghi chú, không hiện)
+Kết nối tệp thuộc tính độc lập (Hệ thống, hoặc Hồ sơ toàn xã → Bảng thuộc tính toàn xã; gộp CSDL xong hỏi kết nối luôn): không cần bản đồ ứng với tệp, bảng thuộc tính hiện đủ mọi tờ, mọi thửa của tệp toàn xã, lọc theo tờ, sửa lưu thẳng vào tệp.
+Vẽ nhãn thửa như ô nhãn N_THUA của phần mềm địa chính: gạch ngang nằm đúng giữa số thửa và diện tích, hai chữ canh giữa theo gạch, gạch dài theo chữ diện tích, loại đất sát bên trái; Sơ đồ thửa đất cùng bố cục.
+Bản đồ thiếu lớp (ví dụ lớp 2, lớp 4) thì công cụ tự tạo lớp tên chuẩn "Level N" rồi vẽ đủ các phần nhãn, không bỏ trống.
+Nền màu loại đất hiển thị trên lớp Default, chỉ hiển thị, không vẽ phần tử vào bản đồ, không tạo lớp mới.
+Mọi hộp thoại co giãn được và không cắt chữ: chữ dài tự xuống dòng, cột bảng vừa chữ dài nhất, đường dẫn và tên mẫu hồ sơ ghi đủ, thanh lệnh hẹp thì xuống hàng.
+Chuẩn hóa nút thao tác: nút chính in đậm, kích thước tối thiểu dễ bấm, giữ nguyên toàn bộ lệnh và bí danh key-in hiện có.
+Không sao chép mã nguồn, thư viện, biểu tượng hoặc tài nguyên độc quyền của phần mềm khác; chỉ tham khảo quy trình nghiệp vụ công khai.
+
+PHIÊN BẢN 2026.11.24.2
+- Bảng thuộc tính: tiêu đề cột một dòng, cột gọn theo nội dung, kéo giãn như Excel, tooltip tên đầy đủ.
+- Cố định cột Số tờ và Số thửa khi trượt ngang; thêm trường căn cước cho người 2, người 3 và các thành viên/đồng sử dụng.
+- Chuẩn hóa ô tích nét mảnh, chữ cùng hàng; thống nhất danh sách Level ở các hộp Tìm lỗi, Sửa lỗi tự động và Tạo thửa.
+- Hộp Thông tin thửa đất chia hai nửa, có nút ghi riêng cho thửa và người sử dụng.

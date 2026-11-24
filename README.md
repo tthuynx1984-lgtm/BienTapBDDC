@@ -1,12 +1,16 @@
 # BienTapBDDC
 
-Trang tải và cập nhật phiên bản mới của công cụ **Biên Tập Bản Đồ Địa Chính**.
+Biên Tập Bản Đồ Địa Chính cho MicroStation V8i.
 
-- Trang tải bộ cài: https://tthuynx1984-lgtm.github.io/BienTapBDDC/
-- Công cụ đã cài đọc `capnhat.json` ở đây khi bấm **Cập nhật phiên bản mới**.
+## Cập nhật phiên bản mới
 
-Kho này chỉ chứa bộ cài, `capnhat.json` và trang tải — không chứa bản đồ, tệp thuộc tính hay hồ sơ.
+Tải [CaiDat_BienTapBDDC_2026.11.24.2.exe](CaiDat_BienTapBDDC_2026.11.24.2.exe). Phiên bản mới nhất: **2026.11.24.2**.
 
-Phiên bản mới nhất: **2026.11.24.1** (24/11/2026) – chuẩn hóa nút thao tác trong các hộp thoại, giữ nguyên toàn bộ lệnh và bí danh key-in; kết nối tệp thuộc tính độc lập (tệp toàn xã: bảng thuộc tính hiện đủ mọi tờ, mọi thửa, không cần bản đồ); vẽ nhãn thửa đúng bố cục ô nhãn; thiếu lớp thì tự tạo lớp "Level N" rồi vẽ đủ; nền màu loại đất chỉ hiển thị trên lớp Default; mọi hộp thoại co giãn được, không cắt chữ.
+Bộ cài kiểm tra SHA-256 qua `capnhat.json`; nút **Cập nhật phiên bản mới** trong ứng dụng dùng tệp này.
 
-Mã nguồn, tài nguyên và giao diện độc quyền của MicroStation hoặc gCadas không được sao chép. Tên nghiệp vụ và quy trình chỉ được dùng để tham khảo, còn công cụ này sử dụng mã nguồn và tài nguyên riêng.
+## Thay đổi 2026.11.24.2
+
+- Bảng thuộc tính có tiêu đề một dòng, cột gọn theo nội dung và có thể kéo giãn như Excel.
+- Cố định Số tờ/Số thửa khi trượt ngang và hiển thị đầy đủ trường căn cước của nhiều người sử dụng.
+- Chuẩn hóa ô tích mảnh, chữ cùng hàng và danh sách Level trong các hộp thoại.
+- Thông tin thửa đất chia hai nửa, có nút ghi riêng cho thửa và người sử dụng.

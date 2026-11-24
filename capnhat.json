@@ -1,17 +1,15 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.24.1",
+  "phienban": "2026.11.24.2",
   "ngay": "24/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.24.1.exe",
-  "kichthuoc": 3272670,
-  "sha256": "eecf7b8605bc29059b0ca14f440c984bf9b217c6203d5e40209359fed9b29aab",
+  "tep": "CaiDat_BienTapBDDC_2026.11.24.2.exe",
+  "kichthuoc": 3288075,
+  "sha256": "e65d5bc6d3b6b516809e8434b1df2a28f15928a279488f802c7228841affbe68",
   "thaydoi": [
-    "Kết nối tệp thuộc tính độc lập (Hệ thống, hoặc Hồ sơ toàn xã → Bảng thuộc tính toàn xã; gộp CSDL xong hỏi kết nối luôn): không cần bản đồ ứng với tệp, bảng thuộc tính hiện đủ mọi tờ, mọi thửa của tệp toàn xã, lọc theo tờ, sửa lưu thẳng vào tệp.",
-    "Vẽ nhãn thửa như ô nhãn N_THUA của phần mềm địa chính: gạch ngang nằm đúng giữa số thửa và diện tích, hai chữ canh giữa theo gạch, gạch dài theo chữ diện tích, loại đất sát bên trái; Sơ đồ thửa đất cùng bố cục.",
-    "Bản đồ thiếu lớp (ví dụ lớp 2, lớp 4) thì công cụ tự tạo lớp tên chuẩn \"Level N\" rồi vẽ đủ các phần nhãn, không bỏ trống.",
-    "Nền màu loại đất hiển thị trên lớp Default, chỉ hiển thị, không vẽ phần tử vào bản đồ, không tạo lớp mới.",
-    "Mọi hộp thoại co giãn được và không cắt chữ: chữ dài tự xuống dòng, cột bảng vừa chữ dài nhất, đường dẫn và tên mẫu hồ sơ ghi đủ, thanh lệnh hẹp thì xuống hàng.",
-    "Chuẩn hóa nút thao tác: nút chính in đậm, kích thước tối thiểu dễ bấm, giữ nguyên toàn bộ lệnh và bí danh key-in hiện có.",
-    "Không sao chép mã nguồn, thư viện, biểu tượng hoặc tài nguyên độc quyền của phần mềm khác; chỉ tham khảo quy trình nghiệp vụ công khai."
+    "Bảng thuộc tính: tiêu đề cột một dòng, cột gọn theo nội dung, kéo giãn như Excel, tooltip tên đầy đủ.",
+    "Cố định cột Số tờ và Số thửa khi trượt ngang; thêm trường căn cước đầy đủ cho người sử dụng thứ 2 trở đi.",
+    "Chuẩn hóa ô tích nét mảnh, chữ cùng hàng; thống nhất danh sách Level ở các hộp Tìm lỗi, Sửa lỗi tự động và Tạo thửa.",
+    "Hộp Thông tin thửa đất chia hai nửa, có nút ghi riêng cho thửa và người sử dụng.",
+    "Giữ nguyên các chức năng và các nút hiện có; các hộp thoại co giãn, không cắt chữ."
   ]
 }
