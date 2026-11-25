@@ -7,6 +7,6 @@ Trang tải và cập nhật phiên bản mới của công cụ **Biên Tập B
 
 Kho này chỉ chứa bộ cài, `capnhat.json` và trang tải — không chứa bản đồ, tệp thuộc tính hay hồ sơ.
 
-Phiên bản mới nhất: **2026.11.25** (25/11/2026) – thông tin thửa đất chia hai nửa có hình thức sử dụng; bảng thuộc tính có giấy tờ tuỳ thân và nhóm người; "Lớp" đổi thành "Level"; hộp thoại chuẩn hoá chung.
+Phiên bản mới nhất: **2026.11.25.1** (25/11/2026) – thông tin thửa đất chia hai nửa có hình thức sử dụng; bảng thuộc tính có giấy tờ tuỳ thân và nhóm người; "Lớp" đổi thành "Level"; hộp thoại chuẩn hoá chung.
 
 Mã nguồn, tài nguyên và giao diện độc quyền của MicroStation hoặc gCadas không được sao chép. Tên nghiệp vụ và quy trình chỉ được dùng để tham khảo, còn công cụ này sử dụng mã nguồn và tài nguyên riêng.

@@ -1,10 +1,10 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.25",
+  "phienban": "2026.11.25.1",
   "ngay": "25/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.25.exe",
-  "kichthuoc": 1986515,
-  "sha256": "965885ef56a7f7058eb4142d36d8d97d46afeb13b36afc5ca20e59f49ab8b053",
+  "tep": "CaiDat_BienTapBDDC_2026.11.25.1.exe",
+  "kichthuoc": 1986536,
+  "sha256": "98b5fd37b354bf565ff0cb1021a576a85ef55159affb00799b46da54e70d7cc9",
   "thaydoi": [
     "Bảng thông tin thuộc tính: bỏ cột DT bản đồ; diện tích viết với dấu chấm thập phân; số tờ và số thửa luôn hiện khi cuộn ngang.",
     "Bảng thông tin thuộc tính: có giấy tờ tuỳ thân của chủ sử dụng (loại, số, ngày cấp, ngày hết hạn, nơi cấp); người thứ 2 trở đi có nhóm cột riêng cùng bộ trường, tự hiện khi thửa có nhiều người.",
