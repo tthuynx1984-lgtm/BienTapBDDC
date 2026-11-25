@@ -1,13 +1,13 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.25.1",
+  "phienban": "2026.11.25.2",
   "ngay": "25/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026_11_25_1.exe",
-  "kichthuoc": 3291085,
-  "sha256": "fdf3868d9c767e9b304b718fc0d748acce4b8659130e24865f7972d8d66d59b6",
+  "tep": "CaiDat_BienTapBDDC_2026_11_25_2.exe",
+  "kichthuoc": 3291721,
+  "sha256": "f81506237d1a48bab385bd3030e1cae60230f6edf5fd76969e05ec741cc978d0",
   "thaydoi": [
-    "Sửa ghi thửa đất và ghi người sử dụng; đọc dự phòng chủ từ dòng GRow khi tệp .gtp chưa có liên kết DangKyThua.",
-    "Sửa tương thích CLR/.NET của MicroStation V8i và chặn lỗi null khi tệp thiếu bảng hoặc chưa có tọa độ tâm thửa.",
-    "Sửa hộp tách/hợp để nút thao tác không bị cắt; tách riêng ô chọn level và màu tâm thửa."
+    "Xác nhận và sửa luồng liên kết Parcel với đúng thuaDatId trước khi đọc/ghi chủ sử dụng.",
+    "Đọc đúng chủ Nguyễn Văn Tuyển, Hoàng Thị Th… của tờ 208, thửa 4 từ DC208.gtp thật; xử lý tên cột và khóa DangKyThua không phân biệt hoa thường.",
+    "Giữ các sửa đổi giao diện, tách/hợp, Mẫu số 22 và cập nhật của bản 2026.11.25.1."
   ]
 }
