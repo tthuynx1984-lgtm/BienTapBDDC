@@ -3,8 +3,8 @@
   "phienban": "2026.11.25.1",
   "ngay": "25/11/2026",
   "tep": "CaiDat_BienTapBDDC_2026_11_25_1.exe",
-  "kichthuoc": 3291077,
-  "sha256": "f079f421a92e1c67e3f4ce9a0f3a4f4c8457e1cded70e70d9dc95cef02793ecc",
+  "kichthuoc": 3291085,
+  "sha256": "fdf3868d9c767e9b304b718fc0d748acce4b8659130e24865f7972d8d66d59b6",
   "thaydoi": [
     "Sửa ghi thửa đất và ghi người sử dụng; đọc dự phòng chủ từ dòng GRow khi tệp .gtp chưa có liên kết DangKyThua.",
     "Sửa tương thích CLR/.NET của MicroStation V8i và chặn lỗi null khi tệp thiếu bảng hoặc chưa có tọa độ tâm thửa.",
