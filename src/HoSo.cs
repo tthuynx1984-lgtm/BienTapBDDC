@@ -35,7 +35,7 @@ namespace M8Pro
             var n1 = new Nhom("Thửa lập hồ sơ") { Dock = DockStyle.Top, Vua = true };
             lThua.Font = new Font(Font, FontStyle.Bold);
             var h1 = new FlowLayoutPanel { Dock = DockStyle.Top, WrapContents = true, AutoSize = true, AutoSizeMode = AutoSizeMode.GrowAndShrink };
-            var bChon = new Button { Text = "Chọn thửa trên bản đồ", AutoSize = true, Height = 28 };
+            var bChon = GiaoDien.Nut("Chọn thửa trên bản đồ", 170, true);
             try { bChon.Image = Icons.Get("cursor", 16); bChon.TextImageRelation = TextImageRelation.ImageBeforeText; } catch { }
             bChon.Click += (s, e) => Run(() => M.Pick("Hồ sơ thửa đất › chạm vào thửa cần lập hồ sơ", p => DatThua(p)));
             h1.Controls.Add(bChon); n1.Than.Controls.Add(h1); n1.Than.Controls.Add(lThua);
@@ -53,7 +53,7 @@ namespace M8Pro
             // 5. lưu hồ sơ
             var n5 = new Nhom("Lưu hồ sơ") { Dock = DockStyle.Top, Vua = true };
             var h5 = new FlowLayoutPanel { Dock = DockStyle.Top, WrapContents = true, AutoSize = true, AutoSizeMode = AutoSizeMode.GrowAndShrink };
-            var bMo = new Button { Text = "Mở thư mục", AutoSize = true, Height = 28 }; var bDoi = new Button { Text = "Đổi thư mục…", AutoSize = true, Height = 28 };
+            var bMo = GiaoDien.Nut("Mở thư mục", 120, false); var bDoi = GiaoDien.Nut("Đổi thư mục…", 130, false);
             try { bMo.Image = Icons.Get("folder", 16); bMo.TextImageRelation = TextImageRelation.ImageBeforeText; } catch { }
             bMo.Click += (s, e) => Run(Web.OpenOutDir);
             bDoi.Click += (s, e) => Run(() =>

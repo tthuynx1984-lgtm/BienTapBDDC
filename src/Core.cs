@@ -85,6 +85,14 @@ namespace M8Pro
         [Category("4. Biên tập"), DisplayName("Tên chủ sử dụng – level")] public int ChuLop { get; set; }
         [Category("4. Biên tập"), DisplayName("Tên chủ sử dụng – màu")] public int ChuMau { get; set; }
         [Category("4. Biên tập"), DisplayName("Ranh quy hoạch (vùng khép kín) – level")] public int QhLop { get; set; }
+        [Category("2. Level"), DisplayName("Loại đất mặc định khi tạo thửa")] public string LdMacDinh { get; set; }
+        [Category("2. Level"), DisplayName("Level tâm thửa")] public int TamLop { get; set; }
+        [Category("2. Level"), DisplayName("Màu tâm thửa")] public int TamMau { get; set; }
+        [Category("2. Level"), DisplayName("Tỷ lệ cell tâm thửa")] public double TamTyLe { get; set; }
+        [Browsable(false)] public bool TaoLuuPhapLy { get; set; }
+        [Browsable(false)] public bool TaoLuuDienTich { get; set; }
+        [Browsable(false)] public bool TaoCapNhatMdsd { get; set; }
+        [Browsable(false)] public bool TaoChuyenChu { get; set; }
 
         static string File_ { get { var d = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "M8Pro"); Directory.CreateDirectory(d); return Path.Combine(d, "diachinh.ini"); } }
         static Cfg Load()
@@ -92,7 +100,7 @@ namespace M8Pro
             var c = new Cfg
             {
                 Tinh = "Phú Thọ", Huyen = "", Xa = "", MaXa = "", HoiGtp = true, GhiKhiTaoThua = true, ThuMucHoSo = "", MoHoSo = true, ChayNgam = true, AnhNguon = "", GoogleKey = "", AnhTuLamMoi = true, MauChuDe = "", DinhDang = "pdf", GtpTx = "", BanDaBao = "", MauSang = 4, To = "", TyLe = 1000, Ktt = 105, LvRanh = "10", LvNhan = "13", Tol = 0.02, FixTol = 0.5, CatGiao = true, BoVung = 0, HoiCatTao = true, NenLop = "Default", VungNho = 1, TimLoai = "", ChiLopCo = true, Kieu = KieuNhan.Ba_lop_chuan, HNhan = 1.2, TextWidthRatio = 1, TpTheoNhan = true,
-                SoLop = 13, SoMau = 1, DtLop = 4, DtMau = 3, LdLop = 2, LdMau = 2, DtLe = 1, DauPhay = true, KtLop = 14, KtMau = 6, DinhLop = 15, DinhMau = 5, KhungLop = 1, KhungMau = 0, ToLop = 63, TachLop = 10, HopLop = 49, NhanCuLop = 49, TachHopBanVe = true, Lech = 5, CoQuan = "", TuMo = true, NutMenu = true, TuLuu = true, TuMoGtp = true, DiemLop = 21, DiemMau = 1, ChuLop = 20, ChuMau = 7, QhLop = 50
+                SoLop = 13, SoMau = 1, DtLop = 4, DtMau = 3, LdLop = 2, LdMau = 2, DtLe = 1, DauPhay = true, KtLop = 14, KtMau = 6, DinhLop = 15, DinhMau = 5, KhungLop = 1, KhungMau = 0, ToLop = 63, TachLop = 10, HopLop = 49, NhanCuLop = 49, TachHopBanVe = true, Lech = 5, CoQuan = "", TuMo = true, NutMenu = true, TuLuu = true, TuMoGtp = true, DiemLop = 21, DiemMau = 1, ChuLop = 20, ChuMau = 7, QhLop = 50, LdMacDinh = "", TamLop = 21, TamMau = 1, TamTyLe = 1
             };
             try
             {
@@ -359,6 +367,16 @@ namespace M8Pro
                 Bt.PutCell(p, els, txt, pos, x, y);
             }
             Notify();
+        }
+        // Vẽ tâm thửa bằng dấu cộng nhỏ trên level/màu đã chọn; không tạo phần tử giả.
+        public static int DrawCenters(IEnumerable<Parcel> list)
+        {
+            var c = Cfg.I; double d = Math.Max(0.05, c.H * Math.Max(0.1, c.TamTyLe)); int n = 0;
+            foreach (var p in list.Where(x => x != null && !x.Virtual && x.Lp != null && x.Lp.Length >= 2))
+            {
+                try { Ms.AddLine(new[] { p.Lp[0] - d, p.Lp[1], p.Lp[0] + d, p.Lp[1] }, c.TamLop, c.TamMau, 0); Ms.AddLine(new[] { p.Lp[0], p.Lp[1] - d, p.Lp[0], p.Lp[1] + d }, c.TamLop, c.TamMau, 0); n++; } catch (Exception ex) { Program.Log(ex); }
+            }
+            if (n > 0) { Dirty = true; Notify(); } return n;
         }
         static void Add(Parcel p, Bentley.Interop.MicroStationDGN.Element e) { p.Labels.Add(new MEl { El = e, Kind = 17 }); }
         // nhãn cũ ở lần vẽ nhãn gần nhất: số phần tử đã chuyển sang lớp nhãn cũ, số phần tử đã xoá

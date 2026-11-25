@@ -224,11 +224,11 @@ namespace M8Pro
                 "Thửa sẽ trùng số thửa đã có của tờ mới thì giữ số tờ cũ và được báo. Mỗi tệp giữ bản gốc <tên>.gtp.bak. Nên đóng tệp ở phần mềm khác trước khi chuyển." };
             L.Columns.Add("Tệp thuộc tính", 230); L.Columns.Add("Số tờ mới", 80); L.Columns.Add("Số tờ đang có trong tệp (số thửa)", 230); L.Columns.Add("Sẽ chuyển", 170); L.Columns.Add("Ghi chú", 360);
             var bt = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 40, Padding = new Padding(4), FlowDirection = FlowDirection.LeftToRight };
-            Func<string, int, Button> nut = (s, w) => { var b = new Button { Text = s, Width = w, Height = 28 }; bt.Controls.Add(b); return b; };
+            Func<string, int, Button> nut = (s, w) => { var b = GiaoDien.Nut(s, w, false); bt.Controls.Add(b); return b; };
             var bTep = nut("Thêm tệp…", 100); var bThu = nut("Thêm thư mục…", 120); var bSua = nut("Sửa số tờ…", 100); var bBo = nut("Bỏ khỏi danh sách", 130);
             var op = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 30, Padding = new Padding(6, 4, 4, 0) }; op.Controls.Add(cSo); op.Controls.Add(cCu);
             var bp = new FlowLayoutPanel { Dock = DockStyle.Bottom, FlowDirection = FlowDirection.RightToLeft, Height = 42, Padding = new Padding(4) };
-            var dong = new Button { Text = "Đóng", Width = 90, Height = 30, DialogResult = DialogResult.Cancel }; var ok = new Button { Text = "⇄ Chuyển số tờ", Width = 140, Height = 30 };
+            var dong = GiaoDien.Nut("Đóng", 90, false); dong.DialogResult = DialogResult.Cancel; var ok = GiaoDien.Nut("⇄ Chuyển số tờ", 140, true);
             bp.Controls.Add(dong); bp.Controls.Add(ok); CancelButton = dong;
             Controls.Add(L); Controls.Add(top); Controls.Add(bt); Controls.Add(op); Controls.Add(st); Controls.Add(bp);
             bTep.Click += (s, e) => { using (var d = new OpenFileDialog { Filter = "Tệp thuộc tính (*.gtp)|*.gtp", Multiselect = true, Title = "Chọn một hoặc nhiều tệp thuộc tính" }) if (d.ShowDialog(this) == DialogResult.OK) Them(d.FileNames); };

@@ -114,14 +114,14 @@ namespace M8Pro
     // ================= TẠO THỬA ĐẤT: lớp ranh tạo thửa bên trái; thông tin gán cho thửa và đọc nhãn bên phải =================
     public class TaoThuaForm : Form
     {
-        DsLop L = new DsLop(); TextBox tTo = new TextBox { Width = 90 }, tBo = new TextBox { Width = 90 }, tTol = new TextBox { Width = 90 }, tNhan = new TextBox { Width = 90 };
-        ComboBox cLe = new ComboBox { Width = 90, DropDownStyle = ComboBoxStyle.DropDownList };
-        CheckBox cGhi = new OTich { AutoSize = true, Text = "Ghi vào tệp thuộc tính ngay sau khi tạo thửa" }, cCat = new OTich { AutoSize = true, Text = "Hỏi cắt ranh tại giao điểm trước khi tạo thửa" };
+        DsLop L = new DsLop(); TextBox tTo = new TextBox { Width = 90 }, tBo = new TextBox { Width = 90 }, tTol = new TextBox { Width = 90 }, tNhan = new TextBox { Width = 90 }, tTamLv = new TextBox { Width = 70 }, tTamMau = new TextBox { Width = 70 }, tTamTl = new TextBox { Width = 70 };
+        ComboBox cLe = new ComboBox { Width = 90, DropDownStyle = ComboBoxStyle.DropDownList }, cLd = new ComboBox { Width = 120, DropDownStyle = ComboBoxStyle.DropDown };
+        CheckBox cGhi = new OTich { AutoSize = true, Text = "Ghi thông tin thửa vào tệp thuộc tính" }, cCat = new OTich { AutoSize = true, Text = "Hỏi cắt ranh tại giao điểm trước khi tạo thửa" }, cPhap = new OTich { AutoSize = true, Text = "Lưu thông tin pháp lý" }, cDt = new OTich { AutoSize = true, Text = "Lưu diện tích và tâm thửa" }, cMdsd = new OTich { AutoSize = true, Text = "Cập nhật mục đích sử dụng đất" }, cChu = new OTich { AutoSize = true, Text = "Chuyển thửa thành chủ sử dụng" }, cTam = new OTich { AutoSize = true, Text = "Vẽ tâm thửa sau khi tạo" };
         public List<int> Levels = new List<int>();
         public TaoThuaForm(ICollection<int> sel)
         {
             Text = "Tạo thửa đất"; Font = new Font("Segoe UI", 9f); FormBorderStyle = FormBorderStyle.Sizable; MinimizeBox = false; MaximizeBox = false; ShowInTaskbar = false; StartPosition = FormStartPosition.CenterParent; TopMost = true;
-            Width = 760; Height = 500; MinimumSize = new Size(660, 470);
+            Width = 820; Height = 620; MinimumSize = new Size(700, 560);
             var dem = new SortedDictionary<int, int>(); try { dem = Bt.LevelLines(); } catch (Exception ex) { Program.Log(ex); }
             L.Nap(dem, sel);
             var nL = new Nhom("Các level ranh tạo thửa") { Dock = DockStyle.Fill }; nL.Than.Controls.Add(L);
@@ -131,14 +131,16 @@ namespace M8Pro
             var tg = new TableLayoutPanel { Dock = DockStyle.Top, ColumnCount = 2, AutoSize = true, AutoSizeMode = AutoSizeMode.GrowAndShrink };
             tg.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100)); tg.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
             tTo.Text = Dc.To; for (int i = 0; i <= 3; i++) cLe.Items.Add(i.ToString(CultureInfo.InvariantCulture)); cLe.SelectedIndex = Math.Max(0, Math.Min(3, Cfg.I.DtLe));
-            tBo.Text = GiaoDien.ChuSo(Cfg.I.BoVung); tTol.Text = GiaoDien.ChuSo(Cfg.I.Tol); cGhi.Checked = Cfg.I.GhiKhiTaoThua; cCat.Checked = Cfg.I.HoiCatTao;
+            cLd.Items.AddRange(new object[] { "", "ONT", "ODT", "CLN", "LUC", "HNK", "TMD", "DTS" }); cLd.Text = Cfg.I.LdMacDinh ?? "";
+            tBo.Text = GiaoDien.ChuSo(Cfg.I.BoVung); tTol.Text = GiaoDien.ChuSo(Cfg.I.Tol); cGhi.Checked = Cfg.I.GhiKhiTaoThua; cCat.Checked = Cfg.I.HoiCatTao; cPhap.Checked = Cfg.I.TaoLuuPhapLy; cDt.Checked = Cfg.I.TaoLuuDienTich; cMdsd.Checked = Cfg.I.TaoCapNhatMdsd; cChu.Checked = Cfg.I.TaoChuyenChu; tTamLv.Text = Cfg.I.TamLop.ToString(); tTamMau.Text = Cfg.I.TamMau.ToString(); tTamTl.Text = GiaoDien.ChuSo(Cfg.I.TamTyLe); cTam.Checked = Cfg.I.TamLop > 0;
             Func<string, Label> LN = t0 => GiaoDien.Gian(new Label { Text = t0, Dock = DockStyle.Fill, Margin = new Padding(3, 6, 3, 2) });
             tg.Controls.Add(LN("Tờ bản đồ số"), 0, 0); tg.Controls.Add(tTo, 1, 0);
-            tg.Controls.Add(LN("Số lẻ diện tích"), 0, 1); tg.Controls.Add(cLe, 1, 1);
-            tg.Controls.Add(LN("Bỏ vùng có diện tích nhỏ hơn (m²)"), 0, 2); tg.Controls.Add(tBo, 1, 2);
-            tg.Controls.Add(LN("Dung sai bắt nối ranh (m)"), 0, 3); tg.Controls.Add(tTol, 1, 3);
+            tg.Controls.Add(LN("Loại đất mặc định"), 0, 1); tg.Controls.Add(cLd, 1, 1);
+            tg.Controls.Add(LN("Số lẻ diện tích"), 0, 2); tg.Controls.Add(cLe, 1, 2);
+            tg.Controls.Add(LN("Bỏ vùng có diện tích nhỏ hơn (m²)"), 0, 3); tg.Controls.Add(tBo, 1, 3);
+            tg.Controls.Add(LN("Dung sai bắt nối ranh (m)"), 0, 4); tg.Controls.Add(tTol, 1, 4);
             cGhi.Dock = DockStyle.Fill; cCat.Dock = DockStyle.Fill; GiaoDien.Gian(cGhi); GiaoDien.Gian(cCat);
-            tg.Controls.Add(cGhi, 0, 4); tg.SetColumnSpan(cGhi, 2); tg.Controls.Add(cCat, 0, 5); tg.SetColumnSpan(cCat, 2);
+            int rr = 5; foreach (var q in new[] { cGhi, cPhap, cDt, cMdsd, cChu, cCat }) { tg.Controls.Add(q, 0, rr++); tg.SetColumnSpan(q, 2); }
             new ToolTip().SetToolTip(tTo, "Số tờ dùng để liên kết thửa với tệp thuộc tính. Để trống: theo tên tờ bản đồ (" + (Dc.ToTheoTen() != "" ? "tờ " + Dc.ToTheoTen() : "tên tệp không có số tờ") + ").");
             nG.Than.Controls.Add(tg);
             // đọc nhãn
@@ -149,7 +151,9 @@ namespace M8Pro
             tn.Controls.Add(LN("Level chữ nhãn (cách nhau dấu phẩy)"), 0, 0); tn.Controls.Add(tNhan, 1, 0);
             var gc = GiaoDien.Gian(new Label { Dock = DockStyle.Fill, ForeColor = Color.DimGray, Margin = new Padding(3, 6, 3, 3), Text = "Số thửa, loại đất, diện tích đọc từ nhãn nằm trong thửa (nhãn ô N_THUA hoặc chữ rời). Thửa không có nhãn để số thửa trống." });
             tn.Controls.Add(gc, 0, 1); tn.SetColumnSpan(gc, 2); nN.Than.Controls.Add(tn);
-            phai.Controls.Add(nN); phai.Controls.Add(new Panel { Dock = DockStyle.Top, Height = 6 }); phai.Controls.Add(nG);
+            var nT = new Nhom("Vẽ tâm thửa") { Dock = DockStyle.Top, Vua = true }; var tt = new TableLayoutPanel { Dock = DockStyle.Top, ColumnCount = 2, AutoSize = true }; tt.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100)); tt.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            tt.Controls.Add(LN("Level"), 0, 0); tt.Controls.Add(tTamLv, 1, 0); tt.Controls.Add(LN("Màu"), 0, 1); tt.Controls.Add(tTamMau, 1, 1); tt.Controls.Add(LN("Tỷ lệ cell"), 0, 2); tt.Controls.Add(tTamTl, 1, 2); tt.Controls.Add(cTam, 0, 3); tt.SetColumnSpan(cTam, 2); nT.Than.Controls.Add(tt);
+            phai.Controls.Add(nN); phai.Controls.Add(new Panel { Dock = DockStyle.Top, Height = 6 }); phai.Controls.Add(nT); phai.Controls.Add(new Panel { Dock = DockStyle.Top, Height = 6 }); phai.Controls.Add(nG);
             // dưới
             var bp = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 42, FlowDirection = FlowDirection.RightToLeft, Padding = new Padding(6, 4, 6, 4) };
             var ok = GiaoDien.Nut("Thực hiện", 100, true); var no = GiaoDien.Nut("Đóng", 84, false); no.DialogResult = DialogResult.Cancel;
@@ -164,8 +168,9 @@ namespace M8Pro
                 if (!GiaoDien.So(tTol.Text, out tol) || tol <= 0 || tol > 5) { MessageBox.Show(this, "Dung sai bắt nối ranh không hợp lệ (0 – 5 m).", Text); tTol.Focus(); return; }
                 var nhan = Cfg.Lvs(tNhan.Text); if (nhan.Count == 0) { MessageBox.Show(this, "Hãy nhập level chữ nhãn (ví dụ 13).", Text); tNhan.Focus(); return; }
                 var to = tTo.Text.Trim(); if (to != "" && !System.Text.RegularExpressions.Regex.IsMatch(to, @"^\d+$")) { MessageBox.Show(this, "Số tờ bản đồ phải là số.", Text); tTo.Focus(); return; }
-                var c = Cfg.I; c.LvRanh = string.Join(",", Levels.Select(x => x.ToString(CultureInfo.InvariantCulture)).ToArray()); c.DtLe = cLe.SelectedIndex; c.BoVung = bo; c.Tol = tol;
-                c.GhiKhiTaoThua = cGhi.Checked; c.HoiCatTao = cCat.Checked; c.LvNhan = string.Join(",", nhan.Select(x => x.ToString(CultureInfo.InvariantCulture)).ToArray()); c.Save();
+                int tamLv, tamMau; double tamTl; if (!int.TryParse(tTamLv.Text, out tamLv) || tamLv < 0 || !int.TryParse(tTamMau.Text, out tamMau) || tamMau < 0 || !GiaoDien.So(tTamTl.Text, out tamTl) || tamTl <= 0) { MessageBox.Show(this, "Thông số vẽ tâm thửa không hợp lệ.", Text); return; }
+                var c = Cfg.I; c.LvRanh = string.Join(",", Levels.Select(x => x.ToString(CultureInfo.InvariantCulture)).ToArray()); c.DtLe = cLe.SelectedIndex; c.BoVung = bo; c.Tol = tol; c.LdMacDinh = cLd.Text.Trim().ToUpperInvariant();
+                c.GhiKhiTaoThua = cGhi.Checked; c.HoiCatTao = cCat.Checked; c.TaoLuuPhapLy = cPhap.Checked; c.TaoLuuDienTich = cDt.Checked; c.TaoCapNhatMdsd = cMdsd.Checked; c.TaoChuyenChu = cChu.Checked; c.TamLop = tamLv; c.TamMau = tamMau; c.TamTyLe = tamTl; c.LvNhan = string.Join(",", nhan.Select(x => x.ToString(CultureInfo.InvariantCulture)).ToArray()); c.Save();
                 // số tờ: trùng số theo tên tờ bản đồ thì để tự động theo tên
                 if (to != Dc.To) Dc.SetTo(to == Dc.ToTheoTen() ? "" : to);
                 DialogResult = DialogResult.OK;

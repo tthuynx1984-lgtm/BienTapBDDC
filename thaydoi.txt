@@ -12,3 +12,8 @@ PHIÊN BẢN 2026.11.24.2
 - Cố định cột Số tờ và Số thửa khi trượt ngang; thêm trường căn cước cho người 2, người 3 và các thành viên/đồng sử dụng.
 - Chuẩn hóa ô tích nét mảnh, chữ cùng hàng; thống nhất danh sách Level ở các hộp Tìm lỗi, Sửa lỗi tự động và Tạo thửa.
 - Hộp Thông tin thửa đất chia hai nửa, có nút ghi riêng cho thửa và người sử dụng.
+
+PHIÊN BẢN 2026.11.24.3
+- Hộp Tạo thửa đất: loại đất mặc định, lựa chọn lưu/cập nhật thông tin và vẽ tâm thửa theo level/màu/tỷ lệ.
+- Hộp Vẽ nhãn địa chính: tự động, bán tự động trong cùng hộp, thửa chưa có nhãn, xóa nhãn và chỉnh level/màu trực tiếp.
+- Bổ sung hộp Vẽ văn tự động, dùng chung bộ dựng nhãn thật của ứng dụng.

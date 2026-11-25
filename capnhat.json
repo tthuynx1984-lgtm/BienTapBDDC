@@ -1,15 +1,14 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.24.2",
+  "phienban": "2026.11.24.3",
   "ngay": "24/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.24.2.exe",
-  "kichthuoc": 3288075,
-  "sha256": "e65d5bc6d3b6b516809e8434b1df2a28f15928a279488f802c7228841affbe68",
+  "tep": "CaiDat_BienTapBDDC_2026.11.24.3.exe",
+  "kichthuoc": 3290293,
+  "sha256": "015e9d225d25dcc3a74843dd58778fcfa6fea2ab209b1dfb7e0d16bc3f018314",
   "thaydoi": [
-    "Bảng thuộc tính: tiêu đề cột một dòng, cột gọn theo nội dung, kéo giãn như Excel, tooltip tên đầy đủ.",
-    "Cố định cột Số tờ và Số thửa khi trượt ngang; thêm trường căn cước đầy đủ cho người sử dụng thứ 2 trở đi.",
-    "Chuẩn hóa ô tích nét mảnh, chữ cùng hàng; thống nhất danh sách Level ở các hộp Tìm lỗi, Sửa lỗi tự động và Tạo thửa.",
-    "Hộp Thông tin thửa đất chia hai nửa, có nút ghi riêng cho thửa và người sử dụng.",
-    "Giữ nguyên các chức năng và các nút hiện có; các hộp thoại co giãn, không cắt chữ."
+    "Bổ sung hộp Tạo thửa đất: loại đất mặc định, lưu/cập nhật thông tin và vẽ tâm thửa theo level, màu, tỷ lệ.",
+    "Hộp Vẽ nhãn địa chính có tự động, bán tự động chọn thửa trong cùng hộp, thửa chưa có nhãn, xóa nhãn và chỉnh level/màu.",
+    "Bổ sung chức năng riêng Vẽ văn tự động với các kiểu nhãn địa chính, một dòng, đa dòng và thửa phố.",
+    "Giữ nguyên các nút và luồng cũ; chuẩn hóa bố cục, ô tích, nhãn và nút thao tác."
   ]
 }

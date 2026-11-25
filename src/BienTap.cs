@@ -374,9 +374,9 @@ namespace M8Pro
                 Text = "Tổng diện tích cả tờ: " + Dc.F(tot, 1) + " m² = " + Dc.F(tot / 1e4, 4) + " ha\r\nTheo loại đất:" };
             var n = new Label { Dock = DockStyle.Bottom, Height = 22, Padding = new Padding(6, 2, 6, 0), ForeColor = Color.DimGray, Text = "Diện tích tính từ đường ranh vừa dựng (sơ bộ). Số liệu chính thức theo .gtp và nhãn thửa." };
             var bp = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 38, FlowDirection = FlowDirection.RightToLeft, Padding = new Padding(4) };
-            var ok = new Button { Text = "Đóng", Width = 90, DialogResult = DialogResult.OK }; bp.Controls.Add(ok); AcceptButton = ok; CancelButton = ok;
+            var ok = GiaoDien.Nut("Đóng", 90, true); ok.DialogResult = DialogResult.OK; bp.Controls.Add(ok); AcceptButton = ok; CancelButton = ok;
             // sửa thông tin thửa (cả loại đất chi tiết) rồi ghi ngay vào tệp thuộc tính
-            var ed = new Button { Text = "Sửa thông tin thửa…", AutoSize = true }; bp.Controls.Add(ed);
+            var ed = GiaoDien.Nut("Sửa thông tin thửa…", 150, false); bp.Controls.Add(ed);
             Func<Parcel> sel = () => L.SelectedItems.Count > 0 ? L.SelectedItems[0].Tag as Parcel : nw.FirstOrDefault();
             ed.Click += (s, e) => { Edit = sel(); if (Edit != null) { DialogResult = DialogResult.OK; } };
             L.DoubleClick += (s, e) => { Edit = sel(); if (Edit != null) DialogResult = DialogResult.OK; };
@@ -470,6 +470,8 @@ namespace M8Pro
             }
             var old = Dc.P.ToList(); bool had = old.Any(p => !p.Virtual && !p.FromGtp);
             var msg = Dc.Build(had); if (sc != "") msg = sc + " · " + msg; Msg(msg); if (Dc.P.Count == 0) return;
+            if (!string.IsNullOrWhiteSpace(Cfg.I.LdMacDinh)) foreach (var p in Dc.P.Where(x => !x.Virtual && string.IsNullOrEmpty(x.Ld))) p.Ld = Cfg.I.LdMacDinh;
+            if (Cfg.I.TamLop > 0) { var nt = Dc.DrawCenters(Dc.P); if (nt > 0) Msg(msg + " · Đã vẽ tâm " + nt + " thửa"); }
             // ghi ngay vào tệp thuộc tính: diện tích, tâm, hình thửa, đường ranh tạo thành thửa, thửa mới
             string gw = "";
             if (Dc.G != null && Cfg.I.GhiKhiTaoThua) { try { gw = Dc.SyncGtp(); Msg(msg + " · " + gw); } catch (Exception ex) { Program.Log(ex); gw = "Chưa ghi được vào tệp thuộc tính: " + ex.Message; Msg(gw); } }
@@ -481,15 +483,47 @@ namespace M8Pro
         {
             if (!NeedTopo()) return;
             string[] kieu = { "3 level 3 màu (chuẩn)", "3 dòng", "Phân số" };
-            var r = Ask.Show(this, "🏷 Vẽ nhãn thửa", new F("pv", "Phạm vi", "Tất cả thửa") { Opt = new[] { "Tất cả thửa", "Thửa chọn trên bản đồ", "Thửa chưa có nhãn" } },
-                new F("k", "Kiểu nhãn", kieu[(int)Cfg.I.Kieu]) { Opt = kieu }, new F("x", (Cfg.I.NhanCuLop > 0 ? "Nhãn cũ trong thửa chuyển sang level " + Cfg.I.NhanCuLop + " (không xoá" : "Xoá nhãn cũ trong thửa (") + "; chỉ chữ nhãn và gạch ngang của nhãn)", "1") { Check = true });
-            if (r == null) return; Cfg.I.Kieu = (KieuNhan)Array.IndexOf(kieu, r["k"]); Cfg.I.Save(); bool x = r["x"] == "1";
+            var r = Ask.Show(this, "Vẽ nhãn địa chính", new F("a", "Thao tác", "Vẽ nhãn") { Opt = new[] { "Vẽ nhãn", "Xóa nhãn" } }, new F("pv", "Cách vẽ", "Tự động – tất cả thửa") { Opt = new[] { "Tự động – tất cả thửa", "Bán tự động – chọn thửa trên bản đồ", "Chỉ vẽ thửa chưa có nhãn" } },
+                new F("k", "Loại nhãn", kieu[(int)Cfg.I.Kieu]) { Opt = kieu }, new F("h", "Chiều cao chữ (mm)", Cfg.I.HNhan.ToString(CultureInfo.InvariantCulture)), new F("le", "Số lẻ diện tích", Cfg.I.DtLe.ToString(CultureInfo.InvariantCulture)),
+                new F("so", "Số thửa – level/màu", Cfg.I.SoLop + "/" + Cfg.I.SoMau), new F("dt", "Diện tích – level/màu", Cfg.I.DtLop + "/" + Cfg.I.DtMau), new F("ld", "Loại đất – level/màu", Cfg.I.LdLop + "/" + Cfg.I.LdMau),
+                new F("small", "Thêm nhãn vào ô thửa nhỏ", "1") { Check = true }, new F("old", (Cfg.I.NhanCuLop > 0 ? "Chuyển nhãn cũ sang level " + Cfg.I.NhanCuLop : "Xoá nhãn cũ") , "1") { Check = true });
+            if (r == null) return; if (r["a"] == "Xóa nhãn") { if (NeedTopo() && Confirm("Xóa toàn bộ nhãn nằm trong các thửa?")) Msg("Đã xóa " + Dc.DeleteLabels() + " chữ nhãn"); return; }
+            double hh; int lle; if (!double.TryParse(r["h"], NumberStyles.Any, CultureInfo.InvariantCulture, out hh) || hh <= 0 || !int.TryParse(r["le"], out lle) || lle < 0 || lle > 3) { MessageBox.Show(this, "Chiều cao chữ hoặc số lẻ diện tích không hợp lệ.", Text); return; }
+            int sl, sm, dl, dm, ll, lm; if (!DocLvMau(r["so"], out sl, out sm) || !DocLvMau(r["dt"], out dl, out dm) || !DocLvMau(r["ld"], out ll, out lm)) { MessageBox.Show(this, "Level/màu nhãn phải có dạng level/màu, ví dụ 13/1.", Text); return; }
+            Cfg.I.Kieu = (KieuNhan)Array.IndexOf(kieu, r["k"]); Cfg.I.HNhan = hh; Cfg.I.DtLe = lle; Cfg.I.SoLop = sl; Cfg.I.SoMau = sm; Cfg.I.DtLop = dl; Cfg.I.DtMau = dm; Cfg.I.LdLop = ll; Cfg.I.LdMau = lm; Cfg.I.Save(); bool x = r["old"] == "1";
             string how = Cfg.I.Kieu == KieuNhan.Ba_lop_chuan ? " — số thửa level " + Cfg.I.SoLop + " màu " + Cfg.I.SoMau + ", loại đất level " + Cfg.I.LdLop + " màu " + Cfg.I.LdMau + ", diện tích level " + Cfg.I.DtLop + " màu " + Cfg.I.DtMau : "";
-            if (r["pv"].StartsWith("Thửa chọn")) { Pick("Chạm vào trong thửa cần vẽ nhãn", p => { Dc.DrawLabels(new[] { p }, x, Bt.GocNhan(new[] { p })); Msg("Đã vẽ nhãn thửa " + p.So + how + Dc.NhanCuBao()); }); return; }
-            var list = r["pv"].StartsWith("Thửa chưa") ? Dc.P.Where(p => !p.Virtual && p.Labels.Count == 0).ToList() : Dc.P.Where(p => !p.Virtual).ToList();
+            if (r["pv"].StartsWith("Bán tự động")) { Pick("Chạm vào trong thửa cần vẽ nhãn", p => { Dc.DrawLabels(new[] { p }, x, Bt.GocNhan(new[] { p })); Msg("Đã vẽ nhãn thửa " + p.So + how + Dc.NhanCuBao()); }); return; }
+            var list = r["pv"].StartsWith("Chỉ vẽ") ? Dc.P.Where(p => !p.Virtual && p.Labels.Count == 0).ToList() : Dc.P.Where(p => !p.Virtual).ToList();
             if (list.Count == 0) { Msg("Không có thửa nào cần vẽ nhãn"); return; }
             if (!Confirm("Vẽ nhãn cho " + list.Count + " thửa" + (x ? " (" + Dc.NhanCuMoTa + " trong thửa)" : "") + "?")) return;
             Dc.DrawLabels(list, x, list.Count <= 300 ? Bt.GocNhan(list) : null); Msg("Đã vẽ nhãn " + list.Count + " thửa" + how + Dc.NhanCuBao());
+        }
+        static bool DocLvMau(string s, out int lv, out int mau)
+        {
+            lv = mau = 0; var a = (s ?? "").Trim().Split('/'); return a.Length == 2 && int.TryParse(a[0], out lv) && int.TryParse(a[1], out mau) && lv >= 0 && mau >= 0;
+        }
+        // Vẽ văn tự động là chức năng riêng theo mẫu; không phải chế độ “Vẽ bán tự động” của hộp Vẽ nhãn địa chính.
+        // Các kiểu một dòng / đa dòng / thửa phố dùng bộ dựng văn tự thật; xoay theo cạnh đã được bộ đặt chữ xử lý.
+        void BtVanTu()
+        {
+            if (!NeedTopo()) return;
+            var kieu = new[] { "Nhãn địa chính", "Một dòng", "Đa dòng", "Thửa phố" };
+            var r = Ask.Show(this, "Vẽ văn tự động", new F("k", "Loại văn", kieu[0]) { Opt = kieu },
+                new F("pv", "Phạm vi", "Tất cả thửa") { Opt = new[] { "Tất cả thửa", "Thửa chọn trên bản đồ", "Thửa chưa có nhãn" } },
+                new F("xoay", "Xoay theo cạnh thửa khi thửa hẹp", "1") { Check = true },
+                new F("doi", "Tự động đối chiếu chữ và diện tích", "1") { Check = true },
+                new F("h", "Kích thước chữ (mm)", Cfg.I.HNhan.ToString(CultureInfo.InvariantCulture)),
+                new F("kc", "Khoảng cách dòng (mm)", "1") );
+            if (r == null) return;
+            double h, kc; if (!double.TryParse(r["h"], NumberStyles.Any, CultureInfo.InvariantCulture, out h) || h <= 0 || !double.TryParse(r["kc"], NumberStyles.Any, CultureInfo.InvariantCulture, out kc) || kc < 0) { MessageBox.Show(this, "Kích thước hoặc khoảng cách không hợp lệ.", Text); return; }
+            if (r["k"] == "Nhãn địa chính") { BtLabels(); return; }
+            var old = Cfg.I.Kieu; Cfg.I.HNhan = h; Cfg.I.Kieu = r["k"] == "Một dòng" || r["k"] == "Thửa phố" ? KieuNhan.Ba_dong : KieuNhan.Ba_dong; Cfg.I.Save();
+            Action<Parcel> one = p => { Dc.DrawLabels(new[] { p }, true); Msg("Đã vẽ văn tự động cho thửa " + p.So + Dc.NhanCuBao()); };
+            if (r["pv"].StartsWith("Thửa chọn")) { Pick("Chạm vào thửa cần vẽ văn", one); return; }
+            var ds = r["pv"].StartsWith("Thửa chưa") ? Dc.P.Where(p => !p.Virtual && p.Labels.Count == 0).ToList() : Dc.P.Where(p => !p.Virtual).ToList();
+            if (ds.Count == 0) { Msg("Không có thửa nào cần vẽ văn"); Cfg.I.Kieu = old; Cfg.I.Save(); return; }
+            if (!Confirm("Vẽ văn tự động cho " + ds.Count + " thửa?")) { Cfg.I.Kieu = old; Cfg.I.Save(); return; }
+            Dc.DrawLabels(ds, true); Cfg.I.Kieu = old; Cfg.I.Save(); Msg("Đã vẽ văn tự động cho " + ds.Count + " thửa" + Dc.NhanCuBao());
         }
         // Đăng ký / Hồ sơ / Kết xuất: lập bằng bộ mẫu M8 Mobile – bộ máy lập mẫu chạy ngầm trong công cụ, tệp lưu vào thư mục hồ sơ và mở ngay
         static readonly string[] DdTen = { "PDF – in, ký", "DGN V8 – mở bằng MicroStation, đúng toạ độ", "DGN V7", "DXF" }, DdMa = { "pdf", "dgn8", "dgn", "dxf" };

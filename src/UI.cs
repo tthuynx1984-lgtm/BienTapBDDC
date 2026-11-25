@@ -60,7 +60,7 @@ namespace M8Pro
                 if (x.Check) { t.Controls.Add(new Label()); t.Controls.Add(c); } else { t.Controls.Add(new Label { Text = x.L, AutoSize = true, Anchor = AnchorStyles.Left, Margin = new Padding(3, 7, 8, 3) }); t.Controls.Add(c); }
                 ctl[x.K] = c;
             }
-            var ok = new Button { Text = "Đồng ý", DialogResult = DialogResult.OK, Width = 90 }; var no = new Button { Text = "Hủy", DialogResult = DialogResult.Cancel, Width = 90 };
+            var ok = GiaoDien.Nut("Đồng ý", 90, true); ok.DialogResult = DialogResult.OK; var no = GiaoDien.Nut("Hủy", 90, false); no.DialogResult = DialogResult.Cancel;
             var bp = new FlowLayoutPanel { FlowDirection = FlowDirection.RightToLeft, AutoSize = true, Dock = DockStyle.Bottom }; bp.Controls.Add(no); bp.Controls.Add(ok);
             t.Controls.Add(new Label()); t.Controls.Add(bp); f.Controls.Add(t); f.AcceptButton = ok; f.CancelButton = no; GiaoDien.KhongCat(f);
             if (f.ShowDialog(owner) != DialogResult.OK) return null;
@@ -163,7 +163,7 @@ namespace M8Pro
         {
             var OLD = new List<KeyValuePair<string, It[]>> {
                 new KeyValuePair<string, It[]>("Hệ thống", new[] { new It { T = "Kết nối MicroStation", Ic = "plug", A = () => { if (Connect(true)) Msg("Đã kết nối: " + Ms.FileName + " – tờ số " + Dc.To); }, Map = false }, new It { T = "Ngắt kết nối MicroStation", Ic = "plug", A = Disconnect, Map = false }, new It { T = "Thiết lập (tờ bản đồ, level, nhãn…)", Ic = "gear", A = Setup, Map = false }, S(), new It { T = "Chẩn đoán kết nối và đọc dữ liệu", Ic = "search", A = Diagnose }, S(), new It { T = "Giới thiệu", Ic = "info", A = About, Map = false }, new It { T = "Đóng M8 Pro", Ic = "trash", A = Close, Map = false } }),
-                new KeyValuePair<string, It[]>("Thửa đất", new[] { I("Tạo thửa từ ranh", "polygon", () => { Msg(Dc.Build(false)); }), I("Chọn thửa trên bản đồ", "cursor", PickParcel), I("Thông tin thửa đất", "info", () => { if (Cur != null && Dc.P.Contains(Cur)) ShowParcel(Cur); else PickParcel(); }), I("Bảng thông tin thuộc tính", "table", ShowAttr), new It { T = "Tạo thửa theo hình trong tệp thuộc tính (.gtp)", Ic = "polygon", A = () => Msg(Dc.FromGtp()), Map = false } }),
+                new KeyValuePair<string, It[]>("Thửa đất", new[] { I("Tạo thửa từ ranh", "polygon", BtCreate), I("Chọn thửa trên bản đồ", "cursor", PickParcel), I("Thông tin thửa đất", "info", () => { if (Cur != null && Dc.P.Contains(Cur)) ShowParcel(Cur); else PickParcel(); }), I("Bảng thông tin thuộc tính", "table", ShowAttr), new It { T = "Tạo thửa theo hình trong tệp thuộc tính (.gtp)", Ic = "polygon", A = () => Msg(Dc.FromGtp()), Map = false } }),
                 new KeyValuePair<string, It[]>("Đo đạc", new[] { I("Triển điểm đo từ tệp toạ độ", "coord", TrienDiem), I("Nối điểm thành ranh thửa", "polygon", NoiDiem), S(), I("Chia thửa theo diện tích", "scissors", ChiaThua) }),
                 new KeyValuePair<string, It[]>("Kiểm tra", new[] { I("Tìm lỗi ranh và nhãn", "search", CheckErr), I("Sửa lỗi ranh tự động", "wrench", FixErr), S(), I("Đối chiếu nhãn với tệp thuộc tính", "search", DoiChieu), I("Cập nhật lại nhãn theo tệp thuộc tính", "refresh", CapNhatNhan) }),
                 new KeyValuePair<string, It[]>("Nhãn thửa", new[] { I("Vẽ nhãn tất cả thửa", "tag", () => { if (NeedTopo() && Confirm("Vẽ lại nhãn cho " + Dc.P.Count + " thửa (" + Dc.NhanCuMoTa + " trong thửa)?")) { Dc.DrawLabels(Dc.P, true); Msg("Đã vẽ nhãn " + Dc.P.Count + " thửa" + Dc.NhanCuBao()); } }),
@@ -186,7 +186,7 @@ namespace M8Pro
                     new It { T = "Gộp CSDL bản đồ và thuộc tính toàn xã (nhiều tờ, nhiều thư mục)…", Ic = "merge", A = GopToanXa, Map = false },
                     new It { T = "Thiết lập đơn vị hành chính…", Ic = "layers", A = DonViHanhChinh, Map = false }, O("Thiết lập (tờ bản đồ, level, nhãn…)"), new It { T = "Màu chủ đề thanh ứng dụng…", Ic = "palette", A = ChonChuDe, Map = false }, S(),
                     new It { T = "Mở thư mục hồ sơ", Ic = "folder", A = Web.OpenOutDir, Map = false }, O("Chẩn đoán kết nối và đọc dữ liệu"), S(), new It { T = "Cập nhật phiên bản mới…", Ic = "update", A = CapNhat.Mo, Map = false }, O("Giới thiệu"), new It { T = "Đóng " + Bt.Ten, Ic = "trash", A = Close, Map = false } }),
-                new KeyValuePair<string, It[]>("Bản đồ", new[] { I("Sửa lỗi tự động", "wrench", BtFix), I("Tìm và sửa lỗi", "search", BtCheck), I("Tạo thửa", "polygon", BtCreate), I("Vẽ nhãn", "tag", BtLabels), O("Bảng thông tin thuộc tính"), S(),
+                new KeyValuePair<string, It[]>("Bản đồ", new[] { I("Sửa lỗi tự động", "wrench", BtFix), I("Tìm và sửa lỗi", "search", BtCheck), I("Tạo thửa", "polygon", BtCreate), I("Vẽ nhãn", "tag", BtLabels), I("Vẽ văn tự động", "tag", BtVanTu), O("Bảng thông tin thuộc tính"), S(),
                     O("Tách thửa"), O("Hợp thửa"), O("Chia thửa theo diện tích"), S(), new It { T = AnhNen.TEN, Ic = "globe", A = () => AnhNen.BatTat(this) }, new It { T = AnhNen.TEN_TL, Ic = "gear", A = () => AnhNen.ThietLap(this, false), Map = false }, new It { T = "Mở Google Maps tại thửa (trình duyệt)", Ic = "globe", A = AnhGoogle },
                     new It { T = NenMau.TEN, Ic = "landbg", A = () => NenMau.BatTat(this) }, new It { T = NenMau.TEN_BM, Ic = "palette", A = () => NenMau.BangMau(this), Map = false } }),
                 new KeyValuePair<string, It[]>("Đăng ký", new[] { F_("hsdn", "Đơn đăng ký đất đai, tài sản gắn liền với đất (Mẫu số 15)", "pen", true), F_("hsck", "Danh sách công khai kết quả kiểm tra hồ sơ (Mẫu số 06/ĐK)", "list", false),
@@ -511,7 +511,7 @@ namespace M8Pro
             L("Lập hồ sơ: " + (Cfg.I.ChayNgam ? "chạy ngầm, " + Web.EngineInfo() : "cửa sổ hồ sơ riêng") + "; thư mục hồ sơ: " + Web.OutDir() + "; bộ mẫu: " + (Web.Html ?? "(thiếu BienTapBDDC.html)"));
             var f = new Form { Text = "Chẩn đoán – chụp màn hình hoặc bấm Sao chép rồi gửi tác giả", Width = 760, Height = 560, StartPosition = FormStartPosition.CenterScreen, TopMost = true };
             var t = new TextBox { Multiline = true, ReadOnly = true, ScrollBars = ScrollBars.Both, Dock = DockStyle.Fill, Font = new Font("Consolas", 9f), Text = sb.ToString(), WordWrap = false };
-            var b = new Button { Text = "Sao chép", Dock = DockStyle.Bottom, Height = 30 }; b.Click += (s2, e2) => { try { Clipboard.SetText(t.Text); b.Text = "Đã sao chép"; } catch { } };
+            var b = GiaoDien.Nut("Sao chép", 100, false); b.Dock = DockStyle.Bottom; b.Click += (s2, e2) => { try { Clipboard.SetText(t.Text); b.Text = "Đã sao chép"; } catch { } };
             f.Controls.Add(t); f.Controls.Add(b); f.ShowDialog(this);
         }
         void About() { MessageBox.Show(this, Bt.Ten + " – phiên bản " + CapNhat.Ngay + " (" + CapNhat.PhienBan + ")\n(nền M8 Pro Địa chính, kế thừa M8 Mobile)\nCông cụ biên tập bản đồ địa chính làm việc trực tiếp với MicroStation V8i.\n\nTác giả, bản quyền: Nguyễn Xuân Thủy", Text, MessageBoxButtons.OK, MessageBoxIcon.Information); }
@@ -1029,7 +1029,7 @@ namespace M8Pro
             g.Columns.Add("k", "Loại đất"); g.Columns.Add("n", "Tên loại đất"); g.Columns.Add("c", "Số thửa"); g.Columns.Add("a", "Diện tích (m²)"); g.Columns.Add("p", "%");
             double tot = Math.Max(Dc.P.Sum(p => p.Dt), 1e-9); foreach (var kv in Dc.StatLD()) g.Rows.Add(kv.Key, Dc.LoaiDat.ContainsKey(kv.Key) ? Dc.LoaiDat[kv.Key] : "", kv.Value[0], Dc.FD(kv.Value[1]), Dc.F(kv.Value[1] / tot * 100, 2));
             g.Rows.Add("Tổng", "", Dc.P.Count, Dc.FD(tot), "100");
-            var b = new Button { Text = "In bảng thống kê", Dock = DockStyle.Bottom, Height = 30 }; b.Click += (s, e) => Reports.ThongKe(); Controls.Add(g); Controls.Add(b);
+            var b = GiaoDien.Nut("In bảng thống kê", 130, true); b.Dock = DockStyle.Bottom; b.Click += (s, e) => Reports.ThongKe(); Controls.Add(g); Controls.Add(b);
         }
     }
 }

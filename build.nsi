@@ -1,16 +1,16 @@
 ﻿Unicode true
 RequestExecutionLevel admin
 Name "Biên Tập Bản Đồ Địa Chính"
-OutFile "CaiDat_BienTapBDDC_2026.11.24.2.exe"
+OutFile "CaiDat_BienTapBDDC_2026.11.24.3.exe"
 InstallDir "$PROGRAMFILES32\BienTapBDDC"
 InstallDirRegKey HKLM "Software\BienTapBDDC" "ThuMuc"
 Icon "app.ico"
 
-VIProductVersion "2026.11.24.2.0"
+VIProductVersion "2026.11.24.3.0"
 VIAddVersionKey /LANG=1040 "ProductName" "Biên Tập Bản Đồ Địa Chính"
 VIAddVersionKey /LANG=1040 "CompanyName" "Nguyễn Xuân Thủy"
 VIAddVersionKey /LANG=1040 "FileDescription" "Công cụ biên tập bản đồ địa chính cho MicroStation V8i"
-VIAddVersionKey /LANG=1040 "FileVersion" "2026.11.24.2"
+VIAddVersionKey /LANG=1040 "FileVersion" "2026.11.24.3"
 VIAddVersionKey /LANG=1040 "LegalCopyright" "Nguyễn Xuân Thủy"
 
 !include "MUI2.nsh"
@@ -18,7 +18,7 @@ VIAddVersionKey /LANG=1040 "LegalCopyright" "Nguyễn Xuân Thủy"
 !define MUI_ICON "app.ico"
 !define MUI_UNICON "app.ico"
 !define MUI_WELCOMEPAGE_TITLE "Biên Tập Bản Đồ Địa Chính"
-!define MUI_WELCOMEPAGE_TEXT "Cài đặt phiên bản 2026.11.24.2 cho MicroStation V8i.$\r$\n$\r$\nHãy lưu bản vẽ và đóng MicroStation trước khi cài."
+!define MUI_WELCOMEPAGE_TEXT "Cài đặt phiên bản 2026.11.24.3 cho MicroStation V8i.$\r$\n$\r$\nHãy lưu bản vẽ và đóng MicroStation trước khi cài."
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
@@ -52,13 +52,13 @@ Section "BienTapBDDC" SecMain
   FileClose $0
 
   ; BTBCaiDat biên dịch add-in với các DLL Bentley có trên máy người dùng.
-  ExecWait '"$INSTDIR\BTBCaiDat.exe" /caidat "$INSTDIR" /ban 2026.11.24.2 /cu "$INSTDIR" /chitiet "$INSTDIR\chitiet.txt"' $1
+  ExecWait '"$INSTDIR\BTBCaiDat.exe" /caidat "$INSTDIR" /ban 2026.11.24.3 /cu "$INSTDIR" /chitiet "$INSTDIR\chitiet.txt"' $1
 
   SetRegView 32
   WriteRegStr HKLM "Software\BienTapBDDC" "ThuMuc" "$INSTDIR"
-  WriteRegStr HKLM "Software\BienTapBDDC" "PhienBan" "2026.11.24.2"
+  WriteRegStr HKLM "Software\BienTapBDDC" "PhienBan" "2026.11.24.3"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BienTapBDDC" "DisplayName" "Biên Tập Bản Đồ Địa Chính"
-  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BienTapBDDC" "DisplayVersion" "2026.11.24.2"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BienTapBDDC" "DisplayVersion" "2026.11.24.3"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BienTapBDDC" "Publisher" "Nguyễn Xuân Thủy"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BienTapBDDC" "InstallLocation" "$INSTDIR"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BienTapBDDC" "UninstallString" '"$INSTDIR\GoCaiDat.exe"'

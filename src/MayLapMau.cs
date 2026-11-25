@@ -279,8 +279,8 @@ namespace M8Pro
             {
                 var lb = new Label { Text = msg, AutoSize = true, MaximumSize = new Size(460, 0), Location = new Point(12, 12) }; f.Controls.Add(lb);
                 var sz = lb.GetPreferredSize(new Size(460, 0)); var tb = new TextBox { Text = def ?? "", Location = new Point(12, 20 + sz.Height), Width = 460, Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right }; f.Controls.Add(tb);
-                var ok = new Button { Text = "Đồng ý", DialogResult = DialogResult.OK, Size = new Size(90, 28), Location = new Point(282, tb.Bottom + 12), Anchor = AnchorStyles.Top | AnchorStyles.Right };
-                var no = new Button { Text = "Hủy", DialogResult = DialogResult.Cancel, Size = new Size(90, 28), Location = new Point(382, tb.Bottom + 12), Anchor = AnchorStyles.Top | AnchorStyles.Right };
+                var ok = GiaoDien.Nut("Đồng ý", 90, true); ok.DialogResult = DialogResult.OK; ok.Location = new Point(282, tb.Bottom + 12); ok.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+                var no = GiaoDien.Nut("Hủy", 90, false); no.DialogResult = DialogResult.Cancel; no.Location = new Point(382, tb.Bottom + 12); no.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 f.Controls.Add(ok); f.Controls.Add(no); f.AcceptButton = ok; f.CancelButton = no; f.ClientSize = new Size(484, ok.Bottom + 12);
                 f.Shown += (s, e) => { tb.Focus(); tb.SelectAll(); };
                 return f.ShowDialog(Owner()) == DialogResult.OK ? tb.Text : null;
@@ -340,7 +340,7 @@ namespace M8Pro
                 int pick = -1;
                 for (int i = btns.Count - 1; i >= 0; i--)
                 {
-                    var bd = btns[i] as Dictionary<string, object>; var bt = new Button { Text = MiniJson.S(bd, "t"), AutoSize = true, MinimumSize = new Size(90, 28) }; int ix = i;
+                    var bd = btns[i] as Dictionary<string, object>; var bt = GiaoDien.Nut(MiniJson.S(bd, "t"), 100, MiniJson.B(bd, "p")); int ix = i;
                     bt.Click += (s, e) => { pick = ix; f.DialogResult = DialogResult.OK; };
                     if (MiniJson.B(bd, "p")) { bt.Font = new Font(fnt, FontStyle.Bold); f.AcceptButton = bt; }
                     if (MiniJson.B(bd, "c")) f.CancelButton = bt;

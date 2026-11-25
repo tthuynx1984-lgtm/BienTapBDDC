@@ -12,7 +12,7 @@ namespace M8Pro
 {
     public static class CapNhat
     {
-        public const string PhienBan = "2026.11.24.2";   // số phiên bản: so với tệp capnhat.json trên mạng để biết có bản mới
+        public const string PhienBan = "2026.11.24.3";   // số phiên bản: so với tệp capnhat.json trên mạng để biết có bản mới
         public const string Ngay = "24/11/2026";
         static Mutex dauHieu;
         // dấu hiệu "công cụ đã nạp vào MicroStation" cho trình khởi động (khỏi nạp lần hai)

@@ -94,7 +94,7 @@ namespace M8Pro
         RadioButton rSame = new RadioButton { AutoSize = true }, rDir = new RadioButton { Text = "Tệp khác trong cùng thư mục:", AutoSize = true },
             rPick = new RadioButton { Text = "Tệp ở thư mục khác:", AutoSize = true }, rNone = new RadioButton { Text = "Không kết nối – chỉ làm việc với bản đồ", AutoSize = true };
         ComboBox cDir = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Width = 300 };
-        TextBox tPick = new TextBox { Width = 300, ReadOnly = true }; Button bPick = new Button { Text = "Chọn…", Width = 80 };
+        TextBox tPick = new TextBox { Width = 300, ReadOnly = true }; Button bPick = GiaoDien.Nut("Chọn…", 80, false);
         Label info = new Label { Dock = DockStyle.Top, Height = 64, Padding = new Padding(8, 6, 8, 4), BorderStyle = BorderStyle.FixedSingle, BackColor = Color.FromArgb(246, 248, 251) };
         CheckBox cAsk = new OTich { Dock = DockStyle.Top, Height = 28, Text = "Hỏi lại mỗi khi mở tờ bản đồ (bỏ chọn: lần sau tự kết nối tệp đã chọn cho tờ đó)", Padding = new Padding(8, 0, 0, 0) };
         public GtpConnForm(string dgn, string cur, string mem, bool auto)
@@ -117,7 +117,7 @@ namespace M8Pro
             var gb = new GroupBox { Dock = DockStyle.Top, Height = 150, Text = "Tệp thuộc tính dùng cho tờ bản đồ này", Padding = new Padding(4) }; gb.Controls.Add(t);
             t.SizeChanged += (s, e) => gb.Height = Math.Max(150, t.Height + 26);   // khung cao theo các dòng (tên tệp dài xuống dòng)
             var bp = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 42, FlowDirection = FlowDirection.RightToLeft, Padding = new Padding(6) };
-            var ok = new Button { Text = "Kết nối", Width = 100 }; var no = new Button { Text = "Bỏ qua", Width = 90, DialogResult = DialogResult.Cancel };
+            var ok = GiaoDien.Nut("Kết nối", 100, true); var no = GiaoDien.Nut("Bỏ qua", 90, false); no.DialogResult = DialogResult.Cancel;
             bp.Controls.Add(no); bp.Controls.Add(ok); AcceptButton = ok; CancelButton = no;
             Controls.Add(cAsk); Controls.Add(info); Controls.Add(gb); Controls.Add(hd); Controls.Add(bp);
             // chọn sẵn: tệp đang kết nối → tệp đã chọn lần trước cho tờ này → tệp cùng tên → tệp khác cùng thư mục
@@ -196,8 +196,8 @@ namespace M8Pro
             var note = new Label { Dock = DockStyle.Top, Height = 58, Padding = new Padding(12, 4, 12, 0), ForeColor = Color.DimGray,
                 Text = "Từ 01/7/2025 chính quyền địa phương có 2 cấp: để trống Huyện nếu bản đồ, hồ sơ không ghi cấp huyện. Tên đơn vị dùng để in khung bản đồ, sổ sách và các mẫu trong cửa sổ hồ sơ; gõ thiếu cấp (xã, tỉnh…) công cụ tự thêm." };
             var bp = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 44, FlowDirection = FlowDirection.RightToLeft, Padding = new Padding(8) };
-            var ok = new Button { Text = "Lưu", Width = 90 }; var no = new Button { Text = "Hủy", Width = 80, DialogResult = DialogResult.Cancel };
-            var lay = new Button { Text = "Lấy theo tệp thuộc tính", AutoSize = true, Enabled = gtpInfo != null && gtpInfo.Count > 0 };
+            var ok = GiaoDien.Nut("Lưu", 90, true); var no = GiaoDien.Nut("Hủy", 80, false); no.DialogResult = DialogResult.Cancel;
+            var lay = GiaoDien.Nut("Lấy theo tệp thuộc tính", 170, false); lay.Enabled = gtpInfo != null && gtpInfo.Count > 0;
             if (gtpName != null) lay.Text += " (" + gtpName + ")";
             bp.Controls.Add(no); bp.Controls.Add(ok); bp.Controls.Add(lay); AcceptButton = ok; CancelButton = no;
             Controls.Add(note); Controls.Add(t); Controls.Add(bp);

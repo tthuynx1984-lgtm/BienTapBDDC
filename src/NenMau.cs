@@ -1,4 +1,4 @@
-// BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH – NỀN MÀU LOẠI ĐẤT dưới bản đồ DGN (bật / tắt). © Nguyễn Xuân Thủy
+﻿// BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH – NỀN MÀU LOẠI ĐẤT dưới bản đồ DGN (bật / tắt). © Nguyễn Xuân Thủy
 // Tô mỗi thửa đúng màu loại đất: bộ màu dịu (mặc định) hoặc màu chuẩn bản đồ hiện trạng (TT 08/2024/TT-BTNMT); mã loại đất cũ tự quy về mã mới;
 // sửa được màu từng mã.
 // Vẽ bằng phần tử tạm (transient) của chương trình bản vẽ, vẽ trước mọi đối tượng của bản vẽ: KHÔNG ghi gì vào tệp DGN, không vào Undo, không chọn,
@@ -558,12 +558,12 @@ namespace M8Pro
             lv.Columns.Add("Màu", 46); lv.Columns.Add("Mã", 56); lv.Columns.Add("Loại đất", 310); lv.Columns.Add("R, G, B", 96); lv.Columns.Add("Số thửa", 66, HorizontalAlignment.Right);
             lv.SmallImageList = il; lv.DoubleClick += (s, e) => DoiMau(); lv.KeyDown += (s, e) => { if (e.KeyCode == Keys.Enter) DoiMau(); };
             var bp = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 42, FlowDirection = FlowDirection.RightToLeft, Padding = new Padding(6) };
-            var bDong = new Button { Text = "Đóng", AutoSize = true, DialogResult = DialogResult.OK };
-            var bHet = new Button { Text = "Màu mặc định cho tất cả", AutoSize = true };
+            var bDong = GiaoDien.Nut("Đóng", 90, false); bDong.DialogResult = DialogResult.OK;
+            var bHet = GiaoDien.Nut("Màu mặc định cho tất cả", 180, false);
             bHet.Click += (s, e) => { if (MessageBox.Show(this, "Đưa tất cả mã loại đất về màu mặc định của " + MauLoaiDat.TenNgan[MauLoaiDat.Bo] + "?", Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) { MauLoaiDat.MacDinhHet(); Nap(); } };
-            var bMot = new Button { Text = "Màu mặc định mã này", AutoSize = true };
+            var bMot = GiaoDien.Nut("Màu mặc định mã này", 170, false);
             bMot.Click += (s, e) => { var l = Chon(); if (l != null) { MauLoaiDat.Dat(l.Ma, l.MacDinh); Nap(); } };
-            var bDoi = new Button { Text = "Đổi màu…", AutoSize = true }; bDoi.Click += (s, e) => DoiMau();
+            var bDoi = GiaoDien.Nut("Đổi màu…", 100, true); bDoi.Click += (s, e) => DoiMau();
             bp.Controls.AddRange(new Control[] { bDong, bHet, bMot, bDoi });
             Controls.Add(lv); Controls.Add(tt); Controls.Add(pb); Controls.Add(bp); AcceptButton = bDong; CancelButton = bDong;
             Nap();
