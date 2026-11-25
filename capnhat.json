@@ -1,13 +1,13 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.25.2",
+  "phienban": "2026.11.25.3",
   "ngay": "25/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026_11_25_2.exe",
-  "kichthuoc": 3291721,
-  "sha256": "f81506237d1a48bab385bd3030e1cae60230f6edf5fd76969e05ec741cc978d0",
+  "tep": "CaiDat_BienTapBDDC_2026_11_25_3.exe",
+  "kichthuoc": 3291858,
+  "sha256": "8e35dfe32af80314e743e8d618c7f1f1ae81f6c64228dc30474ee8dd530196f5",
   "thaydoi": [
-    "Xác nhận và sửa luồng liên kết Parcel với đúng thuaDatId trước khi đọc/ghi chủ sử dụng.",
-    "Đọc đúng chủ Nguyễn Văn Tuyển, Hoàng Thị Th… của tờ 208, thửa 4 từ DC208.gtp thật; xử lý tên cột và khóa DangKyThua không phân biệt hoa thường.",
-    "Giữ các sửa đổi giao diện, tách/hợp, Mẫu số 22 và cập nhật của bản 2026.11.25.1."
+    "Sửa tương thích Interop MicroStation V8i thật ở thao tác phóng to theo cửa sổ (Origin/Extents); mã nguồn đã biên dịch thành công với DLL V8i người dùng gửi.",
+    "Chuẩn hóa liên kết Parcel với đúng thuaDatId trước khi đọc/ghi chủ sử dụng; đọc đúng chủ từ DC208.gtp thật.",
+    "Giữ các sửa đổi giao diện, tách/hợp, Mẫu số 22 và cập nhật của bản 2026.11.25.2."
   ]
 }
