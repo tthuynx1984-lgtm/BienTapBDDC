@@ -1,9 +1,0 @@
-HƯỚNG DẪN PHÁT HÀNH BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH
-
-1. Đóng MicroStation V8i trước khi cài.
-2. Chạy tệp CaiDat_BienTapBDDC_2026_11_25_1.exe bằng quyền quản trị.
-3. Bộ cài tự đưa mã nguồn và công cụ biên dịch vào thư mục cài đặt.
-4. Mở MicroStation V8i rồi chạy Biên Tập BĐĐC.
-5. Trong ứng dụng, chọn Cập nhật phiên bản mới để kiểm tra capnhat.json.
-
-Lưu ý: chưa kiểm thử trực tiếp trên MicroStation V8i thật trong môi trường phát triển; cần kiểm tra lại trên máy cơ quan trước khi dùng dữ liệu sản xuất.
