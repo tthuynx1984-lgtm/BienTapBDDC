@@ -1,0 +1,13 @@
+{
+  "ten": "Biên Tập BĐĐC",
+  "phienban": "2026.11.25.1",
+  "ngay": "25/11/2026",
+  "tep": "CaiDat_BienTapBDDC_2026.11.25.1.exe",
+  "kichthuoc": 3291077,
+  "sha256": "f079f421a92e1c67e3f4ce9a0f3a4f4c8457e1cded70e70d9dc95cef02793ecc",
+  "thaydoi": [
+    "Sửa ghi thửa đất và ghi người sử dụng; đọc dự phòng chủ từ dòng GRow khi tệp .gtp chưa có liên kết DangKyThua.",
+    "Sửa tương thích CLR/.NET của MicroStation V8i và chặn lỗi null khi tệp thiếu bảng hoặc chưa có tọa độ tâm thửa.",
+    "Sửa hộp tách/hợp để nút thao tác không bị cắt; tách riêng ô chọn level và màu tâm thửa."
+  ]
+}
