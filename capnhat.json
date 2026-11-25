@@ -1,17 +1,16 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.24.1",
-  "ngay": "24/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.24.1.exe",
-  "kichthuoc": 3272670,
-  "sha256": "eecf7b8605bc29059b0ca14f440c984bf9b217c6203d5e40209359fed9b29aab",
+  "phienban": "2026.11.25",
+  "ngay": "25/11/2026",
+  "tep": "CaiDat_BienTapBDDC_2026.11.25.exe",
+  "kichthuoc": 1986515,
+  "sha256": "965885ef56a7f7058eb4142d36d8d97d46afeb13b36afc5ca20e59f49ab8b053",
   "thaydoi": [
-    "Kết nối tệp thuộc tính độc lập (Hệ thống, hoặc Hồ sơ toàn xã → Bảng thuộc tính toàn xã; gộp CSDL xong hỏi kết nối luôn): không cần bản đồ ứng với tệp, bảng thuộc tính hiện đủ mọi tờ, mọi thửa của tệp toàn xã, lọc theo tờ, sửa lưu thẳng vào tệp.",
-    "Vẽ nhãn thửa như ô nhãn N_THUA của phần mềm địa chính: gạch ngang nằm đúng giữa số thửa và diện tích, hai chữ canh giữa theo gạch, gạch dài theo chữ diện tích, loại đất sát bên trái; Sơ đồ thửa đất cùng bố cục.",
-    "Bản đồ thiếu lớp (ví dụ lớp 2, lớp 4) thì công cụ tự tạo lớp tên chuẩn \"Level N\" rồi vẽ đủ các phần nhãn, không bỏ trống.",
-    "Nền màu loại đất hiển thị trên lớp Default, chỉ hiển thị, không vẽ phần tử vào bản đồ, không tạo lớp mới.",
-    "Mọi hộp thoại co giãn được và không cắt chữ: chữ dài tự xuống dòng, cột bảng vừa chữ dài nhất, đường dẫn và tên mẫu hồ sơ ghi đủ, thanh lệnh hẹp thì xuống hàng.",
-    "Chuẩn hóa nút thao tác: nút chính in đậm, kích thước tối thiểu dễ bấm, giữ nguyên toàn bộ lệnh và bí danh key-in hiện có.",
-    "Không sao chép mã nguồn, thư viện, biểu tượng hoặc tài nguyên độc quyền của phần mềm khác; chỉ tham khảo quy trình nghiệp vụ công khai."
+    "Bảng thông tin thuộc tính: bỏ cột DT bản đồ; diện tích viết với dấu chấm thập phân; số tờ và số thửa luôn hiện khi cuộn ngang.",
+    "Bảng thông tin thuộc tính: có giấy tờ tuỳ thân của chủ sử dụng (loại, số, ngày cấp, ngày hết hạn, nơi cấp); người thứ 2 trở đi có nhóm cột riêng cùng bộ trường, tự hiện khi thửa có nhiều người.",
+    "Thông tin thửa đất: chia hai nửa – bên trái thông tin thửa, hình thức sử dụng và mục đích; bên phải người sử dụng đất với đủ trường cá nhân và giấy tờ; chọn hình thức thì tự thêm đủ người.",
+    "Hồ sơ thửa: bỏ nút \"Thửa đang chọn\", còn nút \"Chọn thửa trên bản đồ\".",
+    "Đổi tên \"Lớp\" thành \"Level\" trên mọi hộp thoại, bảng và thông báo.",
+    "Các hộp thoại dùng chung một kiểu nút: xác nhận bên trái, Huỷ bên phải; nền và chữ như hộp thoại Windows; bỏ hộp thoại trùng không còn dùng."
   ]
 }
