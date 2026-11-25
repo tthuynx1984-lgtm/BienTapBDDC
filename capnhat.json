@@ -1,0 +1,16 @@
+{
+  "ten": "Biên Tập BĐĐC",
+  "phienban": "2026.11.17",
+  "ngay": "17/11/2026",
+  "tep": "CaiDat_BienTapBDDC_2026.11.17.exe",
+  "kichthuoc": 1862335,
+  "sha256": "e2e1caa3d3ca9e9b5929b778f8f45e8e7336c99bc11d03eb6066e151bc607001",
+  "thaydoi": [
+    "Bộ cài đặt CaiDat_BienTapBDDC_….exe: biểu tượng Biên Tập BĐĐC trên màn hình nền và menu Start, gỡ cài đặt trong Cài đặt của Windows.",
+    "Mở Biên Tập BĐĐC → chọn tờ bản đồ: MicroStation V8i mở tờ đó và nạp sẵn công cụ; MicroStation đang mở thì mở tờ trong phiên đang chạy.",
+    "Nút Cập nhật phiên bản mới (cửa sổ Biên Tập BĐĐC và menu Hệ thống của công cụ): tải bản mới, kiểm tra tệp, cài rồi hiện báo cáo cập nhật.",
+    "Biểu tượng lệnh dưới menu chính vẽ lại nét mảnh, hai tông màu; mỗi lệnh trên thanh công cụ có biểu tượng riêng.",
+    "Logo Biên Tập Bản Đồ mới cho ứng dụng, bộ cài và cửa sổ công cụ.",
+    "Chuột phải tệp .dgn → Mở bằng Biên Tập BĐĐC."
+  ]
+}

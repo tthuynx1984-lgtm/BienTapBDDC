@@ -1,0 +1,117 @@
+﻿HƯỚNG DẪN PHÁT HÀNH PHIÊN BẢN MỚI – BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH (dành cho tác giả)
+Mục đích: lưu bản mới đúng chỗ để người dùng bấm "Cập nhật phiên bản mới" là có ngay bản mới, kèm báo cáo
+cập nhật. Tác giả: Nguyễn Xuân Thủy.
+
+A. NÚT CẬP NHẬT LẤY BẢN MỚI Ở ĐÂU
+   - Mọi máy đã cài Biên Tập BĐĐC đọc tệp capnhat.json ở địa chỉ (mặc định, ghi sẵn trong chương trình):
+         https://tthuynx1984-lgtm.github.io/BienTapBDDC/capnhat.json
+     tức trang GitHub Pages của kho BienTapBDDC trong tài khoản GitHub tthuynx1984-lgtm (tài khoản đang có
+     trang M8v17).
+   - capnhat.json ghi số phiên bản mới nhất, tên bộ cài, dung lượng, mã kiểm tra SHA-256 và những điểm mới.
+     Số trên mạng LỚN HƠN số trên máy → nút Cập nhật tải bộ cài nằm cùng chỗ với capnhat.json, kiểm tra
+     dung lượng + SHA-256, nhắc đóng MicroStation, cài lặng rồi hiện BÁO CÁO CẬP NHẬT.
+   - Vì vậy mỗi lần phát hành chỉ cần ĐƯA 2 TỆP LÊN CÙNG MỘT CHỖ:
+         CaiDat_BienTapBDDC_<số phiên bản>.exe     bộ cài
+         capnhat.json                               ghi đè tệp cũ
+     Hai tệp này phải của CÙNG MỘT LẦN ĐÓNG GÓI (mã SHA-256 trong capnhat.json khớp đúng tệp .exe đó).
+
+B. CHUẨN BỊ MỘT LẦN (khoảng 5 phút)
+   1) Đăng nhập github.com bằng tài khoản tthuynx1984-lgtm.
+   2) Góc trên bên phải bấm  +  → New repository:
+        • Repository name:  BienTapBDDC     (đúng từng chữ hoa, chữ thường)
+        • Public  (GitHub miễn phí chỉ mở trang Pages cho kho công khai)
+        • Bật "Add README" (để kho có sẵn nhánh main)
+      → Create repository.
+   3) Trong kho BienTapBDDC: Settings → cột trái chọn Pages → mục Build and deployment:
+        Source: Deploy from a branch   ·   Branch: main   ·   thư mục: / (root)   → Save.
+   4) Đưa lên lần đầu (cách đưa như mục C): CaiDat_BienTapBDDC_2026.11.17.exe, capnhat.json và index.html.
+      index.html là TRANG TẢI BỘ CÀI, chỉ cần đưa một lần: nó tự đọc capnhat.json nên luôn chỉ tới bản mới
+      nhất. Gửi người dùng mới địa chỉ:
+         https://tthuynx1984-lgtm.github.io/BienTapBDDC/
+   5) Nên bật xác thực hai lớp cho tài khoản GitHub (Settings → Password and authentication): ai vào được
+      tài khoản là phát hành được bộ cài tới mọi máy.
+
+C. MỖI LẦN CÓ PHIÊN BẢN MỚI (2–3 phút)
+   1) Nhận bộ phát hành: thư mục PhatHanh gồm CaiDat_BienTapBDDC_<số>.exe và capnhat.json.
+   2) Mở https://github.com/tthuynx1984-lgtm/BienTapBDDC → nút Add file → Upload files.
+   3) Kéo thả CẢ HAI tệp vào trang cùng một lần (capnhat.json cũ được thay) → ô Commit changes ghi
+      "Phiên bản <số>" → chọn "Commit directly to the main branch" → bấm Commit changes.
+   4) Chờ 1–2 phút (thẻ Actions có dấu ✓ xanh "pages build and deployment" là xong). Mở
+         https://tthuynx1984-lgtm.github.io/BienTapBDDC/capnhat.json
+      thấy "phienban": "<số mới>" là đã phát hành.
+   5) Thử trên một máy đang dùng bản cũ: Biên Tập BĐĐC → Cập nhật phiên bản mới → thấy "Có phiên bản mới …"
+      và những điểm mới → Cập nhật ngay → báo cáo "✓ Đã cập nhật lên phiên bản …".
+   Từ lúc đó mọi máy bấm Cập nhật phiên bản mới là nhận ngay bản mới (nút luôn hỏi thẳng trang mạng, không
+   dùng bản lưu tạm). Máy mở Biên Tập BĐĐC còn tự kiểm tra (nhiều nhất 4 giờ một lần) và hiện dải vàng
+   "Có phiên bản mới – bấm vào đây để cập nhật".
+
+   LƯU Ý
+   - Đưa .exe cùng lúc với capnhat.json (một lần Upload). Nếu capnhat.json lên trước mà .exe chưa có, máy
+     người dùng chỉ báo "Tải không được", không hỏng gì – đưa nốt .exe là xong.
+   - KHÔNG sửa "tep", "kichthuoc", "sha256" trong capnhat.json. Được sửa câu chữ trong "thaydoi" (những điểm
+     mới: mỗi điểm trong ngoặc kép, cách nhau dấu phẩy) và "ngay" bằng Notepad, lưu dạng UTF-8.
+   - Bộ cài các bản trước có thể để lại trong kho (lưu trữ) hoặc xoá cho gọn; nút Cập nhật chỉ dùng tệp ghi
+     trong capnhat.json.
+   - SỐ PHIÊN BẢN dạng NĂM.THÁNG.NGÀY, thêm .2, .3 nếu phát hành nhiều bản trong một ngày:
+         2026.11.17 → 2026.11.17.2 → 2026.11.18 …
+     Nút Cập nhật chỉ cài khi số trên mạng lớn hơn số trên máy, nên số luôn phải tăng.
+   - Muốn quay về bản trước: đóng gói lại mã nguồn bản trước với SỐ PHIÊN BẢN MỚI HƠN rồi phát hành như
+     trên (nút Cập nhật không hạ phiên bản).
+   - Kho công khai: ai cũng tải được các tệp trong kho. Chỉ đặt bộ cài, capnhat.json, index.html – không đặt
+     bản đồ, tệp .gtp, hồ sơ, danh sách chủ sử dụng. Bộ cài mang cả các giá trị mặc định của mẫu hồ sơ (ví
+     dụ tên chi nhánh in sẵn trên mẫu); không muốn công khai những giá trị đó thì phát hành bằng thư mục
+     dùng chung (mục D) thay cho GitHub.
+   - Tải lên bằng trình duyệt: mỗi tệp tối đa 25 MB (bộ cài hiện khoảng 2 MB).
+
+D. KHÔNG DÙNG GITHUB: THƯ MỤC DÙNG CHUNG TRONG CƠ QUAN (mạng nội bộ, máy không ra Internet)
+   1) Tạo thư mục chia sẻ, ví dụ  \\MAYCHU\PhanMem\BienTapBDDC  (người dùng chỉ cần quyền đọc).
+   2) Mỗi lần phát hành: chép CaiDat_BienTapBDDC_<số>.exe và capnhat.json vào thư mục đó (ghi đè
+      capnhat.json).
+   3) Trên từng máy, làm một lần: Biên Tập BĐĐC → Thiết lập → Nơi lấy phiên bản mới → gõ
+      \\MAYCHU\PhanMem\BienTapBDDC → Lưu. (Nút "Mặc định" quay lại địa chỉ GitHub.)
+   Dùng song song được: máy đặt thư mục chung lấy ở đó, máy khác lấy trên mạng.
+   Máy hoàn toàn không có mạng: chép bộ cài vào máy → Cập nhật phiên bản mới → "Cập nhật từ tệp cài đặt…"
+   (vẫn hiện báo cáo cập nhật).
+
+E. TỰ VIẾT capnhat.json (khi chỉ có tệp bộ cài)
+   - Mã SHA-256: mở PowerShell ở thư mục chứa bộ cài, gõ
+         Get-FileHash .\CaiDat_BienTapBDDC_2026.11.18.exe -Algorithm SHA256
+     chép chuỗi Hash (64 ký tự, chữ hoa hay thường đều được).
+   - Dung lượng: chuột phải bộ cài → Properties → Size, lấy số byte trong ngoặc (không lấy Size on disk).
+   - Mẫu (lưu bằng Notepad, mã hoá UTF-8, tên tệp capnhat.json):
+         {
+           "ten": "Biên Tập BĐĐC",
+           "phienban": "2026.11.18",
+           "ngay": "18/11/2026",
+           "tep": "CaiDat_BienTapBDDC_2026.11.18.exe",
+           "kichthuoc": 1860421,
+           "sha256": "…64 ký tự…",
+           "thaydoi": [
+             "Điểm mới thứ nhất.",
+             "Điểm mới thứ hai."
+           ]
+         }
+     "tep" là tên tệp nằm cùng chỗ với capnhat.json, hoặc địa chỉ đầy đủ https://…
+   - Thiếu "sha256", "kichthuoc" thì vẫn cập nhật được nhưng không kiểm tra được tệp – nên ghi đủ.
+
+F. ĐÓNG GÓI BẢN MỚI TỪ MÃ NGUỒN (người đóng gói)
+   - Thư mục caidat\ của mã nguồn có dong-goi.sh (chạy trên Linux hoặc WSL của Windows, cần mono-mcs, nsis,
+     python3):
+         ./dong-goi.sh 2026.11.18 18/11/2026
+     Lệnh tự ghi số phiên bản vào mọi chỗ trong mã (trình khởi động, trợ giúp cài, công cụ trong
+     MicroStation), dựng BienTapBDDC.exe, BTBCaiDat.exe, bộ cài và capnhat.json, chép index.html vào
+     caidat\out\. Đưa caidat\out\CaiDat_BienTapBDDC_<số>.exe và caidat\out\capnhat.json lên như mục C.
+   - Những điểm mới: sửa caidat\thaydoi.txt trước khi đóng gói (mỗi dòng một điểm, dòng bắt đầu bằng # bỏ
+     qua) – hiện trong bảng Cập nhật phiên bản mới, trang tải và báo cáo cập nhật.
+   - Công cụ trong MicroStation được dựng ngay trên máy người dùng lúc cài (đúng bản MicroStation của máy),
+     nên bộ cài mang mã nguồn src\ chứ không mang tệp .dll dựng sẵn.
+   - Bộ cài chưa có chữ ký số: người dùng tự tải bằng trình duyệt có thể gặp cảnh báo SmartScreen ("Thông
+     tin bổ sung" → "Vẫn chạy"); hộp hỏi quyền quản trị ghi "Nhà phát hành: Không xác định". Muốn hết cảnh
+     báo cần mua chứng thư ký mã (code signing) và ký bộ cài trước khi phát hành.
+
+G. NGƯỜI DÙNG THẤY GÌ KHI CẬP NHẬT
+   Bấm Cập nhật phiên bản mới → "Có phiên bản mới: 18/11/2026 (2026.11.18) · 1,8 MB" + những điểm mới →
+   Cập nhật ngay → tải (thanh tiến trình) → kiểm tra tệp → "Hãy lưu bản vẽ và đóng MicroStation" (nếu đang
+   mở) → Windows hỏi quyền: Yes → cài lặng → BÁO CÁO CẬP NHẬT: "✓ Đã cập nhật lên phiên bản 18/11/2026",
+   từ bản cũ lên bản mới, những điểm mới, kết quả từng bước, việc cần làm tiếp → "Mở Biên Tập BĐĐC".
+   Báo cáo lưu ở C:\ProgramData\BienTapBDDC\BaoCao; menu Start → Biên Tập BĐĐC → Báo cáo cài đặt, cập nhật.

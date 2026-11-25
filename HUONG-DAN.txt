@@ -1,0 +1,381 @@
+﻿BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH – công cụ biên tập bản đồ địa chính chạy trong MicroStation V8i
+Phiên bản 17/11/2026 (2026.11.17) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
+Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
+
+0. ĐIỂM MỚI CỦA BẢN NÀY (17/11/2026)
+   - CÓ BỘ CÀI ĐẶT CaiDat_BienTapBDDC_2026.11.17.exe: bấm đúp là cài, không phải chạy build.bat, cai-dat.bat.
+     Bộ cài tự tìm MicroStation V8i, dựng công cụ đúng với MicroStation trên máy, đặt vào MicroStation, tạo
+     biểu tượng Biên Tập BĐĐC trên màn hình nền và menu Start; gỡ trong phần Ứng dụng của Windows (mục 1).
+   - BIỂU TƯỢNG BIÊN TẬP BĐĐC TRÊN MÀN HÌNH NỀN: mở ra là cửa sổ chọn tờ bản đồ; chọn tờ → MicroStation V8i
+     mở tờ đó và nạp sẵn công cụ. Có danh sách tờ mở gần đây, kéo thả tệp .dgn, chuột phải tệp .dgn →
+     "Mở bằng Biên Tập BĐĐC" (mục 1b).
+   - NÚT CẬP NHẬT PHIÊN BẢN MỚI (cửa sổ Biên Tập BĐĐC, menu Hệ thống của công cụ, menu Biên tập BĐĐC của
+     MicroStation, menu Start, lệnh M8PRO CAPNHAT): kiểm tra, tải, kiểm tra tệp rồi cài bản mới; cập nhật
+     xong HIỆN BÁO CÁO CẬP NHẬT (mục 1c).
+   - Biểu tượng lệnh dưới menu chính vẽ lại nét mảnh, hai tông màu, cùng một kiểu; mỗi lệnh trên thanh công
+     cụ có biểu tượng riêng, sắc nét cả trên màn hình phóng to chữ.
+   - Logo mới cho cửa sổ công cụ, bộ cài và biểu tượng trên màn hình nền.
+
+0b. ĐIỂM MỚI CỦA BẢN 2026-11-16-c
+   - CÁC MẪU HỒ SƠ, KẾT XUẤT LẬP NGAY TRONG CÔNG CỤ: không còn mở cửa sổ hồ sơ riêng. Bộ mẫu chuẩn của
+     M8 Mobile chạy ngầm (Edge / Chrome không cửa sổ); hộp chọn của mẫu hiện bằng hộp thoại của công cụ;
+     mẫu cần chạm thửa thì chạm trên bản vẽ MicroStation; tệp kết quả lưu vào thư mục hồ sơ và mở ngay
+     (mục 5).
+   - Thửa chọn trên Bảng thuộc tính sáng lên trên bản đồ và ngược lại: chọn nhãn / ranh thửa trong
+     MicroStation thì bảng tự chuyển tới dòng của thửa đó (mục 7).
+   - Nhãn thửa vẽ ra là Ô (CELL) tên N_THUA gồm loại đất, số thửa, gạch ngang, diện tích – chọn, xoá, di
+     chuyển cả nhãn một lần. Nhãn dạng chữ rời cũ vẫn đọc, xoá, sửa được.
+   - Tạo thửa GHI NGAY VÀO TỆP .GTP: diện tích, tâm, hình thửa, các đường ranh tạo thành thửa (như phần mềm
+     địa chính), thêm thửa mới. Bảng tổng hợp sau khi tạo thửa có nút "Sửa thông tin thửa…" (mục 4.3).
+   - Bảng THÔNG TIN THỬA ĐẤT: sửa số thửa, diện tích pháp lý, địa chỉ, ghi chú, LOẠI ĐẤT CHI TIẾT (nhiều mục
+     đích, diện tích từng mục đích, mục đích chính, thời hạn), chủ sử dụng; nút Ghi cập nhật ngay vào .gtp.
+   - Nút Xem ảnh vệ tinh Google Maps tại thửa và Chỉ đường tới thửa (như M8 Mobile) trên thanh công cụ.
+   - Mở tờ bản đồ khác: công cụ nhận tờ mới nhanh hơn và tự kết nối .gtp của tờ mới (sửa lỗi bản trước).
+   - Tên công cụ: BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH. Tệp nạp vẫn là M8ProDiaChinh.dll, lệnh nạp không đổi.
+   - Thanh menu theo nghiệp vụ: Hệ thống · Bản đồ · Đăng ký · Hồ sơ · Kết xuất. Các lệnh còn lại là nút
+     độc lập trên thanh công cụ (rê chuột lên nút để xem tên lệnh).
+   - Menu Bản đồ viết lại: Sửa lỗi tự động (chọn lớp), Tìm và sửa lỗi (◀ ▶ đưa MicroStation tới từng
+     lỗi, sửa xong tự dò lại), Tạo thửa (chỉ tạo khi hết lỗi treo đỉnh, xong có bảng tổng hợp),
+     Vẽ nhãn (nhãn chuẩn 3 lớp 3 màu), Bảng thông tin thuộc tính.
+   - Menu Đăng ký, Hồ sơ, Kết xuất: lập theo bộ mẫu của M8 Mobile, chạy ngầm trong công cụ (mục 5).
+   - Mở tờ bản đồ trong MicroStation là hiện bảng KẾT NỐI TỆP THUỘC TÍNH (.gtp): tệp cùng tên, cùng thư mục
+     hoặc chọn tệp khác (mục 2b). Menu Hệ thống có thêm Kết nối tệp thuộc tính và Thiết lập đơn vị hành chính.
+   - Nhãn thửa mặc định là NHÃN CHUẨN 3 LỚP 3 MÀU: số thửa lớp 13 màu 1 (trên gạch ngang), loại đất
+     lớp 2 màu 2 (bên trái), diện tích lớp 4 màu 3 (dưới gạch). Lần nạp đầu tiên của bản này, thiết lập
+     nhãn cũ được đổi theo kiểu trên MỘT LẦN; điểm đo đang ở lớp 2 chuyển sang lớp 21 (lớp 2 dành cho
+     loại đất). Muốn khác: Hệ thống → Thiết lập → 3. Nhãn thửa và 4. Biên tập.
+
+1. CÀI ĐẶT (một lần)
+   - Lưu bản vẽ, đóng MicroStation. Bấm đúp CaiDat_BienTapBDDC_2026.11.17.exe → Windows hỏi cho phép thay
+     đổi máy: bấm Yes / Có → Tiếp → chọn thư mục cài (mặc định C:\Program Files (x86)\BienTapBDDC) → Cài
+     đặt. Bộ cài tự làm:
+       • tìm MicroStation V8i trên máy (máy có nhiều bản V8i thì đặt vào tất cả);
+       • dựng công cụ M8ProDiaChinh.dll đúng với MicroStation đó bằng trình biên dịch có sẵn trong Windows
+         (.NET Framework 4), chép vào …\MicroStation\mdlapps\ cùng bộ mẫu hồ sơ BienTapBDDC;
+       • đặt cách nạp: mở tờ bản đồ từ biểu tượng Biên Tập BĐĐC là công cụ nạp cùng tờ bản đồ;
+       • tạo biểu tượng Biên Tập BĐĐC trên màn hình nền; nhóm Biên Tập BĐĐC trong menu Start (Cập nhật
+         phiên bản mới · Báo cáo cài đặt, cập nhật · Hướng dẫn sử dụng · Gỡ cài đặt); mục "Mở bằng Biên Tập
+         BĐĐC" khi chuột phải tệp .dgn;
+       • ghi BÁO CÁO CÀI ĐẶT – hiện khi mở Biên Tập BĐĐC lần đầu.
+   - Windows hiện "Windows đã bảo vệ máy tính của bạn" (SmartScreen – bộ cài chưa có chữ ký số): bấm
+     "Thông tin bổ sung" (More info) → "Vẫn chạy" (Run anyway). Chỉ gặp khi chạy tệp tải bằng trình duyệt.
+   - Cần .NET Framework 4 (Windows 8, 10, 11 có sẵn; Windows 7 cài thêm .NET Framework 4.8 của Microsoft).
+   - Máy chưa có MicroStation V8i: cài MicroStation trước. Cài MicroStation sau Biên Tập BĐĐC, hoặc cài lại
+     MicroStation: mở Biên Tập BĐĐC → Thiết lập → "Cài công cụ vào MicroStation (sửa cài đặt)…".
+   - Đang dùng bản cũ cài bằng build.bat, cai-dat.bat: cứ chạy bộ cài, tệp cũ được thay, thiết lập của công
+     cụ giữ nguyên. Từ đó về sau chỉ cần bấm Cập nhật phiên bản mới (mục 1c).
+   - Gỡ ra: Cài đặt của Windows → Ứng dụng → BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH → Gỡ cài đặt (hoặc menu Start →
+     Biên Tập BĐĐC → Gỡ cài đặt Biên Tập BĐĐC). Thiết lập riêng của người dùng được giữ lại.
+   - Bộ mẫu hồ sơ chạy ngầm bằng Microsoft Edge (có sẵn trên Windows 10, 11) hoặc Google Chrome có trên
+     máy – không hiện cửa sổ trình duyệt, không đụng tới trình duyệt bạn đang dùng.
+   - Windows 7: đọc/ghi tệp .gtp trong MicroStation cần thêm sqlite3.dll bản 32-bit: chép vào thư mục cài
+     (C:\Program Files (x86)\BienTapBDDC) rồi Thiết lập → "Cài công cụ vào MicroStation (sửa cài đặt)…".
+   - CÁCH CŨ, KHÔNG DÙNG BỘ CÀI (dự phòng): giải nén thư mục mã nguồn (giữ nguyên thư mục con BienTapBDDC),
+     bấm đúp build.bat (tạo M8ProDiaChinh.dll nạp vào MicroStation và M8ProDiaChinh.exe chạy riêng), đóng
+     MicroStation, chuột phải cai-dat.bat → Run as administrator. Gỡ: go-cai-dat.bat (Run as administrator).
+     Báo lỗi biên dịch: chụp màn hình các dòng lỗi gửi tác giả.
+
+1b. MỞ TỜ BẢN ĐỒ BẰNG BIỂU TƯỢNG BIÊN TẬP BĐĐC (trên màn hình nền)
+   - Bấm đúp biểu tượng Biên Tập BĐĐC → cửa sổ "Chọn tờ bản đồ để làm việc":
+       • "Mở tờ bản đồ…": chọn tệp .dgn → MicroStation V8i mở tờ đó và NẠP SẴN công cụ (menu Biên tập BĐĐC,
+         cửa sổ công cụ, bảng kết nối tệp thuộc tính .gtp như mục 2b);
+       • "Tờ bản đồ mở gần đây": nhấp đúp (hoặc Enter) để mở lại; chuột phải → Mở thư mục chứa tờ bản đồ ·
+         Xoá khỏi danh sách (phím Delete);
+       • kéo thả tệp .dgn vào cửa sổ;
+       • "Mở MicroStation": chỉ mở MicroStation, chưa chọn tờ – công cụ vẫn được nạp.
+   - MicroStation đang mở: tờ được chọn mở ngay trong phiên MicroStation đó, công cụ được nạp nếu chưa có.
+   - Chuột phải tệp .dgn trong Windows → "Mở bằng Biên Tập BĐĐC" (Windows 11: chọn "Hiện thêm tùy chọn").
+   - Cửa sổ Biên Tập BĐĐC tự ẩn khi MicroStation đã hiện và tự đóng khi công cụ đã nạp (tắt ở Thiết lập).
+   - THIẾT LẬP (chữ xanh góc trên cửa sổ):
+       • Tệp chạy MicroStation V8i (ustation.exe): để trống là tự tìm; máy có nhiều bản thì chọn bản dùng.
+       • Tham số thêm khi mở MicroStation, ví dụ chọn người dùng, dự án:  -wuTEN -wpDUAN
+       • Nơi lấy phiên bản mới; Tự kiểm tra phiên bản mới khi mở Biên Tập BĐĐC (mục 1c).
+       • Cài công cụ vào MicroStation (sửa cài đặt)…: dựng và đặt lại công cụ, hiện báo cáo.
+       • Cách nạp công cụ…: LUÔN nạp mỗi khi mở MicroStation (kể cả mở bằng biểu tượng MicroStation, bấm đúp
+         tệp .dgn), hoặc chỉ nạp khi mở từ biểu tượng Biên Tập BĐĐC (mặc định). Mở MicroStation theo cách
+         khác mà công cụ chưa nạp: gõ  mdl load M8ProDiaChinh  (mục 2).
+
+1c. CẬP NHẬT PHIÊN BẢN MỚI, BÁO CÁO CẬP NHẬT
+   - Bấm "Cập nhật phiên bản mới" ở một trong các chỗ: cửa sổ Biên Tập BĐĐC · menu Hệ thống của công cụ ·
+     menu Biên tập BĐĐC của MicroStation · menu Start → Biên Tập BĐĐC · lệnh gõ M8PRO CAPNHAT.
+   - Bảng Cập nhật phiên bản mới kiểm tra ngay trên mạng. Có bản mới thì hiện ngày phát hành, dung lượng và
+     NHỮNG ĐIỂM MỚI → bấm "Cập nhật ngay":
+       1) tải bộ cài, kiểm tra đủ dung lượng và đúng mã SHA-256 (tệp hỏng, bị tráo thì không cài);
+       2) MicroStation đang mở thì nhắc lưu bản vẽ, đóng MicroStation – đóng xong việc cài tự tiếp tục;
+       3) Windows hỏi cho phép thay đổi máy: bấm Yes / Có (bộ cài chạy lặng, không phải bấm Tiếp);
+       4) HIỆN BÁO CÁO CẬP NHẬT: phiên bản cũ → mới, những điểm mới, kết quả từng bước (✓ tốt · ⚠ cần chú ý ·
+          ✗ lỗi), việc cần làm tiếp; bấm "Mở Biên Tập BĐĐC" để làm việc tiếp với bản mới.
+   - Mở Biên Tập BĐĐC là chương trình tự kiểm tra (nhiều nhất 4 giờ một lần, không làm phiền): có bản mới thì
+     hiện dải vàng "Có phiên bản mới … – bấm vào đây để cập nhật" ở đầu cửa sổ.
+   - Máy không vào mạng: chép bộ cài CaiDat_BienTapBDDC_….exe vào máy, bấm "Cập nhật từ tệp cài đặt…"
+     trong bảng Cập nhật phiên bản mới (hoặc bấm đúp bộ cài như mục 1). Vẫn có báo cáo.
+   - Cơ quan có thư mục dùng chung: Thiết lập → Nơi lấy phiên bản mới → gõ thư mục chứa capnhat.json và bộ
+     cài, ví dụ  \\MAYCHU\PhanMem\BienTapBDDC  (tác giả, quản trị xem HUONG-DAN-PHAT-HANH.txt).
+   - Xem lại báo cáo: menu Start → Biên Tập BĐĐC → Báo cáo cài đặt, cập nhật. Các báo cáo lưu ở
+     C:\ProgramData\BienTapBDDC\BaoCao (tên tệp BaoCao_<ngày>_<giờ>.txt) – gửi tác giả khi cần hỗ trợ.
+
+2. NẠP VÀO MICROSTATION
+   - Mở MicroStation V8i và tệp bản đồ (.dgn).
+   - Cách 1: gõ vào ô Key-in:   mdl load M8ProDiaChinh
+   - Cách 2: Utilities → MDL Applications → Browse… → chọn M8ProDiaChinh.dll → Load.
+   - Cách 3: mở tờ bản đồ bằng biểu tượng Biên Tập BĐĐC trên màn hình nền (mục 1b) – công cụ tự nạp. Muốn
+     công cụ nạp cả khi mở MicroStation theo cách khác: Biên Tập BĐĐC → Thiết lập → Cách nạp công cụ… → Có.
+   - Nạp xong: trên thanh menu MicroStation có menu "Biên tập BĐĐC" (cùng hàng File, Edit…) và cửa sổ
+     BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH (thanh menu + thanh công cụ). Nếu MicroStation không cho thêm mục vào
+     thanh menu, menu hiện thành nút "Biên tập BĐĐC ▾" ở CUỐI HÀNG MENU (góc phải), luôn đi theo cửa sổ
+     MicroStation. Chữ nút màu xanh = đang kết nối.
+   - Menu "Biên tập BĐĐC" của MicroStation: Mở công cụ · Kết nối lại với bản đồ đang mở · Ngắt kết nối ·
+     Sửa lỗi tự động · Tìm và sửa lỗi · Tạo thửa · Vẽ nhãn · Chọn thửa · Bảng thông tin thuộc tính ·
+     Kết nối tệp thuộc tính · Thiết lập đơn vị hành chính · Mở thư mục hồ sơ · Tách thửa · Gộp thửa ·
+     Phiếu PL17 · Trích lục PL19 ·
+     Thiết lập · Chẩn đoán kết nối · Cập nhật phiên bản mới · Đóng.
+   - NGẮT KẾT NỐI: đóng các bảng, giải phóng tệp .gtp (hỏi lưu nếu có sửa), thôi làm việc với bản đồ.
+     MicroStation và bản đồ không bị ảnh hưởng. Kết nối lại: menu Biên tập BĐĐC → Kết nối lại, hoặc nút
+     đầu thanh công cụ (nút này đổi qua lại Kết nối / Ngắt kết nối).
+   - Muốn khi nạp chỉ hiện menu, không bật cửa sổ: Thiết lập → 6. Khởi động → tắt "Mở cửa sổ…".
+   - Gỡ khỏi phiên làm việc: mdl unload M8ProDiaChinh
+
+   LỆNH GÕ (dùng trong ô Key-in, hoặc gắn vào menu / nút / phím F của MicroStation):
+     M8PRO MO        mở cửa sổ công cụ                 M8PRO NGAT      ngắt kết nối
+     M8PRO DONG      đóng công cụ                      M8PRO MENU      hiện lại menu Biên tập BĐĐC
+     M8PRO SUALOI    sửa lỗi tự động                   M8PRO KIEMTRA   tìm và sửa lỗi
+     M8PRO TAOTHUA   tạo thửa                          M8PRO VENHAN    vẽ nhãn
+     M8PRO BANG      bảng thông tin thuộc tính         M8PRO HOSO      mở thư mục hồ sơ
+     M8PRO PHIEU17   phiếu đo đạc chỉnh lý (PL 17)    M8PRO TRICHLUC  trích lục bản đồ (PL 19)
+     M8PRO SODO      sơ đồ thửa đất DGN 4 lớp          M8PRO CHONTHUA  chọn thửa trên bản đồ
+     M8PRO NHAN      vẽ nhãn thửa chọn                 M8PRO TACH      tách thửa
+     M8PRO GOP       gộp thửa                          M8PRO THIETLAP  thiết lập
+     M8PRO GTP       kết nối tệp thuộc tính (.gtp)     M8PRO DVHC      thiết lập đơn vị hành chính
+     M8PRO CAPNHAT   cập nhật phiên bản mới (mục 1c)
+
+   TẠO MENU CỐ ĐỊNH TRONG THANH MENU MICROSTATION (tuỳ chọn, làm một lần, lưu vĩnh viễn):
+     Workspace → Customize → thẻ Menu Bar → chọn tệp dgnlib của bạn (hoặc tạo mới) → New Menu đặt tên
+     "Biên tập BĐĐC" → thêm các mục (New Item), ô Key-in của mỗi mục điền lệnh gõ ở trên
+     (M8PRO SUALOI, M8PRO KIEMTRA, M8PRO TAOTHUA, M8PRO VENHAN…) → Save. Thẻ Tools để tạo thanh công cụ.
+     Khi đã có menu cố định: Thiết lập → 6. Khởi động → tắt "Hiện menu Biên tập BĐĐC".
+
+2b. KẾT NỐI TỆP THUỘC TÍNH (.gtp) KHI MỞ BẢN ĐỒ
+   - Mỗi khi MicroStation mở một tờ bản đồ (và lần đầu kết nối), công cụ hiện bảng "Kết nối tệp thuộc tính":
+       • Tệp cùng tên, cùng thư mục (ví dụ DC208.dgn → DC208.gtp) – chọn sẵn nếu có;
+       • Tệp khác trong cùng thư mục (danh sách các tệp .gtp ở đó);
+       • Tệp ở thư mục khác (nút Chọn…);
+       • Không kết nối – chỉ làm việc với bản đồ.
+     Chọn một tệp là hiện ngay số thửa, số thửa có chủ, các tờ, tên xã/tỉnh và ngày sửa của tệp để kiểm tra
+     đúng tệp trước khi bấm Kết nối. Bỏ qua: chưa kết nối, khi cần vào Hệ thống → Kết nối tệp thuộc tính.
+   - Lựa chọn được nhớ riêng cho từng tờ bản đồ; lần sau bảng chọn sẵn tệp đó. Bỏ dấu "Hỏi lại mỗi khi mở
+     tờ bản đồ" thì lần sau công cụ tự kết nối tệp đã chọn (hoặc tệp cùng tên), không hỏi; bật lại trong
+     Thiết lập → 7. Tệp thuộc tính → "Hỏi kết nối tệp thuộc tính khi mở bản đồ".
+   - Chuyển sang tờ khác: tệp thuộc tính của tờ trước được lưu (theo thiết lập lưu thẳng) và ngắt, để không nối
+     nhầm thửa. Tệp có nhiều tờ: công cụ hỏi tờ ứng với bản đồ đang mở.
+   - Đơn vị hành chính chưa thiết lập thì lấy theo tệp thuộc tính (tên xã, huyện, tỉnh, mã xã).
+   - Hệ thống → Ngắt kết nối tệp thuộc tính: lưu (hỏi nếu còn thay đổi chưa lưu) rồi ngắt.
+
+2c. THIẾT LẬP ĐƠN VỊ HÀNH CHÍNH (Hệ thống → Thiết lập đơn vị hành chính, hoặc gõ M8PRO DVHC)
+   - Tỉnh / thành phố (chọn trong danh sách 34 đơn vị cấp tỉnh hoặc gõ), Huyện / quận (để trống nếu không còn
+     dùng – từ 01/7/2025 chính quyền địa phương 2 cấp), Xã / phường / đặc khu, Mã đơn vị hành chính cấp xã,
+     Tờ bản đồ số (của tờ đang mở), Tỷ lệ, Kinh tuyến trục, Cơ quan in trên hồ sơ.
+   - Nút "Lấy theo tệp thuộc tính": điền tên xã, huyện, tỉnh, mã xã, số tờ theo tệp .gtp đang kết nối.
+   - Gõ thiếu cấp (ví dụ "Hợp Thịnh") công cụ tự thêm ("xã Hợp Thịnh"). Tên đơn vị dùng để vẽ khung bản đồ,
+     in sổ sách và in trên các mẫu hồ sơ (ô Đơn vị hành chính, Cơ quan).
+
+3. THANH MENU CỦA CÔNG CỤ
+   HỆ THỐNG  Kết nối · Ngắt kết nối · Kết nối tệp thuộc tính (.gtp) · Ngắt kết nối tệp thuộc tính ·
+             Thiết lập đơn vị hành chính · Thiết lập · Mở thư mục hồ sơ · Chẩn đoán · Cập nhật phiên bản
+             mới · Giới thiệu · Đóng.
+   BẢN ĐỒ    Sửa lỗi tự động · Tìm và sửa lỗi · Tạo thửa · Vẽ nhãn · Bảng thông tin thuộc tính (mục 4).
+   ĐĂNG KÝ   Đơn đăng ký đất đai, tài sản gắn liền với đất (Mẫu số 15) · Danh sách công khai kết quả kiểm
+             tra hồ sơ (Mẫu số 06/ĐK) · Kê khai đăng ký (Excel) · Bản mô tả ranh giới, mốc giới thửa đất
+             (Phụ lục 12) · Bảng tổng hợp diện tích, số thửa, số người sử dụng đất (Phụ lục 16).
+   HỒ SƠ     Sổ địa chính (Mẫu số 01/ĐK) · Sổ mục kê đất đai (Phụ lục 18) · Sổ cấp Giấy chứng nhận
+             (Mẫu số 02/ĐK) · Sổ đăng ký biến động đất đai · Bảng thống kê tọa độ điểm mốc ranh giới
+             (Phụ lục 14a) · Danh sách thửa và thống kê (Excel).
+   KẾT XUẤT  Sơ đồ thửa đất (DGN): ranh thửa lớp 10, số thửa lớp 13, loại đất lớp 2, diện tích lớp 4 ·
+             Phiếu đo đạc chỉnh lý thửa đất (Phụ lục 17) · Trích lục bản đồ địa chính (Phụ lục 19) ·
+             Bản vẽ tách thửa, hợp thửa đất (Mẫu số 22) · Phiếu xác nhận kết quả đo đạc hiện trạng thửa
+             đất (Phụ lục 14) · Sơ đồ thửa đất in trên Giấy chứng nhận · Shapefile (VN-2000) ·
+             GeoJSON (WGS84).
+   Đăng ký, Hồ sơ, Kết xuất lập ngay trong công cụ theo bộ mẫu M8 Mobile (mục 5).
+
+4. MENU BẢN ĐỒ
+   4.1 SỬA LỖI TỰ ĐỘNG
+     - Bảng chọn lớp liệt kê các lớp có đường nét trong bản vẽ (ví dụ "Lớp 10 · 396 nét"): tích các lớp
+       có đường ranh cần sửa (mặc định lớp ranh thửa).
+     - Khoảng sửa tối đa (m) và 3 việc: nối đầu hở tới ranh gần nhất (bắt chưa tới), cắt phần thừa ngắn
+       (bắt quá), xoá đoạn thẳng trùng nhau. Sửa ngay trên bản vẽ MicroStation (Undo được).
+     - Xong báo số chỗ đã sửa và số đầu hở còn lại; còn thì hỏi mở "Tìm và sửa lỗi" để tới từng chỗ.
+   4.2 TÌM VÀ SỬA LỖI
+     - Dò theo dữ liệu hiện tại (cả đường vừa vẽ thêm): đầu đường hở (treo đỉnh), đoạn ranh vẽ chồng lên
+       nhau, vùng rất nhỏ (dưới 1 m²), thửa chưa có số, trùng số thửa, diện tích nhãn lệch diện tích
+       tính từ ranh. Danh sách xếp theo nhóm lỗi, trong nhóm từ Bắc xuống Nam, từ Tây sang Đông.
+     - ◀ ▶ (hoặc phím mũi tên trái/phải, PageUp/PageDown): MicroStation phóng tới lỗi, đầu hở được chọn
+       sẵn đối tượng. Nhấp một dòng để tới thẳng lỗi đó.
+     - Sửa trong MicroStation rồi quay lại bấm ▶: công cụ tự dò lại; lỗi vừa xem đã hết thì báo
+       "✓ Đã sửa · còn N" và ▶ tới lỗi kế tiếp. Bấm ⟳ Dò lại để dò ngay.
+   4.3 TẠO THỬA
+     - Chọn lớp ranh thửa (bản đồ địa chính thường là lớp 10; chọn được nhiều lớp).
+     - Chỉ tạo khi KHÔNG còn lỗi treo đỉnh trên các lớp đã chọn; còn lỗi thì công cụ mở "Tìm và sửa lỗi"
+       tại lỗi đầu tiên.
+     - Tạo xong hiện bảng tổng hợp sơ bộ: tổng số thửa (số thửa chưa có số), các thửa mới (số thửa, loại
+       đất, diện tích) và cộng diện tích thửa mới, tổng diện tích cả tờ (m² và ha), thống kê theo loại
+       đất. Tạo lại sau khi tách, gộp: thửa mới là vùng chưa có trước đó.
+     - Đã kết nối tệp .gtp: tạo xong GHI NGAY vào tệp – diện tích, tâm, hình thửa và các đường ranh tạo thành
+       thửa (mã phần tử ranh trên bản đồ) của thửa đã liên kết; thửa có số mà tệp chưa có thì thêm thửa mới
+       kèm loại đất theo nhãn. Bảng tổng hợp báo kết quả ghi (chữ xanh) hoặc lỗi (chữ đỏ). Tắt: Thiết lập →
+       7. Tệp thuộc tính → "Tạo thửa xong ghi vào tệp thuộc tính".
+     - Bảng tổng hợp: chọn một thửa mới rồi bấm "Sửa thông tin thửa…" (hoặc nhấp đúp) để mở bảng Thông tin
+       thửa đất (mục 7).
+   4.4 VẼ NHÃN
+     - Phạm vi: tất cả thửa / thửa chọn trên bản đồ / thửa chưa có nhãn. Kiểu: 3 lớp 3 màu (chuẩn),
+       3 dòng, phân số.
+     - Nhãn chuẩn: số thửa trên gạch ngang (lớp 13), loại đất bên trái ngang giữa gạch (lớp 2), diện tích
+       dưới gạch (lớp 4). Nhãn đặt ở chỗ rộng nhất trong thửa; thửa hẹp thì xoay theo cạnh dài và thu nhỏ
+       chữ; quá chật thì chỉ ghi số thửa.
+     - Diện tích ghi theo dấu thập phân mà đa số nhãn trên tờ đang dùng (chấm hoặc phẩy).
+     - "Xoá nhãn cũ trong thửa": chỉ xoá chữ là nhãn thửa và gạch ngang của nhãn; địa danh, ghi chú
+       trong thửa được giữ nguyên.
+     - Nhãn vẽ thành Ô (cell) N_THUA: các thành phần vẫn ở đúng lớp, màu của chúng (loại đất lớp 2, số thửa
+       và gạch lớp 13, diện tích lớp 4). Bật / tắt lớp vẫn ẩn hiện từng phần như nhãn chữ rời.
+   4.5 BẢNG THÔNG TIN THUỘC TÍNH: xem mục 7.
+
+5. ĐĂNG KÝ – HỒ SƠ – KẾT XUẤT: LẬP NGAY TRONG CÔNG CỤ (bộ mẫu M8 Mobile chạy ngầm)
+   - Bấm một mục trong menu Đăng ký, Hồ sơ hoặc Kết xuất. Mục lập cho một thửa thì thanh trạng thái
+     MicroStation nhắc chạm vào thửa: nhấp chuột trái vào trong thửa, nhấp chuột phải để huỷ.
+   - Công cụ lưu tệp thuộc tính (.gtp) và tờ bản đồ, rồi giao cho BỘ MÁY LẬP MẪU chạy ngầm (Edge / Chrome
+     không cửa sổ) lập theo đúng mẫu của M8 Mobile, từ tờ bản đồ và tệp .gtp đang kết nối. Lần đầu mất vài
+     giây để khởi động; mở menu Đăng ký / Hồ sơ / Kết xuất là công cụ khởi động sẵn và nạp sẵn tờ bản đồ.
+   - Hộp chọn của mẫu (phạm vi, định dạng, khổ giấy, cao chữ…) hiện bằng hộp thoại của công cụ. Chọn
+     "Một thửa (chạm chọn thửa)" thì chạm thửa trên bản vẽ MicroStation.
+   - Phiếu đo đạc chỉnh lý (PL17), Trích lục (PL19), Bản vẽ tách thửa (Mẫu 22): hỏi định dạng tệp – PDF để
+     in, ký; DGN V8 mở bằng MicroStation, đúng toạ độ; DGN V7; DXF (như M8 Mobile).
+   - TỆP KẾT QUẢ lưu vào thư mục HoSo cạnh tệp bản đồ (đổi ở Thiết lập → 5. Hồ sơ → Thư mục lưu hồ sơ),
+     trùng tên thì thêm (2), (3)…; PDF, Excel mở ngay bằng chương trình mặc định; DGN, DXF, Shapefile thì mở
+     thư mục và chọn sẵn tệp. Tắt tự mở: Thiết lập → 5 → "Mở tệp hồ sơ sau khi lập". Xem lại: Hệ thống →
+     Mở thư mục hồ sơ (gõ M8PRO HOSO).
+   - BẢN VẼ TÁCH THỬA, HỢP THỬA ĐẤT (Mẫu số 22):
+       • Tách thửa: vẽ đường tách cắt qua thửa trong MicroStation (đường thẳng hoặc đường gấp khúc, lớp bất
+         kỳ – vẽ thẳng lên lớp ranh cũng được: công cụ lấy lại thửa gốc chưa chia), CHỌN đường đó, rồi
+         Kết xuất → Bản vẽ tách thửa → chạm thửa cần tách. Nhiều đường tách: chọn cả.
+       • Hợp thửa: chọn nhãn các thửa cần hợp trong MicroStation, rồi Kết xuất → Bản vẽ tách thửa → chạm
+         một trong các thửa đó.
+       • Hộp thoại hiện diện tích thửa gốc, các thửa sau tách/hợp và các ô thông tin in trên bản vẽ (số
+         phát hành, ngày cấp GCN, người sử dụng, địa chỉ, số thửa mới, ghi sau diện tích…) – lấy sẵn theo
+         tệp .gtp, sửa được trước khi bấm Lập.
+       • Lập xong bản vẽ mới tách thật trên bản đồ: đưa đường tách lên lớp ranh → Bản đồ → Tạo thửa.
+   - CHỈ ĐỌC: bộ máy lập mẫu không ghi vào bản đồ và tệp .gtp. Ranh, nhãn, thuộc tính sửa bằng công cụ;
+     mỗi lần lập hồ sơ, bộ máy tự đọc lại bản mới nhất.
+   - Đơn vị hành chính, cơ quan in trên hồ sơ lấy theo Hệ thống → Thiết lập đơn vị hành chính.
+   - Tờ bản đồ từ 1 MB trở lên cần mã kích hoạt bản quyền M8: công cụ hỏi mã (MAPDGN-…) một lần cho máy.
+   - An toàn: bộ máy chỉ nhận kết nối từ chính máy này (127.0.0.1, cổng 27808), có mã phiên; chỉ đọc được
+     tờ bản đồ đang mở và tệp .dgn, .gtp cùng thư mục. Không cần mở cổng tường lửa. Bộ máy tự tắt khi đóng
+     công cụ hoặc MicroStation, nghỉ 20 phút không lập hồ sơ cũng tự tắt cho nhẹ máy.
+   - Sổ đăng ký biến động lấy nội dung thay đổi ghi trong tệp .gtp (trang sổ địa chính, thửa tách, hợp);
+     tệp chưa có biến động thì công cụ báo rõ.
+   - Sơ đồ thửa đất (DGN): cả tờ hoặc một thửa, đúng toạ độ VN-2000; ranh thửa lớp 10, số thửa lớp 13,
+     loại đất lớp 2, diện tích lớp 4; mở trong MicroStation trùng khít bản đồ.
+   - Máy không có Edge / Chrome, hoặc tắt Thiết lập → 5 → "Lập hồ sơ chạy ngầm": công cụ mở cửa sổ hồ sơ
+     riêng như M8 Mobile (tệp tải về thư mục Tải xuống). Gõ M8PRO HOSO CUASO để mở cửa sổ này khi cần.
+
+6. NÚT ĐỘC LẬP TRÊN THANH CÔNG CỤ (rê chuột lên nút để xem tên)
+   Kết nối / Ngắt · Chọn thửa · Thông tin thửa · Tách thửa · Gộp thửa · Chia thửa theo diện tích ·
+   Cập nhật thửa sau khi tự vẽ đường chia · Đánh số thửa tự động · Vẽ nhãn thửa chọn · Xoá nhãn thửa ·
+   Ghi kích thước cạnh · Đánh số hiệu đỉnh · Vẽ khung bản đồ · Tô màu theo loại đất · Ghi tên chủ ·
+   Triển điểm đo · Nối điểm thành ranh · Đối chiếu nhãn với .gtp · Cập nhật lại nhãn theo .gtp ·
+   Thửa chênh lệch diện tích · Diện tích trong / ngoài quy hoạch · Diện tích theo loại đất ·
+   Mở / Cập nhật / Lưu tệp thuộc tính · Xuất / Nhập Excel (CSV) · Đổi phông TCVN3 ↔ Unicode ·
+   Tìm và thay chữ · Thiết lập · Xem ảnh vệ tinh Google Maps tại thửa · Chỉ đường tới thửa.
+   GOOGLE MAPS (như M8 Mobile): thửa đang chọn (chưa chọn thì chạm thửa) → toạ độ VN-2000 đổi sang vĩ độ,
+   kinh độ WGS84 (kinh tuyến trục theo Thiết lập đơn vị hành chính, 7 tham số chuyển đổi chuẩn) → mở Google
+   Maps ảnh vệ tinh tại thửa, hoặc chỉ đường từ vị trí hiện tại tới thửa. Cần mạng.
+   ĐO ĐẠC
+   - Triển điểm đo từ tệp toạ độ: tệp .txt/.csv mỗi dòng "tên X Y H" (cách nhau dấu cách, tab, phẩy hoặc
+     chấm phẩy; dòng tiêu đề tự bỏ qua). Mặc định X là toạ độ Bắc theo VN-2000. Điểm vẽ trên lớp
+     "Điểm đo – lớp" (mặc định 21).
+   - Nối điểm thành ranh thửa: gõ chuỗi tên điểm, ví dụ 1-2-3-4-1; 4-5-6 → vẽ đường ranh trên lớp ranh.
+     Sau đó Bản đồ → Tạo thửa.
+   - Chia thửa theo diện tích: chạm thửa → nhập diện tích cần tách → chọn 2 điểm chỉ hướng đường chia
+     (ví dụ 2 đầu một cạnh: đường chia song song cạnh đó) → chạm vào phía phần cần tách → xem diện tích
+     2 phần, đồng ý thì vẽ đường chia và tạo thửa mới (thửa giữ số cũ, phần mới số lớn nhất + 1).
+   - Tự vẽ đường chia trong MicroStation trên lớp ranh: bấm "Cập nhật thửa sau khi tự vẽ đường chia"
+     (thửa giữ số cũ, phần mới lấy số lớn nhất + 1, tự vẽ nhãn).
+   KIỂM TRA
+   - Đối chiếu nhãn với tệp thuộc tính: thửa có số thửa, loại đất, diện tích trên nhãn khác tệp .gtp; thửa
+     chưa có nhãn; thửa có trong tệp nhưng không có trên bản đồ. Nhấp dòng để phóng tới.
+   - Cập nhật lại nhãn theo tệp thuộc tính: vẽ lại nhãn các thửa bị khác.
+   NHÃN, BIÊN TẬP
+   - Ghi tên chủ sử dụng lên bản đồ (lớp "Tên chủ sử dụng – lớp", mặc định 20; ghi lại thì thay tên cũ).
+   - Đổi phông chữ TCVN3 ↔ Unicode cho toàn bộ chữ của tờ bản đồ.
+   - Tìm và thay chữ trên bản đồ (để trống ô "Thay bằng" để xoá cụm chữ).
+   - Diện tích trong / ngoài quy hoạch: vẽ vùng quy hoạch KHÉP KÍN trên lớp "Ranh quy hoạch – lớp"
+     (mặc định 50) → bảng diện tích từng thửa trong và ngoài quy hoạch.
+
+7. TỆP THUỘC TÍNH .GTP – KẾT NỐI TRỰC TIẾP, LƯU THẲNG
+   - Mở bản đồ DC208.dgn: hiện bảng kết nối, chọn sẵn DC208.gtp nếu có cùng thư mục (mục 2b); số tờ lấy
+     theo tệp.
+   - Đọc đầy đủ: số tờ, số thửa, diện tích, diện tích pháp lý, địa chỉ thửa, ghi chú, TẤT CẢ mục đích sử
+     dụng kèm diện tích từng mục đích (ví dụ ONT 400; CLN 1666,7), chủ sử dụng (cả vợ/chồng), năm sinh,
+     địa chỉ chủ, toạ độ tâm và HÌNH THỬA lưu trong tệp.
+   - Tạo thửa từ ranh trên bản đồ rồi tự liên kết với tệp theo tâm thửa / số thửa. Nếu chưa đọc được ranh:
+     thửa được dựng theo hình trong tệp (vẫn chọn thửa, phóng tới, trích lục, sơ đồ… được).
+   - SỬA ĐẾN ĐÂU LƯU THẲNG VÀO TỆP .GTP ĐẾN ĐÓ (giữ nguyên mã hoá như tệp gốc). Bản gốc trước khi sửa được
+     giữ lại một lần mỗi lần mở: DC208.gtp.bak. Tắt tự lưu: Thiết lập → 7 → "Lưu thẳng…" (khi đó, lúc lập
+     hồ sơ công cụ hỏi lưu tệp thuộc tính, vì bộ mẫu hồ sơ đọc tệp đã lưu trên đĩa).
+   - Bảng thông tin thuộc tính: sửa trực tiếp số thửa, mục đích, DT pháp lý, địa chỉ thửa, tên chủ, năm
+     sinh, địa chỉ chủ, ghi chú. Thửa chưa có chủ: gõ tên chủ là tự thêm chủ vào tệp. Nhấp dòng để phóng
+     tới thửa.
+   - CHỌN QUA LẠI: chọn dòng trong bảng thì thửa sáng lên trên bản đồ (viền màu theo Thiết lập → 4 → "Màu tô
+     sáng thửa đang chọn"); chọn nhãn, chữ hoặc vùng của một thửa trong MicroStation thì bảng tự chuyển tới
+     dòng thửa đó. Chạm thửa bằng lệnh của công cụ cũng chọn luôn dòng trong bảng.
+   - BẢNG THÔNG TIN THỬA ĐẤT (nút Thông tin thửa, nhấp đúp dòng, hoặc "Sửa thông tin thửa…" sau khi tạo thửa):
+       • Thẻ Thửa đất: tờ, số thửa, diện tích bản đồ, diện tích pháp lý, địa chỉ, ghi chú.
+       • Loại đất chi tiết: mỗi dòng một mục đích sử dụng – ký hiệu (chọn trong danh mục), tên, diện tích,
+         mục đích chính, thời hạn, sử dụng chung; + Thêm, − Xoá, "Chia đủ DT" chia phần còn lại; dòng kiểm
+         tra cộng diện tích các mục đích so với diện tích thửa.
+       • Chủ sử dụng: tên, năm sinh, địa chỉ; + Thêm chủ.
+       • Thẻ Tọa độ đỉnh, cạnh của thửa.
+       • GHI: cập nhật ngay vào tệp .gtp (thửa chưa có trong tệp thì thêm mới); tích "Vẽ lại nhãn thửa sau khi
+         ghi" để nhãn trên bản đồ theo thông tin mới. Phóng tới: đưa MicroStation tới thửa.
+   - Nút "Toàn bộ thông tin trong tệp" (hoặc nhấp đúp dòng): xem/sửa MỌI trường của thửa, của từng chủ sử
+     dụng và từng mục đích sử dụng trong tệp.
+   - Mục đích sử dụng trong tệp lưu bằng mã số; công cụ tự học mã ↔ ký hiệu (ONT, CLN, LUC…) từ chính tệp
+     và từ nhãn trên bản đồ. Mã chưa biết hiện dạng #156 – khi tạo thửa từ bản đồ có nhãn, mã sẽ được
+     học và hiện đúng ký hiệu.
+   - Không mở cùng lúc tệp .gtp trong chương trình khác khi đang sửa bằng công cụ này (công cụ sẽ báo,
+     không ghi đè).
+
+8. QUY TRÌNH THƯỜNG DÙNG
+   1) Mở tờ bản đồ trong MicroStation → bảng kết nối tệp thuộc tính → Kết nối. Hệ thống → Thiết lập đơn vị
+      hành chính (một lần); Hệ thống → Thiết lập: LỚP RANH THỬA (mặc định 10), lớp chữ nhãn, phông TCVN3
+      nếu bản đồ dùng .VnTime. Số tờ lấy theo tệp thuộc tính, chữ "Tờ số …" trên bản đồ hoặc số cuối tên
+      tệp, được nhớ riêng cho từng tệp bản đồ.
+   2) Bản đồ → Sửa lỗi tự động, rồi Bản đồ → Tìm và sửa lỗi (◀ ▶) đến khi hết đầu hở.
+   3) Bản đồ → Tạo thửa, xem bảng tổng hợp.
+   4) Bản đồ → Bảng thông tin thuộc tính (thửa đã liên kết với tệp .gtp).
+   5) Nút Đánh số thửa tự động (nếu cần) → Bản đồ → Vẽ nhãn.
+   6) Tách, gộp, chia thửa (nút trên thanh công cụ) → Bản đồ → Tạo thửa để cập nhật.
+   7) Đăng ký / Hồ sơ / Kết xuất: chạm thửa, tệp kết quả lưu ở thư mục HoSo cạnh bản đồ và tự mở.
+   8) Lưu bản đồ trong MicroStation như thường lệ (File → Save hoặc tự lưu).
+
+9. KHI CÓ LỖI
+   - Hệ thống → Chẩn đoán kết nối và đọc dữ liệu → Sao chép → gửi tác giả.
+   - Nhật ký lỗi: %APPDATA%\M8Pro\log.txt
+   - Báo thiếu BienTapBDDC.html, hoặc công cụ không nạp sau khi cài lại MicroStation: mở Biên Tập BĐĐC →
+     Thiết lập → "Cài công cụ vào MicroStation (sửa cài đặt)…" (cách cũ: chạy lại cai-dat.bat, thư mục
+     BienTapBDDC phải nằm cạnh cai-dat.bat).
+   - Cài đặt, cập nhật báo ⚠ hoặc ✗: xem mục VIỆC CẦN LÀM TIẾP trong báo cáo (menu Start → Biên Tập BĐĐC →
+     Báo cáo cài đặt, cập nhật); vẫn lỗi thì gửi tệp báo cáo và tệp BienDich_….log cùng thư mục cho tác giả.
+   - Bấm Cập nhật phiên bản mới báo "Chưa kiểm tra được": kiểm tra mạng; mạng cơ quan chặn thì dùng "Cập
+     nhật từ tệp cài đặt…" hoặc thư mục dùng chung (mục 1c).
+   - Lập hồ sơ báo "Chưa đọc được bản đồ từ MicroStation": kiểm tra công cụ đã kết nối (nút đầu thanh
+     công cụ). Chẩn đoán có dòng "Lập hồ sơ: …" cho biết trình duyệt dùng chạy ngầm, bộ máy đang chạy chưa.
+   - Bộ máy chạy ngầm không khởi động được (chính sách máy cơ quan chặn Edge chạy không cửa sổ…): sau
+     khoảng 45 giây công cụ tự mở cửa sổ hồ sơ để lập. Cài Microsoft Edge hoặc Google Chrome nếu máy chưa có.
+   - Khởi động lại MicroStation: bộ máy cũ tự tắt, lệnh sau tự mở bộ máy mới.
+
+10. LƯU Ý
+   - Mọi chữ, đường do công cụ vẽ đều nằm trong tệp DGN đang mở; dùng Undo của MicroStation nếu cần
+     hoàn tác.
+   - Tô màu loại đất: vẽ trên lớp riêng (mặc định 63), tô lại sẽ thay vùng tô cũ; tắt lớp đó khi in nếu
+     không cần.
+   - Thuộc tính nhập khi chưa có tệp .gtp được lưu tại %APPDATA%\M8Pro\thuoctinh\.
+   - Thư viện đi kèm trong BienTapBDDC\lib: sql.js (giấy phép MIT) và SheetJS (giấy phép Apache 2.0),
+     văn bản giấy phép đặt cùng thư mục.
