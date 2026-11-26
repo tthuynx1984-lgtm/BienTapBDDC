@@ -348,6 +348,15 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy
      menu của công cụ trong MicroStation) → dán mã → Kích hoạt. Mã lưu trên máy, cập nhật bản mới không phải nhập lại.
    - Liên hệ tác giả Nguyễn Xuân Thủy để lấy mã kích hoạt.
 
+1e. BÁO LỖI CẦN SỬA
+   - Menu Hệ thống → "Báo lỗi cần sửa…" (cửa sổ Biên Tập BĐĐC và menu của công cụ trong MicroStation).
+   - Ghi tiêu đề, chức năng, mô tả lỗi, các bước làm để gặp lỗi. Công cụ tự chụp màn hình lúc mở hộp và kèm nhật ký
+     lỗi gần nhất (đã ẩn tên máy, tên người dùng, các dãy số dài).
+   - "Gửi lên GitHub": mở trang báo lỗi của kho BienTapBDDC đã điền sẵn (cần tài khoản GitHub) → kéo thả ảnh chụp
+     vào ô nội dung → "Submit new issue". "Sao chép báo cáo" / "Lưu tệp báo cáo": gửi cho tác giả qua kênh khác.
+   - Kho GitHub công khai: không ghi họ tên, số giấy tờ, số GCN của người dân vào báo lỗi.
+   - Lỗi sửa xong có bản mới trên kho: Hệ thống → "Cập nhật phiên bản mới…".
+
 2. NẠP VÀO MICROSTATION
    - Mở MicroStation V8i và tệp bản đồ (.dgn).
    - Cách 1: gõ vào ô Key-in:   mdl load M8ProDiaChinh
