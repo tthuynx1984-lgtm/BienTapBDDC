@@ -1,12 +1,12 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.26",
-  "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.26.exe",
-  "kichthuoc": 2045101,
-  "sha256": "09f4135ccf5fd7a293f102d29e33000b3bc16e172d598fb9caf1dbd3a4a6cf31",
+  "phienban": "2026.11.27.1",
+  "ngay": "27/11/2026",
+  "tep": "CaiDat_BienTapBDDC_2026.11.27.1.exe",
+  "kichthuoc": 2045102,
+  "sha256": "f47568adacd29fc54052f3bebe3774f17e4445b7056925408f5cc0fefe09e446",
   "thaydoi": [
-    "Báo lỗi cần sửa: mọi máy chỉ cần bấm “Lưu tệp báo cáo” là báo cáo tự gửi về chủ kho – không phải nhập mã.",
-    "Chủ kho: nhập mã chủ kho một lần; nút “Xem đề xuất sửa” tự tổng hợp báo cáo của mọi máy để xem, sửa rồi gửi lên GitHub hoặc sao chép."
+    "Xem đề xuất sửa (chủ kho): hộp gọn lại, chỉ còn Bỏ báo cáo, Lưu sửa, Sao chép báo cáo, Gửi lên GitHub, Đóng.",
+    "Báo lỗi cần sửa: chưa gửi được báo cáo (mất mạng) thì bấm “Lưu tệp báo cáo” lại khi có mạng."
   ]
 }
