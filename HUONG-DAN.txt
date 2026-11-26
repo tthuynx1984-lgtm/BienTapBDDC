@@ -1,8 +1,15 @@
 ﻿﻿﻿BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH – công cụ biên tập bản đồ địa chính chạy trong MicroStation V8i
-Phiên bản 26/11/2026 (2026.11.26) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
+Phiên bản 26/11/2026 (2026.11.26.1) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
 Tác giả, bản quyền: Nguyễn Xuân Thủy
 
-0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26)
+0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26.1)
+   - VẼ NHÃN ĐỊA CHÍNH (Bản đồ → Vẽ nhãn): hộp thoại mới. Cấu hình: tỷ lệ, chiều cao chữ, loại nhãn, màu và level của
+     số thửa, diện tích, loại đất, level nhãn cũ. Tuỳ chọn: vẽ từ thửa … đến thửa …, chỉ thửa chưa có nhãn, chọn
+     thửa trên bản đồ, số lẻ diện tích, vẽ nhãn với diện tích pháp lý, vẽ loại đất, dấu phẩy thập phân, chữ TCVN3.
+     Nút Xoá nhãn (nhãn chuyển sang level nhãn cũ; level nhãn cũ trống thì xoá) – Vẽ nhãn – Đóng.
+   - SỬA LỖI TỰ ĐỘNG, TÌM LỖI DỮ LIỆU, TẠO THỬA ĐẤT: bố cục và nút Chấp nhận – Đóng theo mẫu quen dùng; "Độ chính xác
+     dữ liệu", "Giới hạn thửa nhỏ", "Phục hồi định dạng kiểm tra". Tạo thửa có ô Loại đất mặc định: gán cho thửa
+     không đọc được loại đất từ nhãn.
    - KÍCH HOẠT BẢN QUYỀN (mục 1d): cùng cách cấp mã với bản M8 Mobile (mã bắt đầu bằng MAPDGN-). Bộ cài có trang
      "Mã kích hoạt"; bỏ trống thì dùng thử – đủ chức năng, chỉ mở được tệp thuộc tính dưới 1 MB.
    - THÔNG TIN THỬA ĐẤT chia hai nửa: bên trái thông tin thửa, hình thức sử dụng, mục đích; bên phải người sử dụng

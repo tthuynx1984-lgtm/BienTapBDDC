@@ -1,14 +1,14 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26",
+  "phienban": "2026.11.26.1",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.exe",
-  "kichthuoc": 1990208,
-  "sha256": "f25af0f4f47c053ec6c57b8d5d7164376213359d8a9c18d6a1e411003fd926d8",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.1.exe",
+  "kichthuoc": 1993096,
+  "sha256": "7270f8eaf41558015ac856dad8b94f1acb0dc8eed7071d13e1cb0b88aa1bc826",
   "thaydoi": [
-    "Kích hoạt bản quyền giống bản M8 Mobile (mã MAPDGN-): bộ cài có trang Mã kích hoạt, ứng dụng có menu Hệ thống → Kích hoạt bản quyền; bản dùng thử đủ chức năng, chỉ mở tệp thuộc tính dưới 1 MB.",
-    "Thông tin thửa đất: người thứ hai cùng hồ sơ (vợ/chồng) có dòng riêng với đủ trường và giấy tờ; dòng người không sửa thì không ghi gì vào tệp; giới tính chỉ ghi khi đổi.",
-    "Bảng thông tin thuộc tính: giấy tờ tuỳ thân của chủ sử dụng; người thứ 2 trở đi có nhóm cột riêng, tự hiện khi có thửa nhiều người.",
-    "Thông tin thửa đất chia hai nửa với hình thức sử dụng; \"Lớp\" đổi thành \"Level\"; hộp thoại dùng chung một kiểu nút, nền và chữ như Windows."
+    "Vẽ nhãn địa chính: hộp thoại mới – Cấu hình (tỷ lệ, chiều cao, loại nhãn, màu và level số thửa / diện tích / loại đất, level nhãn cũ) và Tuỳ chọn (vẽ từ thửa đến thửa, chỉ thửa chưa có nhãn, chọn thửa trên bản đồ, số lẻ, diện tích pháp lý, vẽ loại đất, dấu phẩy, chữ TCVN3); nút Xoá nhãn – Vẽ nhãn – Đóng.",
+    "Sửa lỗi tự động, Tìm lỗi dữ liệu, Tạo thửa đất: bố cục, tên nhóm và nút Chấp nhận – Đóng như mẫu; \"Độ chính xác dữ liệu\", \"Giới hạn thửa nhỏ\", \"Phục hồi định dạng kiểm tra\".",
+    "Tạo thửa đất: ô Loại đất trong \"Gán thông tin mặc định\" – gán cho thửa không đọc được loại đất từ nhãn.",
+    "Kích hoạt bản quyền giống bản M8 Mobile (mã MAPDGN-): trang Mã kích hoạt khi cài, menu Hệ thống → Kích hoạt bản quyền; bản dùng thử đủ chức năng, chỉ mở tệp thuộc tính dưới 1 MB."
   ]
 }
