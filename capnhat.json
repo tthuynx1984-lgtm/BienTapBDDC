@@ -1,17 +1,11 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.10",
+  "phienban": "2026.11.26.11",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.10.exe",
-  "kichthuoc": 2035418,
-  "sha256": "3d20c124a9ddf56c94b722441a9beccd1e4b465ce12fd8b029a4119a9b64a710",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.11.exe",
+  "kichthuoc": 2035969,
+  "sha256": "4a23db47f5ef4daa86d70389295368b3b98544120e8d1e85c92c1d2f7d4f1610",
   "thaydoi": [
-    "Thông tin thửa đất: phần người sử dụng đất chia hai bên – bên trái người sử dụng đất (chủ), bên phải người liên quan (vợ/chồng, thành viên hộ, người cùng sử dụng), mỗi người có ô Vai trò; danh sách người có cột Vai trò.",
-    "Thông tin thửa đất: thêm ô Là cá nhân và Đồng sử dụng (vợ chồng); Là cá nhân và Thuộc hộ gia đình loại trừ nhau.",
-    "Thông tin thửa đất: ô Thời hạn sử dụng nằm một hàng riêng, không còn chen ô tích Sử dụng chung.",
-    "Thông tin thửa đất – thẻ Toạ độ đỉnh, cạnh: nút Xuất Excel (bảng toạ độ đỉnh X, Y, chiều dài cạnh, chu vi).",
-    "Nhãn thửa vào đúng level tên “Level 2”, “Level 4”, “Level 13”… (không vào level CHU PHIEU, DINH THUA của phiếu bị chép vào bản đồ).",
-    "Sơ đồ hình thể (DGN V8): dùng bảng level của chính tờ bản đồ – loại đất ở Level 2, diện tích ở Level 4, số thửa và gạch ngang ở Level 13, ranh ở Level 10.",
-    "Bảng thuộc tính: dòng lọc kẻ mờ như các dòng dữ liệu."
+    "Mọi hộp thoại: nền màu be nhạt, chữ đen như ảnh mẫu giao diện – giống nhau trên mọi máy, không theo màu xám/trắng của Windows (cả các thẻ Thửa đất, Toạ độ đỉnh, cạnh)."
   ]
 }

@@ -1,8 +1,11 @@
 ﻿﻿﻿BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH – công cụ biên tập bản đồ địa chính chạy trong MicroStation V8i
-Phiên bản 26/11/2026 (2026.11.26.10) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
+Phiên bản 26/11/2026 (2026.11.26.11) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
 Tác giả, bản quyền: Nguyễn Xuân Thủy
 
-0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26.10)
+0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26.11)
+   - Mọi hộp thoại: nền màu be nhạt, chữ đen như ảnh mẫu giao diện – giống nhau trên mọi máy, không theo màu xám/trắng của Windows (cả các thẻ Thửa đất, Toạ độ đỉnh, cạnh).
+
+0--. BẢN 2026.11.26.10
    - Thông tin thửa đất: phần người sử dụng đất chia hai bên – bên trái người sử dụng đất (chủ), bên phải người liên quan (vợ/chồng, thành viên hộ, người cùng sử dụng), mỗi người có ô Vai trò; danh sách người có cột Vai trò.
    - Thông tin thửa đất: thêm ô Là cá nhân và Đồng sử dụng (vợ chồng); Là cá nhân và Thuộc hộ gia đình loại trừ nhau.
    - Thông tin thửa đất: ô Thời hạn sử dụng nằm một hàng riêng, không còn chen ô tích Sử dụng chung.
