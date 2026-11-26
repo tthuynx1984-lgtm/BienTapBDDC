@@ -1,13 +1,11 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.23",
+  "phienban": "2026.11.26.24",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.23.exe",
-  "kichthuoc": 2040034,
-  "sha256": "e5177348cb35fe6dba79e56a469bc9bd1c4cb486f80b2f52771575d6e8635d53",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.24.exe",
+  "kichthuoc": 2041703,
+  "sha256": "3f9004506df52a13d87b40678adb13d7acacfb26305738556eb286c46f9b0232",
   "thaydoi": [
-    "Nền màu loại đất: đất trồng cây lâu năm (CLN) màu cam pha nâu nhạt.",
-    "Nền màu loại đất: thửa có đất ở ở bất kỳ vị trí nào (ONT+CLN, CLN+ONT…, trong tệp thuộc tính hoặc trên nhãn bản đồ) đều tô màu đất ở.",
-    "Nền màu loại đất: thửa hẹp có chữ loại đất trên nhãn lấn ra ngoài ranh thửa nay vẫn nhận đúng loại đất của nhãn (trước bị tô theo CLN)."
+    "Báo lỗi cần sửa: thêm nút “Xem đề xuất sửa” mở trang các báo lỗi trên GitHub để xem, sửa, trả lời đề xuất sửa – nút chỉ hiện trên máy đã đăng nhập chủ kho (Ctrl+Shift+G trong hộp Báo lỗi)."
   ]
 }

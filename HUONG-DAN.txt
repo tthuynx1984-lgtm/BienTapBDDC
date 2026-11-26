@@ -402,6 +402,9 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy
      vào ô nội dung → "Submit new issue". "Sao chép báo cáo" / "Lưu tệp báo cáo": gửi cho tác giả qua kênh khác.
    - Kho GitHub công khai: không ghi họ tên, số giấy tờ, số GCN của người dân vào báo lỗi.
    - Lỗi sửa xong có bản mới trên kho: Hệ thống → "Cập nhật phiên bản mới…".
+   - Chủ kho: trong hộp Báo lỗi bấm Ctrl+Shift+G, dán mã truy cập GitHub (token) của tài khoản chủ kho → hiện nút
+     "Xem đề xuất sửa" (mở trang các báo lỗi đang mở trên GitHub để xem, sửa, trả lời đề xuất). Máy khác không thấy
+     nút này. Bấm lại Ctrl+Shift+G để đăng xuất chủ kho.
 
 2. NẠP VÀO MICROSTATION
    - Mở MicroStation V8i và tệp bản đồ (.dgn).
