@@ -1,8 +1,209 @@
-﻿BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH – công cụ biên tập bản đồ địa chính chạy trong MicroStation V8i
-Phiên bản 17/11/2026 (2026.11.17) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
-Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
+﻿﻿﻿BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH – công cụ biên tập bản đồ địa chính chạy trong MicroStation V8i
+Phiên bản 26/11/2026 (2026.11.26) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
+Tác giả, bản quyền: Nguyễn Xuân Thủy
 
-0. ĐIỂM MỚI CỦA BẢN NÀY (17/11/2026)
+0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26)
+   - KÍCH HOẠT BẢN QUYỀN (mục 1d): cùng cách cấp mã với bản M8 Mobile (mã bắt đầu bằng MAPDGN-). Bộ cài có trang
+     "Mã kích hoạt"; bỏ trống thì dùng thử – đủ chức năng, chỉ mở được tệp thuộc tính dưới 1 MB.
+   - THÔNG TIN THỬA ĐẤT chia hai nửa: bên trái thông tin thửa, hình thức sử dụng, mục đích; bên phải người sử dụng
+     đất với đủ trường cá nhân và giấy tờ tuỳ thân (loại, số, ngày cấp, nơi cấp, ngày hết hạn). Chọn hình thức sử
+     dụng thì tự thêm đủ người. Người thứ hai cùng hồ sơ (vợ/chồng) có dòng riêng. Dòng người không sửa thì không ghi
+     gì vào tệp; giới tính chỉ ghi khi đổi.
+   - BẢNG THÔNG TIN THUỘC TÍNH: bỏ cột DT bản đồ; diện tích dấu chấm thập phân; số tờ, số thửa cố định khi cuộn
+     ngang; có giấy tờ tuỳ thân của chủ sử dụng; người thứ 2 trở đi (tối đa 6 người) có nhóm cột riêng, tự hiện
+     khi có thửa nhiều người.
+   - "Lớp" đổi thành "Level" ở mọi hộp thoại; Hồ sơ thửa bỏ nút "Thửa đang chọn"; các hộp thoại dùng chung một
+     kiểu nút (xác nhận bên trái, Huỷ bên phải), nền và chữ như hộp thoại Windows.
+
+0b. ĐIỂM MỚI BẢN 2026.11.20.5
+   - KẾT NỐI TỆP THUỘC TÍNH ĐỘC LẬP (Hệ thống → "Kết nối tệp thuộc tính độc lập – mọi tờ, không theo bản đồ";
+     Hồ sơ toàn xã → "Bảng thuộc tính toàn xã"; gộp CSDL xong công cụ hỏi kết nối luôn): kết nối tệp .gtp toàn xã
+     không cần tờ bản đồ ứng với tệp. Bảng thông tin thuộc tính hiện đủ MỌI TỜ, MỌI THỬA trong tệp, xếp theo tờ
+     rồi số thửa; nút "Mọi tờ" lọc từng tờ. Sửa trong bảng lưu thẳng vào tệp. Không liên kết thửa trên bản đồ,
+     không ghi gì từ bản đồ vào tệp (mục 7).
+   - VẼ NHÃN THỬA NHƯ Ô NHÃN N_THUA CỦA PHẦN MỀM ĐỊA CHÍNH: gạch ngang nằm đúng giữa số thửa và diện tích – đáy
+     số thửa cao hơn gạch 2/9 cao chữ, đỉnh diện tích thấp hơn gạch 2/9 cao chữ, hai chữ canh giữa theo gạch; gạch
+     dài theo chữ diện tích; loại đất ngang giữa gạch, sát bên trái. Chữ đặt theo điểm canh lề (giữa – dưới, giữa
+     – trên, phải – giữa) nên sửa chữ trong bản vẽ vẫn giữ đúng chỗ. Sơ đồ thửa đất (DGN) cùng bố cục (mục 4.4, 5).
+   - BẢN ĐỒ THIẾU LỚP THÌ TỰ TẠO LỚP: vẽ nhãn (và mọi lệnh vẽ của công cụ) cần lớp chưa có trong tệp DGN thì
+     công cụ tạo lớp tên chuẩn "Level N" (ví dụ Level 2, Level 4) rồi vẽ đủ các phần, báo lớp đã tạo (mục 4.4).
+   - NỀN MÀU LOẠI ĐẤT hiển thị trên lớp Default (đổi ở Thiết lập → 4 → "Nền màu loại đất – lớp hiển thị"); nền
+     chỉ hiển thị, không vẽ phần tử nào vào bản đồ, không tạo lớp mới (mục 6c).
+   - HỘP THOẠI KHÔNG CẮT CHỮ, CO GIÃN ĐƯỢC: mọi hộp thoại kéo to được (không nhỏ hơn cỡ ban đầu); chữ dài tự
+     xuống dòng, cột bảng / danh sách rộng vừa tiêu đề và chữ dài nhất, đường dẫn thư mục ghi đủ, tên mẫu hồ sơ
+     ghi đủ trên nút; thanh lệnh hẹp thì xuống hàng, không giấu lệnh. Tìm lỗi dữ liệu ghi đủ tên từng loại lỗi.
+
+0a. ĐIỂM MỚI CỦA BẢN 20/11/2026 (2026.11.20.4)
+   - GIAO DIỆN CÁC HỘP THOẠI LÀM LẠI: chia nhóm có tiêu đề, bảng chọn lớp nhiều cột, thanh chuyển về đầu / lùi /
+     tới / về cuối ở chân hộp, nút chính in đậm. Các lệnh, cách làm việc và dữ liệu giữ nguyên như bản trước.
+   - SỬA LỖI TỰ ĐỘNG: thẻ "Level ranh thửa" là bảng lớp (tích chọn · level · số đối tượng đường, ô "Chỉ hiện lớp có
+     đối tượng đường"); thẻ "Tuỳ chọn sửa" gồm nhóm "Cắt ranh tại giao điểm" và nhóm "Sửa thêm đầu đường"; ô
+     "Khoảng sửa tối đa (m)" ở chân hộp (mục 4.1).
+   - TÌM VÀ SỬA LỖI: hộp "Tìm lỗi dữ liệu" mới – chọn lớp ranh, CHỌN LOẠI LỖI CẦN TÌM (9 loại, chỉ dò các loại đã
+     tích), đặt ngưỡng vùng rất nhỏ (m²) và dung sai bắt nối ranh (m). Bảng "Duyệt và sửa lỗi": ô tích từng loại
+     lỗi (kèm số lỗi) để ẩn / hiện, danh sách theo nhóm gọn hơn, thanh chuyển về lỗi đầu / lùi / tới / về lỗi
+     cuối, Dò lại, Phóng tới (mục 4.2).
+   - TẠO THỬA: bên trái chọn lớp ranh; bên phải nhóm "Thông tin gán cho thửa" (tờ bản đồ số, số lẻ diện tích, bỏ
+     vùng có diện tích nhỏ hơn, dung sai bắt nối ranh, ghi vào tệp thuộc tính, hỏi cắt ranh trước) và nhóm "Đọc
+     nhãn thửa" (lớp chữ nhãn). Mới: BỎ VÙNG NHỎ – vùng khép kín nhỏ hơn diện tích đặt không tạo thành thửa.
+     Ô "Hỏi cắt ranh tại giao điểm trước khi tạo thửa" có thiết lập riêng, không còn dính với việc cắt ranh của
+     Sửa lỗi tự động (mục 4.3).
+   - BẢNG THÔNG TIN THUỘC TÍNH: thanh lệnh mới (Thông tin chi tiết, Toàn bộ thông tin, menu Hồ sơ thửa, menu
+     Tiện ích, Phóng tới, Lấy lại dữ liệu, Xuất dữ liệu, ô Tìm); HÀNG LỌC dưới tiêu đề từng cột; dòng "Cộng" diện
+     tích các dòng đang hiện; thanh chuyển dòng ở chân bảng. Số diện tích viết như mọi chỗ khác của công cụ
+     (1200,0); gõ dấu phẩy hay dấu chấm thập phân đều nhận (mục 7).
+   - THÔNG TIN THỬA ĐẤT: bố cục mới – nhóm Thông tin thửa đất (thêm mã định danh, liên kết – chỉ xem), nhóm Mục
+     đích sử dụng (bảng bên trái, chi tiết mục đang chọn bên phải, thanh chuyển giữa các mục đích), nhóm Chủ sử
+     dụng; nút Chọn trên bản đồ, Phóng tới, Ghi lại, Đóng ở chân hộp (mục 7).
+   - BẢNG HỒ SƠ THỬA ĐẤT (mới – Kết xuất → "Bảng hồ sơ thửa đất…", hoặc nút trên thanh công cụ): một bảng gom các
+     mẫu hồ sơ theo nhóm – thửa lập hồ sơ, định dạng tệp, hồ sơ của thửa, hồ sơ cả tờ, thư mục lưu; bấm là lập,
+     không phải chạm lại thửa (mục 5).
+
+0b. ĐIỂM MỚI CỦA BẢN 20/11/2026 (2026.11.20.3)
+   - TẠO THỬA KHÔNG NỐI ĐOẠN RANH NỮA: bỏ chức năng nối các đoạn ranh liền nhau thành đường gấp khúc của bản
+     2026.11.20.2 (bỏ ô chọn trong bảng chọn lớp và mục thiết lập tương ứng). Tạo thửa giữ nguyên các đoạn ranh
+     như đã vẽ / đã cắt. Sửa lỗi tự động vẫn phá đường gấp khúc thành đoạn thẳng rồi cắt ranh tại giao điểm
+     (mục 4.1).
+   - SƠ ĐỒ THỬA ĐẤT (DGN) XUẤT NHÃN THỬA LÀ Ô N_THUA ĐÚNG 3 LỚP 3 MÀU: mỗi nhãn là một ô (cell) N_THUA gồm số
+     thửa và gạch ngang lớp 13 màu 1, loại đất lớp 2 màu 2 (bên trái gạch ngang), diện tích lớp 4 màu 3 (dưới
+     gạch ngang) – bố cục như nhãn 🏷 Vẽ nhãn, đặt trọn trong thửa, xoay theo hướng thửa; thửa nhỏ vẫn đủ 3 phần.
+     Thửa chưa có số (đường, mương…) chỉ ghi loại đất lớp 2. DGN V7 không đặt được tên ô N_THUA nên mỗi nhãn gom
+     thành một nhóm đồ hoạ. Sơ đồ cả tờ rất lớn (hàng nghìn thửa) vẫn xuất trọn một tệp (mục 5).
+   - NỀN MÀU LOẠI ĐẤT PHỐI MÀU DỊU: bộ màu mặc định mới dễ nhìn – lúa vàng nhạt, cây hằng năm cam nhạt, cây lâu
+     năm xanh lá nhạt, rừng xanh lá, thủy sản xanh nước, đất ở hồng, giao thông xám, thủy lợi – sông – mặt nước
+     xanh trời, nghĩa trang tím nhạt, đất chưa sử dụng be, loại khác xám rất nhạt. Bảng màu loại đất có ô "Bộ
+     màu" để chọn lại màu chuẩn bản đồ hiện trạng (TT 08/2024); quy đổi thêm nhiều mã loại đất cũ (mục 6c).
+
+0c. ĐIỂM MỚI CỦA BẢN 20/11/2026 (2026.11.20.2)
+   - SỬA LỖI BẢN 2026.11.20 KHÔNG DỰNG ĐƯỢC CÔNG CỤ: bản 2026.11.20 có lỗi biên dịch trên máy nên bộ cài giữ nguyên
+     công cụ cũ (bấm cập nhật mà không thấy gì đổi). Bản này dựng được; nền màu loại đất, Hồ sơ toàn xã (mục 0d)
+     có từ bản này. Từ nay công cụ tự báo khi bộ cài đã cài bản mới mà công cụ đang chạy vẫn là bản cũ, kèm nút
+     mở báo cáo cập nhật để xem lý do (mục 1c).
+   - SỬA LỖI TỰ ĐỘNG PHÁ ĐƯỜNG GẤP KHÚC THÀNH ĐOẠN THẲNG RỒI MỚI CẮT: mọi đường gấp khúc (line string) – và chuỗi
+     phức chỉ gồm đoạn thẳng – trên các lớp sửa được phá thành đường thẳng (line) từng cạnh, giữ đúng toạ độ (cả
+     cao độ) mọi đỉnh và kiểu đường; sau đó mỗi đoạn chỉ bị ngắt đúng tại điểm cắt (mục 4.1).
+   - TẠO THỬA NỐI ĐOẠN RANH THÀNH ĐƯỜNG GẤP KHÚC (đã bỏ từ bản 2026.11.20.3): các đoạn ranh liền nhau được nối
+     thành một đường gấp khúc từ nút giao tới nút giao.
+
+0d. ĐIỂM MỚI CỦA BẢN 20/11/2026 (2026.11.20 – bản này không dựng được công cụ, các điểm mới có từ 2026.11.20.2)
+   - NỀN MÀU LOẠI ĐẤT (Bản đồ → Nền màu loại đất (bật / tắt), nút ô thửa nhiều màu trên thanh công cụ, gõ
+     M8PRO NENMAU): tô mỗi thửa đúng màu loại đất theo bảng ký hiệu loại đất chuẩn, nằm dưới mọi đối tượng của
+     bản đồ như ảnh vệ tinh nền; bật / tắt một chạm. Nền không phải phần tử của bản vẽ: không thêm, sửa, xoá
+     phần tử nào trong tệp DGN, không vào Undo, không chọn, không bắt điểm, không tính vào Fit View, không in.
+     Cập nhật loại đất đến đâu nền tô lại đến đó (chỉ thửa thay đổi). Có bảng màu (chú giải, số thửa từng loại,
+     đổi màu từng mã) – mục 6c.
+   - HỒ SƠ TOÀN XÃ (menu mới): lập sổ địa chính, sổ mục kê, sổ cấp GCN, sổ biến động, kê khai đăng ký (Excel),
+     danh sách công khai, bảng tổng hợp PL16, danh sách thửa và thống kê (Excel) cho cả xã – lấy thẳng từ tệp
+     thuộc tính toàn xã (.gtp), không cần mở bản đồ DGN – mục 5b.
+
+0e. ĐIỂM MỚI CỦA BẢN 19/11/2026 (2026.11.19.5)
+   - SỬA LỖI TỰ ĐỘNG CHỈ NGẮT ĐƯỜNG TẠI ĐIỂM CẮT: mặc định chỉ cắt ranh đúng tại giao điểm – đường cũ chỉ
+     được ngắt đúng tại điểm đường mới chạm / cắt qua, hai phần nối liền nhau và nối đúng vào đầu đường mới
+     tại chính điểm đó; không kéo, không xén, không xoá đoạn nào của đường cũ. Ba việc "Nối đầu hở", "Cắt
+     phần thừa", "Xoá đoạn trùng" nay MẶC ĐỊNH TẮT; khi tích thì cũng chỉ sửa đầu đường đang hở: nối đầu hở
+     = kéo dài đầu đường theo đúng hướng đoạn cuối của nó tới đường khác; cắt phần thừa = chỉ khi đoạn cuối
+     cắt qua đường khác rồi thò ra. Không bao giờ lấy chính đường đó làm đích, không gộp đỉnh, không dời đỉnh
+     nào khác (bản trước có thể kéo đầu đường cũ vào đỉnh của chính nó hoặc sang ngang làm mất đoạn đầu /
+     đoạn cuối, khiến đường cũ bị cắt thành hai đoạn không nối với đường mới) – mục 4.1.
+   - NHÃN Ô N_THUA CŨ CHẮC CHẮN SANG LỚP 49: ô nhãn cũ nay luôn được dựng lại trên lớp 49 – bản sao mọi thành
+     phần (gạch ngang, số thửa, diện tích, loại đất) gom thành ô mới cùng tên, cùng vị trí, ô cũ xoá – thay
+     cho đổi lớp tại chỗ (có máy chỉ đổi được đầu ô, các thành phần vẫn ở lớp 13). Xong công cụ
+     quét lại bản vẽ kiểm tra từng ô, còn sót thì làm lại. Tách / hợp thửa, vẽ lại nhãn: tìm thêm ô nhãn cũ
+     theo hình thửa và số thửa (cả khi chữ nhãn nằm đúng trên ranh tách). Phần tử nào vẫn chưa đổi được thì
+     thông báo ghi rõ lý do.
+   - GỘP CSDL BẢN ĐỒ VÀ THUỘC TÍNH TOÀN XÃ (Hệ thống → "Gộp CSDL bản đồ và thuộc tính toàn xã…"): gộp mọi tờ
+     bản đồ (.dgn) và tệp thuộc tính (.gtp) của xã – chọn được nhiều tệp ở nhiều thư mục khác nhau – thành
+     một bản đồ và một tệp thuộc tính toàn xã; tệp gốc không bị sửa (mục 7).
+
+0f. ĐIỂM MỚI CỦA BẢN 19/11/2026 (2026.11.19.4)
+   - CẮT RANH CHỈ ĐÚNG TẠI GIAO ĐIỂM, GIỮ NGUYÊN ĐƯỜNG GẤP KHÚC: áp dụng cho cả đường thẳng (line) và đường
+     gấp khúc (line string). Chỉ cắt đúng chỗ các đường gặp nhau; mọi đỉnh khác của đường gấp khúc giữ đúng
+     toạ độ, không bỏ đỉnh, không xoá đoạn nào (bỏ hẳn việc xoá "đoạn trùng" khi cắt). Đường đi qua chỗ giao
+     không bị bẻ gãy: điểm cắt luôn nằm đúng trên đường đó. Đỉnh giữa chỉ coi là chạm đường khác khi nằm
+     đúng trên đường đó (lệch không quá 1 mm) – đỉnh cách đường khác vài cm không bị kéo, không bị cắt. Mỗi
+     đường được kiểm tra lại trước khi ghi (nối liền, đủ mọi đỉnh cũ, không mất khúc); sai thì giữ nguyên
+     đường đó và báo. Vùng (shape), chuỗi phức, cung tròn, đoạn vẽ chồng lên nhau: không cắt, báo vị trí để
+     xử lý tay (mục 4.1).
+   - TÁCH THỬA, HỢP THỬA: nhãn cũ của thửa gốc LUÔN chuyển sang lớp 49 (kể cả khi không vẽ nhãn mới). Nhãn dạng
+     ô (cell) như trên bản đồ thật – gạch ngang và số thửa, diện tích, loại đất cùng một ô – chuyển cả ô và
+     mọi thành phần; công cụ đọc lại trên bản vẽ để kiểm tra, thành phần chưa sang được lớp 49 thì dựng lại
+     ô trên lớp 49 (ô cũ xoá). Nhận ra thêm nhãn khối chữ nhiều dòng, số thửa tạm (45-1), diện tích có dấu
+     nhóm nghìn (1.234,5).
+   - CHUYỂN SỐ TỜ TRONG TỆP THUỘC TÍNH THEO TÊN TỜ BẢN ĐỒ – từng tờ hoặc nhiều tờ một lần (Hệ thống → Chuyển
+     số tờ…, hoặc nút "Tờ …" của Bảng thông tin thuộc tính): tờ bản đồ đặt tên theo số tờ mới (DC226;
+     dc101(dc07) – số trong ngoặc là số tờ cũ) mà tệp .gtp vẫn ghi số tờ cũ thì đổi về đúng số tờ theo tên
+     (mục 7).
+
+0g. ĐIỂM MỚI CỦA BẢN 19/11/2026 (2026.11.19.3)
+   - CẮT RANH ĐÚNG TẠI GIAO ĐIỂM (Bản đồ → Sửa lỗi tự động, ô "Cắt ranh đúng tại giao điểm, khớp đúng điểm
+     nối" – mặc định bật): mọi chỗ các đường ranh gặp nhau – hai đường cắt chéo, đầu đường chạm giữa đường
+     khác (chữ T), đường tự cắt, chạm nhau trong dung sai bắt nối – được cắt đúng tại điểm đó; các đoạn gặp
+     nhau dùng chung đúng một toạ độ nút, đầu đường lệch (trong dung sai) được dời khớp đúng điểm. Mở bằng
+     phần mềm địa chính gốc tạo thửa không phải cắt lại ranh nên không mất dữ liệu khi tạo thửa. Đường mới giữ nguyên lớp,
+     màu, nét, kiểu đường của đường cũ; liên kết thửa – đường ranh trong tệp .gtp tự ghi lại theo đường mới
+     (mục 4.1).
+   - Tìm và sửa lỗi có thêm nhóm "Ranh chưa cắt tại giao điểm", "Đầu đường chưa khớp đúng điểm nối", "Giao
+     với cung tròn / đường cong (cắt tay)". Tạo thửa: còn chỗ chưa cắt thì hỏi cắt trước. Tách thửa, chia
+     thửa: tự cắt ranh tại đầu ranh tách.
+   - THÔNG TIN THỬA ĐẤT: hộp đang mở thì nhấp vào trong thửa khác trên bản đồ là chuyển sang thửa đó (nút
+     "Chọn thửa trên bản đồ"; đang sửa dở thì hỏi ghi trước; chuột phải trên bản đồ để thôi).
+   - BẢNG THÔNG TIN THUỘC TÍNH: nút "Tờ …" đầu thanh công cụ để chọn, chuyển số tờ – theo tên tờ bản đồ đang
+     mở, hoặc tờ khác có trong tệp .gtp (kèm số thửa từng tờ); lựa chọn được nhớ cho tệp bản đồ đó.
+
+0h. ĐIỂM MỚI CỦA BẢN 19/11/2026 (2026.11.19.2)
+   - VẼ NHÃN MỚI THÌ NHÃN CŨ CHUYỂN SANG LỚP 49 (không xoá như trước): Vẽ nhãn, tách thửa, hợp thửa, ghi thông
+     tin thửa có vẽ lại nhãn, đánh số thửa, cập nhật nhãn theo tệp thuộc tính – chữ nhãn cũ và gạch ngang của
+     nhãn cũ trong thửa được chuyển sang lớp 49, giữ nguyên chữ, màu, vị trí (nhãn dạng ô N_THUA chuyển cả ô).
+     Địa danh, ghi chú trong thửa vẫn giữ nguyên lớp. Vẽ lại nhãn nhiều lần: bản giống hệt đã có trên lớp 49
+     thì không chồng thêm. Đổi lớp: Thiết lập → 3. Nhãn thửa → “Nhãn cũ khi vẽ nhãn mới – lớp” (ghi 0 để xoá
+     nhãn cũ như các bản trước).
+
+0i. ĐIỂM MỚI CỦA BẢN 19/11/2026 (2026.11.19)
+   - SỬA LỖI phần mềm địa chính gốc BÁO “Object cannot be cast from DBNull to other types” KHI MỞ BẢNG THUỘC TÍNH sau khi
+     cập nhật thuộc tính bằng công cụ: bản trước ghi để trống một số ô mà phần mềm địa chính gốc luôn cần có giá trị (loại
+     đối tượng sử dụng của chủ mới thêm, liên kết đăng ký – loại đất chi tiết, mã loại đất, diện tích loại
+     đất chi tiết, thửa mới thêm chưa có loại đất chi tiết). Từ bản này mọi lần ghi vào tệp .gtp đều theo
+     đúng cách phần mềm địa chính gốc lưu dữ liệu (mục 7) – hai chương trình dùng chung một tệp không ảnh hưởng nhau.
+   - TỰ SỬA TỆP ĐÃ BỊ BẢN TRƯỚC GHI THIẾU: kết nối tệp thuộc tính là công cụ tự tìm, sửa các chỗ đó, báo
+     đã sửa những gì và lưu lại (bản trước khi sửa giữ ở <tên tệp>.gtp.bak). Sau đó mở bằng phần mềm địa chính gốc là dùng
+     bình thường.
+   - ĐỔI MÀU CHỦ ĐỀ THANH ỨNG DỤNG: Hệ thống → Màu chủ đề thanh ứng dụng… (hoặc chuột phải lên thanh):
+     17 màu có sẵn, Màu khác… để chọn màu tuỳ ý, Mặc định Windows để trở lại như cũ. Bấm màu là thấy ngay
+     trên thanh menu, thanh công cụ, thanh trạng thái (Windows 11: cả thanh tiêu đề); chữ tự trắng hoặc đen
+     cho rõ, nền tối thì biểu tượng tự đổi sang nét sáng. Màu được nhớ cho lần mở sau.
+
+0j. ĐIỂM MỚI CỦA BẢN 18/11/2026 (2026.11.18)
+   - ẢNH VỆ TINH NỀN NGAY TRONG MICROSTATION (nút quả địa cầu trên thanh công cụ, Bản đồ → Ảnh vệ tinh nền
+     (bật / tắt), lệnh M8PRO ANHNEN hoặc M8PRO GOOGLE): bấm là bật – ảnh vệ tinh hiện ngay DƯỚI NỀN bản đồ
+     DGN, đúng toạ độ VN-2000 (kinh tuyến trục 105°00′, múi chiếu 3°), nút giữ trạng thái đang bấm; bấm lần
+     nữa là tắt, ảnh tự gỡ khỏi bản vẽ. Thu phóng, di chuyển khung nhìn: ảnh tự dựng lại đúng độ nét màn
+     hình, tải trên luồng nền nên MicroStation không bị đơ. Ảnh nền không in ra (mục 6a).
+   - Nguồn ảnh: Esri World Imagery (miễn phí, không cần khoá, dùng ngay) hoặc Google Maps bằng khoá Map Tiles
+     API riêng (Bản đồ → Thiết lập ảnh vệ tinh…, mục 6a).
+   - Mở Google Maps trong trình duyệt tại thửa (nút quả địa cầu của bản trước) chuyển vào Bản đồ → Mở Google
+     Maps tại thửa (trình duyệt). Các chức năng khác giữ nguyên.
+
+0k. ĐIỂM MỚI CỦA BẢN 17/11/2026 (2026.11.17.2)
+   - TÁCH THỬA (Bản đồ → Tách thửa, nút ✂ trên thanh công cụ, lệnh M8PRO TACH): vẽ ranh tách trên lớp ranh
+     thửa (nối kín từ ranh tới ranh) → bấm Tách thửa → CHẠM VÀO BÊN TRONG từng thửa mới theo thứ tự muốn
+     đánh số → chuột phải. Số thửa mới tự đánh tiếp theo số lớn nhất của tờ (Điều 17 Thông tư
+     26/2024/TT-BTNMT), sửa được trong hộp thoại; thửa gốc lưu vào THỬA CŨ của từng thửa mới (tệp .gtp);
+     chủ sử dụng, địa chỉ, loại đất chi tiết chép tự động; nhãn thửa mới vẽ đúng quy định (mục 6b).
+   - HỢP THỬA (Bản đồ → Hợp thửa, lệnh M8PRO HOP): bấm Hợp thửa → chạm vào bên trong các thửa cần hợp →
+     chuột phải → Đồng ý. Đoạn ranh chung chuyển sang LỚP 49 (ranh thửa cũ), thửa sau khi hợp nhận số mới,
+     loại đất và diện tích gộp tự động, các thửa cũ lưu vào thửa cũ của thửa mới, vẽ nhãn thửa mới (mục 6b).
+   - BẢN VẼ TÁCH THỬA, HỢP THỬA ĐẤT (Mẫu số 22): lập ngay sau khi tách / hợp, hoặc bất cứ lúc nào bằng Kết
+     xuất → Bản vẽ tách thửa, hợp thửa đất → chạm vào bên trong thửa mới: sơ đồ trước tách/hợp vẽ theo
+     thửa cũ đã lưu, sơ đồ sau tách/hợp theo thửa mới, thông tin thửa gốc lấy tự động (mục 5).
+   - ẢNH VỆ TINH GOOGLE ĐÚNG TOẠ ĐỘ: chạm vào trong thửa hoặc điểm bất kỳ → Google Maps mở ảnh vệ tinh
+     trong trình duyệt, ghim đúng điểm (VN-2000 kinh tuyến trục 105°00′, múi chiếu 3° → WGS84); máy có
+     Google Earth Pro thì mở thêm ranh thửa chồng lên ảnh. Từ bản 2026.11.18 lệnh này ở Bản đồ → Mở Google
+     Maps tại thửa (trình duyệt); nút quả địa cầu bật / tắt ảnh vệ tinh nền (mục 6a).
+   - Chia thửa theo diện tích: vẽ đường chia xong là tách thửa như lệnh Tách thửa (số mới, thửa cũ, nhãn).
+   - Kinh tuyến trục ghi dạng độ phút (105°00′) trên công cụ, khung bản đồ và hướng dẫn; còn để 104°45′
+     thì công cụ hỏi một lần có đổi sang 105°00′ không.
+
+0l. ĐIỂM MỚI CỦA BẢN 17/11/2026 (2026.11.17)
    - CÓ BỘ CÀI ĐẶT CaiDat_BienTapBDDC_2026.11.17.exe: bấm đúp là cài, không phải chạy build.bat, cai-dat.bat.
      Bộ cài tự tìm MicroStation V8i, dựng công cụ đúng với MicroStation trên máy, đặt vào MicroStation, tạo
      biểu tượng Biên Tập BĐĐC trên màn hình nền và menu Start; gỡ trong phần Ứng dụng của Windows (mục 1).
@@ -16,7 +217,7 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
      cụ có biểu tượng riêng, sắc nét cả trên màn hình phóng to chữ.
    - Logo mới cho cửa sổ công cụ, bộ cài và biểu tượng trên màn hình nền.
 
-0b. ĐIỂM MỚI CỦA BẢN 2026-11-16-c
+0m. ĐIỂM MỚI CỦA BẢN 2026-11-16-c
    - CÁC MẪU HỒ SƠ, KẾT XUẤT LẬP NGAY TRONG CÔNG CỤ: không còn mở cửa sổ hồ sơ riêng. Bộ mẫu chuẩn của
      M8 Mobile chạy ngầm (Edge / Chrome không cửa sổ); hộp chọn của mẫu hiện bằng hộp thoại của công cụ;
      mẫu cần chạm thửa thì chạm trên bản vẽ MicroStation; tệp kết quả lưu vào thư mục hồ sơ và mở ngay
@@ -111,8 +312,20 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
      trong bảng Cập nhật phiên bản mới (hoặc bấm đúp bộ cài như mục 1). Vẫn có báo cáo.
    - Cơ quan có thư mục dùng chung: Thiết lập → Nơi lấy phiên bản mới → gõ thư mục chứa capnhat.json và bộ
      cài, ví dụ  \\MAYCHU\PhanMem\BienTapBDDC  (tác giả, quản trị xem HUONG-DAN-PHAT-HANH.txt).
+   - BẢN MỚI CHƯA DỰNG ĐƯỢC CÔNG CỤ (lỗi biên dịch trên máy, tệp công cụ cũ đang bị giữ…): bộ cài giữ nguyên công cụ
+     cũ để vẫn làm việc được. Lần mở công cụ sau đó, công cụ báo "Đã cài bộ cài bản … nhưng công cụ đang chạy vẫn
+     là bản …" và hỏi mở báo cáo cập nhật – làm theo mục "Việc cần làm tiếp", có lỗi biên dịch thì gửi báo cáo cho
+     tác giả.
    - Xem lại báo cáo: menu Start → Biên Tập BĐĐC → Báo cáo cài đặt, cập nhật. Các báo cáo lưu ở
      C:\ProgramData\BienTapBDDC\BaoCao (tên tệp BaoCao_<ngày>_<giờ>.txt) – gửi tác giả khi cần hỗ trợ.
+
+1d. KÍCH HOẠT BẢN QUYỀN
+   - Bản dùng thử: dùng đủ mọi chức năng, chỉ mở (kết nối) được tệp thuộc tính .gtp dưới 1 MB. Mở tệp lớn hơn thì
+     công cụ hiện hộp "Kích hoạt bản quyền".
+   - Mã kích hoạt cấp giống bản M8 Mobile: một dòng bắt đầu bằng MAPDGN-. Mã M8 Mobile đã cấp dùng được luôn.
+   - Nhập mã: khi cài (trang "Mã kích hoạt"), hoặc menu Hệ thống → "Kích hoạt bản quyền…" (cửa sổ Biên Tập BĐĐC và
+     menu của công cụ trong MicroStation) → dán mã → Kích hoạt. Mã lưu trên máy, cập nhật bản mới không phải nhập lại.
+   - Liên hệ tác giả Nguyễn Xuân Thủy để lấy mã kích hoạt.
 
 2. NẠP VÀO MICROSTATION
    - Mở MicroStation V8i và tệp bản đồ (.dgn).
@@ -126,8 +339,8 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
      MicroStation. Chữ nút màu xanh = đang kết nối.
    - Menu "Biên tập BĐĐC" của MicroStation: Mở công cụ · Kết nối lại với bản đồ đang mở · Ngắt kết nối ·
      Sửa lỗi tự động · Tìm và sửa lỗi · Tạo thửa · Vẽ nhãn · Chọn thửa · Bảng thông tin thuộc tính ·
-     Kết nối tệp thuộc tính · Thiết lập đơn vị hành chính · Mở thư mục hồ sơ · Tách thửa · Gộp thửa ·
-     Phiếu PL17 · Trích lục PL19 ·
+     Kết nối tệp thuộc tính · Thiết lập đơn vị hành chính · Mở thư mục hồ sơ · Tách thửa · Hợp thửa ·
+     Bản vẽ tách thửa, hợp thửa đất (Mẫu số 22) · Ảnh vệ tinh nền (bật / tắt) · Phiếu PL17 · Trích lục PL19 ·
      Thiết lập · Chẩn đoán kết nối · Cập nhật phiên bản mới · Đóng.
    - NGẮT KẾT NỐI: đóng các bảng, giải phóng tệp .gtp (hỏi lưu nếu có sửa), thôi làm việc với bản đồ.
      MicroStation và bản đồ không bị ảnh hưởng. Kết nối lại: menu Biên tập BĐĐC → Kết nối lại, hoặc nút
@@ -144,7 +357,9 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
      M8PRO PHIEU17   phiếu đo đạc chỉnh lý (PL 17)    M8PRO TRICHLUC  trích lục bản đồ (PL 19)
      M8PRO SODO      sơ đồ thửa đất DGN 4 lớp          M8PRO CHONTHUA  chọn thửa trên bản đồ
      M8PRO NHAN      vẽ nhãn thửa chọn                 M8PRO TACH      tách thửa
-     M8PRO GOP       gộp thửa                          M8PRO THIETLAP  thiết lập
+     M8PRO HOP       hợp thửa (M8PRO GOP như cũ)       M8PRO THIETLAP  thiết lập
+     M8PRO BANVE     bản vẽ tách thửa, hợp thửa (Mẫu số 22)
+     M8PRO ANHNEN    ảnh vệ tinh nền bật / tắt (mục 6a; M8PRO GOOGLE như cũ)
      M8PRO GTP       kết nối tệp thuộc tính (.gtp)     M8PRO DVHC      thiết lập đơn vị hành chính
      M8PRO CAPNHAT   cập nhật phiên bản mới (mục 1c)
 
@@ -179,17 +394,26 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
      in sổ sách và in trên các mẫu hồ sơ (ô Đơn vị hành chính, Cơ quan).
 
 3. THANH MENU CỦA CÔNG CỤ
-   HỆ THỐNG  Kết nối · Ngắt kết nối · Kết nối tệp thuộc tính (.gtp) · Ngắt kết nối tệp thuộc tính ·
-             Thiết lập đơn vị hành chính · Thiết lập · Mở thư mục hồ sơ · Chẩn đoán · Cập nhật phiên bản
-             mới · Giới thiệu · Đóng.
-   BẢN ĐỒ    Sửa lỗi tự động · Tìm và sửa lỗi · Tạo thửa · Vẽ nhãn · Bảng thông tin thuộc tính (mục 4).
+   HỆ THỐNG  Kết nối · Ngắt kết nối · Kết nối tệp thuộc tính (.gtp) · Kết nối tệp thuộc tính độc lập – mọi tờ,
+             không theo bản đồ (mục 7) · Ngắt kết nối tệp thuộc tính ·
+             Chuyển số tờ trong tệp thuộc tính theo tên tờ bản đồ · Gộp CSDL bản đồ và thuộc tính toàn xã
+             (mục 7) · Thiết lập đơn vị hành chính · Thiết lập · Màu chủ đề thanh ứng dụng · Mở thư mục hồ sơ ·
+             Chẩn đoán · Cập nhật phiên bản mới · Giới thiệu · Đóng.
+   BẢN ĐỒ    Sửa lỗi tự động · Tìm và sửa lỗi · Tạo thửa · Vẽ nhãn · Bảng thông tin thuộc tính (mục 4) ·
+             Tách thửa · Hợp thửa · Chia thửa theo diện tích (mục 6b) · Ảnh vệ tinh nền (bật / tắt) ·
+             Thiết lập ảnh vệ tinh… · Mở Google Maps tại thửa (trình duyệt) (mục 6a) · Nền màu loại đất
+             (bật / tắt) · Bảng màu loại đất (chú giải, đổi màu)… (mục 6c).
    ĐĂNG KÝ   Đơn đăng ký đất đai, tài sản gắn liền với đất (Mẫu số 15) · Danh sách công khai kết quả kiểm
              tra hồ sơ (Mẫu số 06/ĐK) · Kê khai đăng ký (Excel) · Bản mô tả ranh giới, mốc giới thửa đất
              (Phụ lục 12) · Bảng tổng hợp diện tích, số thửa, số người sử dụng đất (Phụ lục 16).
    HỒ SƠ     Sổ địa chính (Mẫu số 01/ĐK) · Sổ mục kê đất đai (Phụ lục 18) · Sổ cấp Giấy chứng nhận
              (Mẫu số 02/ĐK) · Sổ đăng ký biến động đất đai · Bảng thống kê tọa độ điểm mốc ranh giới
              (Phụ lục 14a) · Danh sách thửa và thống kê (Excel).
-   KẾT XUẤT  Sơ đồ thửa đất (DGN): ranh thửa lớp 10, số thửa lớp 13, loại đất lớp 2, diện tích lớp 4 ·
+   HỒ SƠ TOÀN XÃ  Gộp CSDL bản đồ và thuộc tính toàn xã · Chọn tệp thuộc tính toàn xã (.gtp) · Bảng thuộc tính
+             toàn xã (kết nối độc lập, mọi tờ, mọi thửa – mục 7) · Sổ địa chính ·
+             Sổ mục kê · Sổ cấp GCN · Sổ đăng ký biến động · Kê khai đăng ký (Excel) · Danh sách công khai ·
+             Bảng tổng hợp PL16 · Danh sách thửa và thống kê (Excel) – toàn xã, lập từ tệp .gtp (mục 5b).
+   KẾT XUẤT  Bảng hồ sơ thửa đất (các mẫu hồ sơ theo nhóm) · Sơ đồ thửa đất (DGN): ranh thửa lớp 10, số thửa lớp 13, loại đất lớp 2, diện tích lớp 4 ·
              Phiếu đo đạc chỉnh lý thửa đất (Phụ lục 17) · Trích lục bản đồ địa chính (Phụ lục 19) ·
              Bản vẽ tách thửa, hợp thửa đất (Mẫu số 22) · Phiếu xác nhận kết quả đo đạc hiện trạng thửa
              đất (Phụ lục 14) · Sơ đồ thửa đất in trên Giấy chứng nhận · Shapefile (VN-2000) ·
@@ -198,23 +422,83 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
 
 4. MENU BẢN ĐỒ
    4.1 SỬA LỖI TỰ ĐỘNG
-     - Bảng chọn lớp liệt kê các lớp có đường nét trong bản vẽ (ví dụ "Lớp 10 · 396 nét"): tích các lớp
-       có đường ranh cần sửa (mặc định lớp ranh thửa).
-     - Khoảng sửa tối đa (m) và 3 việc: nối đầu hở tới ranh gần nhất (bắt chưa tới), cắt phần thừa ngắn
-       (bắt quá), xoá đoạn thẳng trùng nhau. Sửa ngay trên bản vẽ MicroStation (Undo được).
-     - Xong báo số chỗ đã sửa và số đầu hở còn lại; còn thì hỏi mở "Tìm và sửa lỗi" để tới từng chỗ.
-   4.2 TÌM VÀ SỬA LỖI
-     - Dò theo dữ liệu hiện tại (cả đường vừa vẽ thêm): đầu đường hở (treo đỉnh), đoạn ranh vẽ chồng lên
-       nhau, vùng rất nhỏ (dưới 1 m²), thửa chưa có số, trùng số thửa, diện tích nhãn lệch diện tích
-       tính từ ranh. Danh sách xếp theo nhóm lỗi, trong nhóm từ Bắc xuống Nam, từ Tây sang Đông.
-     - ◀ ▶ (hoặc phím mũi tên trái/phải, PageUp/PageDown): MicroStation phóng tới lỗi, đầu hở được chọn
-       sẵn đối tượng. Nhấp một dòng để tới thẳng lỗi đó.
-     - Sửa trong MicroStation rồi quay lại bấm ▶: công cụ tự dò lại; lỗi vừa xem đã hết thì báo
-       "✓ Đã sửa · còn N" và ▶ tới lỗi kế tiếp. Bấm ⟳ Dò lại để dò ngay.
+     - Hộp thoại hai thẻ. Thẻ "Level ranh thửa": bảng các lớp (tích chọn · Level · Số đối tượng đường; lớp có đối
+       tượng in đậm) – tích các lớp có đường ranh cần sửa (mặc định lớp ranh thửa), nhấp đúp dòng để tích / bỏ
+       tích; bỏ ô "Chỉ hiện lớp có đối tượng đường" để hiện đủ lớp 1–63. Thẻ "Tuỳ chọn sửa": nhóm "Cắt ranh tại
+       giao điểm" và nhóm "Sửa thêm đầu đường". Chân hộp: "Khoảng sửa tối đa (m)", nút Thực hiện, Đóng.
+     - Việc chính (mặc định bật): PHÁ ĐƯỜNG GẤP KHÚC THÀNH ĐOẠN THẲNG rồi CẮT RANH ĐÚNG TẠI GIAO ĐIỂM – mỗi đoạn
+       chỉ bị ngắt tại điểm cắt (xem dưới). Sửa ngay trên bản vẽ. Tạo thửa không nối lại các đoạn (mục 4.3).
+     - Sửa thêm đầu đường (MẶC ĐỊNH TẮT, trong "Khoảng sửa tối đa"; chỉ sửa đỉnh đầu / đỉnh cuối đang hở của
+       đường, không động tới đỉnh nào khác, không lấy chính đường đó làm đích, không gộp đỉnh):
+         • Nối đầu hở (bắt chưa tới): kéo dài đầu đường theo đúng hướng đoạn cuối của nó tới đường khác gần
+           nhất; không có đường nào trên hướng đó thì để nguyên, báo ở Tìm và sửa lỗi;
+         • Cắt phần thừa (bắt quá): chỉ khi đoạn cuối cắt qua một đường khác rồi thò ra – đưa đầu đường về
+           đúng giao điểm (không xén cả đoạn, không xoá đỉnh);
+         • Xoá đoạn thẳng trùng hệt nhau (cùng lớp).
+     - PHÁ ĐƯỜNG GẤP KHÚC: trước khi cắt, mọi đường gấp khúc (line string) – và chuỗi phức (complex chain) chỉ gồm
+       đoạn thẳng – trên các lớp đã tích được phá thành đường thẳng (line) từng cạnh: giữ đúng toạ độ (cả cao độ)
+       mọi đỉnh, giữ lớp, màu, nét, kiểu đường, nhóm; đỉnh lặp (đoạn dài 0) bỏ qua.
+     - CẮT RANH ĐÚNG TẠI GIAO ĐIỂM – cắt các đường thẳng (line), chỉ cắt đúng chỗ các đường gặp nhau:
+         • hai đoạn cắt chéo nhau: cắt cả hai đúng tại giao điểm;
+         • đầu đường chạm giữa đường khác (chữ T): đường kia được cắt đúng tại điểm chạm;
+         • đỉnh của đường gấp khúc nằm đúng trên đường khác (lệch không quá 1 mm), đường tự cắt: cắt tại đó.
+       Các đoạn gặp nhau dùng chung ĐÚNG một toạ độ nút; điểm cắt luôn nằm đúng trên đường đi qua (đường đó
+       không bị bẻ gãy). PHẦN CÒN LẠI GIỮ NGUYÊN: mọi đỉnh khác của đường gấp khúc giữ đúng toạ độ (cả cao độ
+       trên bản vẽ 3D), không bỏ đỉnh, không xoá đoạn nào – đường bị cắt được thay bằng các đoạn nối liền đúng
+       như đường cũ. Đỉnh giữa đường cách đường khác vài cm (không chạm) không bị kéo, không bị cắt.
+     - Đầu đường hụt / thừa trong dung sai bắt nối (Thiết lập → 2 → "Dung sai bắt nối ranh", mặc định 0,02 m)
+       được đưa đúng vào điểm nối, chỉ dời đỉnh đầu: đầu thừa cắt về đúng giao điểm (giữ hướng đường); đầu hụt
+       nối vào chỗ giao / điểm nối có sẵn hoặc đỉnh gần nhất, không có thì kéo dài theo hướng của chính đường
+       đó (hoặc chân vuông góc). Đầu đường nằm sát nhưng chạy gần song song với đường khác thì không nối, báo
+       để kiểm tra.
+     - Từng đường được kiểm tra lại trước khi ghi (các đoạn nối liền, đi qua đủ mọi đỉnh cũ theo thứ tự, điểm
+       cắt nằm trên đường cũ, không mất khúc); sai thì giữ nguyên đường đó và báo "chưa cắt tự động được".
+     - Không cắt, không sửa: vùng (shape), chuỗi phức, cung tròn, ellipse – chỗ cần cắt trên các phần tử này
+       được báo vị trí để cắt tay (đầu cung tròn, đầu chuỗi phức chạm đường thẳng thì đường thẳng vẫn được cắt
+       đúng tại đó); đoạn ranh vẽ chồng lên nhau cũng không cắt, không xoá (báo ở nhóm "Đoạn ranh vẽ chồng lên
+       nhau"). Đường mới giữ nguyên lớp, màu, nét, kiểu đường, nhóm của đường cũ; đường chỉ cần dời đầu thì
+       sửa đỉnh, giữ nguyên phần tử. Chạy lại không thay đổi gì nữa (đã cắt đúng hết).
+     - Đã kết nối tệp .gtp: các thửa có liên kết đường ranh (mã phần tử) tới đường vừa được cắt được ghi lại
+       liên kết theo các đoạn mới và lưu tệp – mở bằng phần mềm địa chính khác không phải tạo lại thửa.
+     - Tắt cắt ranh: bỏ ô trong bảng, hoặc Thiết lập → 2 → "Cắt ranh tại giao điểm".
+     - Hoàn tác cả lần sửa: trước khi sửa, trong MicroStation chọn Edit → Set Mark; sau đó Edit → Undo Other →
+       To Mark (hoặc gõ UNDO MARK).
+     - Xong báo số chỗ đã sửa và số đầu hở còn lại; còn thì hỏi mở bảng "Duyệt và sửa lỗi" để tới từng chỗ
+       (mục 4.2).
+   4.2 TÌM VÀ SỬA LỖI (hộp Tìm lỗi dữ liệu → bảng Duyệt và sửa lỗi)
+     - HỘP TÌM LỖI DỮ LIỆU: bên trái nhóm "Level ranh thửa" – tích các lớp cần dò (lớp có đối tượng in đậm, rê
+       chuột lên lớp để xem số đối tượng; chuột phải: chọn mọi lớp có đối tượng / bỏ chọn tất cả). Bên phải
+       nhóm "Loại lỗi cần tìm" – chỉ dò các loại đã tích: đầu đường hở (treo đỉnh), ranh chưa cắt tại giao
+       điểm, đầu đường chưa khớp đúng điểm nối, chỗ cần cắt / nối tay (giao với cung tròn, vùng, chuỗi phức;
+       đầu đường gần song song với đường khác; đường chưa cắt tự động được), đoạn ranh vẽ chồng lên nhau, vùng
+       rất nhỏ, thửa chưa có số, trùng số thửa, diện tích nhãn lệch diện tích tính từ ranh (rê chuột lên ô để
+       xem giải thích). Nhóm "Ngưỡng kiểm tra": vùng rất nhỏ khi diện tích dưới … m² (mặc định 1), dung sai
+       bắt nối ranh (m). "Đặt lại mặc định": tích lại đủ 9 loại, ngưỡng 1 m² và 0,02 m. Lựa chọn được nhớ cho
+       lần sau.
+     - Dò theo dữ liệu hiện tại (cả đường vừa vẽ thêm). Danh sách xếp theo nhóm lỗi, trong nhóm từ Bắc xuống
+       Nam, từ Tây sang Đông.
+     - BẢNG DUYỆT VÀ SỬA LỖI: nhóm "Loại lỗi đang duyệt" có ô tích từng loại kèm số lỗi – bỏ tích để tạm ẩn loại
+       đó khi duyệt; dòng chữ đỏ dưới nhóm là lỗi đang xem; danh sách theo nhóm (rê chuột lên dòng để xem đủ nội
+       dung); thanh chân bảng: về lỗi đầu, lùi, số thứ tự / tổng số, tới, về lỗi cuối, Dò lại, Phóng tới.
+     - ◀ ▶ (hoặc phím mũi tên trái/phải, PageUp/PageDown; Ctrl+Home, Ctrl+End về lỗi đầu / lỗi cuối): bản vẽ
+       phóng tới lỗi, đầu hở được chọn sẵn đối tượng. Nhấp một dòng để tới thẳng lỗi đó.
+     - Sửa trên bản vẽ rồi quay lại bấm ▶: công cụ tự dò lại (đúng các loại lỗi đã chọn khi tìm); lỗi vừa xem
+       đã hết thì báo "Lỗi vừa xem đã hết" và ▶ tới lỗi kế tiếp. Bấm Dò lại để dò ngay.
    4.3 TẠO THỬA
-     - Chọn lớp ranh thửa (bản đồ địa chính thường là lớp 10; chọn được nhiều lớp).
+     - Hộp thoại: bên trái nhóm "Các lớp ranh tạo thửa" (bản đồ địa chính thường là lớp 10; chọn được nhiều
+       lớp). Bên phải nhóm "Thông tin gán cho thửa": Tờ bản đồ số (mặc định theo tên tờ bản đồ; gõ số khác để
+       đặt riêng cho tệp bản đồ này, gõ lại đúng số theo tên là bỏ đặt riêng) · Số lẻ diện tích (0–3) · Bỏ vùng
+       có diện tích nhỏ hơn (m²) – vùng khép kín nhỏ hơn không tạo thành thửa (0: chỉ bỏ vùng dưới 0,01 m²) ·
+       Dung sai bắt nối ranh (m) · ô "Ghi vào tệp thuộc tính ngay sau khi tạo thửa" · ô "Hỏi cắt ranh tại giao
+       điểm trước khi tạo thửa". Nhóm "Đọc nhãn thửa": lớp chữ nhãn (số thửa, loại đất đọc từ chữ trên lớp
+       này). Bấm Tạo thửa: các giá trị được lưu vào Thiết lập.
      - Chỉ tạo khi KHÔNG còn lỗi treo đỉnh trên các lớp đã chọn; còn lỗi thì công cụ mở "Tìm và sửa lỗi"
        tại lỗi đầu tiên.
+     - Còn chỗ ranh chưa cắt tại giao điểm / đầu đường chưa khớp đúng điểm: công cụ hỏi cắt ranh trước (Có:
+       phá đường gấp khúc, cắt rồi tạo thửa – nên chọn; Không: tạo thửa luôn; Huỷ: thôi). Bỏ ô "Hỏi cắt ranh
+       tại giao điểm trước khi tạo thửa" (hoặc Thiết lập → 2 → "Tạo thửa: hỏi cắt ranh tại giao điểm trước")
+       để tạo thửa luôn, không hỏi.
+     - Tạo thửa không nối, không sửa đoạn ranh nào: các đoạn ranh giữ nguyên như đã vẽ / đã cắt.
      - Tạo xong hiện bảng tổng hợp sơ bộ: tổng số thửa (số thửa chưa có số), các thửa mới (số thửa, loại
        đất, diện tích) và cộng diện tích thửa mới, tổng diện tích cả tờ (m² và ha), thống kê theo loại
        đất. Tạo lại sau khi tách, gộp: thửa mới là vùng chưa có trước đó.
@@ -227,12 +511,20 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
    4.4 VẼ NHÃN
      - Phạm vi: tất cả thửa / thửa chọn trên bản đồ / thửa chưa có nhãn. Kiểu: 3 lớp 3 màu (chuẩn),
        3 dòng, phân số.
-     - Nhãn chuẩn: số thửa trên gạch ngang (lớp 13), loại đất bên trái ngang giữa gạch (lớp 2), diện tích
-       dưới gạch (lớp 4). Nhãn đặt ở chỗ rộng nhất trong thửa; thửa hẹp thì xoay theo cạnh dài và thu nhỏ
-       chữ; quá chật thì chỉ ghi số thửa.
+     - Nhãn chuẩn (bố cục như ô nhãn N_THUA của phần mềm địa chính): số thửa trên gạch ngang (lớp 13), loại
+       đất bên trái ngang giữa gạch (lớp 2), diện tích dưới gạch (lớp 4). Gạch nằm đúng giữa: đáy số thửa cao
+       hơn gạch 2/9 cao chữ, đỉnh diện tích thấp hơn gạch 2/9 cao chữ; số thửa và diện tích canh giữa theo gạch;
+       gạch dài bằng chữ diện tích (diện tích dài thì gạch bằng 4/5 chữ); loại đất sát bên trái khối chữ. Mỗi chữ
+       mang canh lề như nhãn chuẩn (số thửa giữa – dưới, diện tích giữa – trên, loại đất phải – giữa) nên sửa
+       chữ trong bản vẽ vẫn giữ đúng chỗ. Nhãn đặt ở chỗ rộng nhất trong thửa; thửa hẹp thì xoay theo cạnh dài
+       và thu nhỏ chữ; quá chật thì chỉ ghi số thửa.
+     - Bản đồ chưa có lớp nào cần dùng (ví dụ chưa có lớp 2, lớp 4): công cụ tạo lớp tên chuẩn "Level 2",
+       "Level 4"… (mã lớp đúng số lớp) rồi vẽ đủ các phần, cuối lệnh báo các lớp đã tạo. Không bỏ trống phần nào,
+       không vẽ nhầm sang lớp đang dùng. Mọi lệnh vẽ khác của công cụ cũng vậy.
      - Diện tích ghi theo dấu thập phân mà đa số nhãn trên tờ đang dùng (chấm hoặc phẩy).
-     - "Xoá nhãn cũ trong thửa": chỉ xoá chữ là nhãn thửa và gạch ngang của nhãn; địa danh, ghi chú
-       trong thửa được giữ nguyên.
+     - "Nhãn cũ trong thửa chuyển sang lớp 49": chỉ chữ là nhãn thửa và gạch ngang của nhãn chuyển sang lớp 49
+       (giữ nguyên chữ, màu, vị trí – không xoá); địa danh, ghi chú trong thửa được giữ nguyên. Bỏ tích thì
+       nhãn cũ để nguyên. Level nhãn cũ đổi ở Thiết lập → 3 → "Nhãn cũ khi vẽ nhãn mới – lớp" (0: xoá nhãn cũ).
      - Nhãn vẽ thành Ô (cell) N_THUA: các thành phần vẫn ở đúng lớp, màu của chúng (loại đất lớp 2, số thửa
        và gạch lớp 13, diện tích lớp 4). Bật / tắt lớp vẫn ẩn hiện từng phần như nhãn chữ rời.
    4.5 BẢNG THÔNG TIN THUỘC TÍNH: xem mục 7.
@@ -240,6 +532,20 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
 5. ĐĂNG KÝ – HỒ SƠ – KẾT XUẤT: LẬP NGAY TRONG CÔNG CỤ (bộ mẫu M8 Mobile chạy ngầm)
    - Bấm một mục trong menu Đăng ký, Hồ sơ hoặc Kết xuất. Mục lập cho một thửa thì thanh trạng thái
      MicroStation nhắc chạm vào thửa: nhấp chuột trái vào trong thửa, nhấp chuột phải để huỷ.
+   - BẢNG HỒ SƠ THỬA ĐẤT (Kết xuất → "Bảng hồ sơ thửa đất (các mẫu hồ sơ theo nhóm)…", nút Bảng hồ sơ thửa đất
+     trên thanh công cụ, hoặc Bảng thông tin thuộc tính → Hồ sơ thửa → "Bảng hồ sơ thửa đất…"): bảng đứng bên
+     trái màn hình, gom các mẫu theo nhóm, mở sẵn trong lúc làm việc:
+       • Thửa lập hồ sơ: "Chọn thửa trên bản đồ" (chạm vào trong thửa) – bảng ghi số thửa, tờ, diện tích, loại đất. Chạm thửa bằng lệnh khác của
+         công cụ thì bảng cũng chuyển theo thửa đó.
+       • Định dạng tệp: PDF / DGN V8 / DGN V7 / DXF cho phiếu đo đạc, trích lục, bản vẽ tách hợp thửa – bấm lập
+         từ bảng này thì không hỏi lại định dạng.
+       • Hồ sơ của thửa: phiếu đo đạc chỉnh lý, trích lục bản đồ, xác nhận hiện trạng, mô tả ranh giới mốc giới,
+         sơ đồ in trên GCN, bảng toạ độ mốc, đơn đăng ký (Mẫu 15) – bấm là lập cho thửa ghi ở trên (chưa có thì
+         nhắc chạm thửa); bản vẽ tách, hợp thửa: chạm vào thửa mới như mục dưới. Rê chuột lên nút để xem tên đầy
+         đủ của mẫu.
+       • Cả tờ bản đồ: sơ đồ thửa đất (DGN), sổ mục kê, sổ địa chính, danh sách công khai, Shapefile (VN-2000),
+         GeoJSON (WGS84).
+       • Lưu hồ sơ: thư mục đang lưu, "Mở thư mục", "Đổi thư mục…", ô "Mở tệp hồ sơ ngay sau khi lập".
    - Công cụ lưu tệp thuộc tính (.gtp) và tờ bản đồ, rồi giao cho BỘ MÁY LẬP MẪU chạy ngầm (Edge / Chrome
      không cửa sổ) lập theo đúng mẫu của M8 Mobile, từ tờ bản đồ và tệp .gtp đang kết nối. Lần đầu mất vài
      giây để khởi động; mở menu Đăng ký / Hồ sơ / Kết xuất là công cụ khởi động sẵn và nạp sẵn tờ bản đồ.
@@ -251,16 +557,18 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
      trùng tên thì thêm (2), (3)…; PDF, Excel mở ngay bằng chương trình mặc định; DGN, DXF, Shapefile thì mở
      thư mục và chọn sẵn tệp. Tắt tự mở: Thiết lập → 5 → "Mở tệp hồ sơ sau khi lập". Xem lại: Hệ thống →
      Mở thư mục hồ sơ (gõ M8PRO HOSO).
-   - BẢN VẼ TÁCH THỬA, HỢP THỬA ĐẤT (Mẫu số 22):
-       • Tách thửa: vẽ đường tách cắt qua thửa trong MicroStation (đường thẳng hoặc đường gấp khúc, lớp bất
-         kỳ – vẽ thẳng lên lớp ranh cũng được: công cụ lấy lại thửa gốc chưa chia), CHỌN đường đó, rồi
-         Kết xuất → Bản vẽ tách thửa → chạm thửa cần tách. Nhiều đường tách: chọn cả.
-       • Hợp thửa: chọn nhãn các thửa cần hợp trong MicroStation, rồi Kết xuất → Bản vẽ tách thửa → chạm
-         một trong các thửa đó.
-       • Hộp thoại hiện diện tích thửa gốc, các thửa sau tách/hợp và các ô thông tin in trên bản vẽ (số
-         phát hành, ngày cấp GCN, người sử dụng, địa chỉ, số thửa mới, ghi sau diện tích…) – lấy sẵn theo
-         tệp .gtp, sửa được trước khi bấm Lập.
-       • Lập xong bản vẽ mới tách thật trên bản đồ: đưa đường tách lên lớp ranh → Bản đồ → Tạo thửa.
+   - BẢN VẼ TÁCH THỬA, HỢP THỬA ĐẤT (Mẫu số 22) – cơ chế như phần mềm địa chính: bản vẽ lập theo THỬA CŨ đã
+     lưu khi tách / hợp.
+       • Sau khi Tách thửa / Hợp thửa (mục 6b): để dấu ở ô "Lập ngay Bản vẽ tách thửa, hợp thửa đất" là bản
+         vẽ lập luôn. Lập lại lúc khác: Kết xuất → Bản vẽ tách thửa, hợp thửa đất (hoặc nút Mẫu 22 trên
+         thanh công cụ, lệnh M8PRO BANVE) → CHẠM VÀO BÊN TRONG thửa mới → chuột phải. Thửa cũ lấy từ tệp
+         .gtp (bảng thửa cũ có hình thửa); chưa kết nối .gtp thì lấy từ lịch sử tách / hợp lưu trên máy.
+       • Sơ đồ 3.1 (trước tách/hợp) vẽ thửa cũ, 3.2 (sau) vẽ các thửa mới, ghi số thửa liền kề; 3.3 độ dài
+         cạnh; trang 1 ghi thửa gốc (số, tờ, diện tích, loại đất, chủ, địa chỉ, số phát hành GCN) lấy tự
+         động – sửa được trong hộp thoại trước khi bấm Lập.
+       • Lập PHƯƠNG ÁN khi chưa tách trên bản đồ: vẽ đường tách cắt qua thửa trong MicroStation, CHỌN đường
+         đó rồi chọn lệnh và chạm thửa cần tách; phương án hợp: chọn lệnh rồi chạm vào trong 2 thửa trở lên.
+     Người lập bản vẽ mặc định "cán bộ thuộc" cơ quan đặt ở Hệ thống → Thiết lập đơn vị hành chính.
    - CHỈ ĐỌC: bộ máy lập mẫu không ghi vào bản đồ và tệp .gtp. Ranh, nhãn, thuộc tính sửa bằng công cụ;
      mỗi lần lập hồ sơ, bộ máy tự đọc lại bản mới nhất.
    - Đơn vị hành chính, cơ quan in trên hồ sơ lấy theo Hệ thống → Thiết lập đơn vị hành chính.
@@ -270,22 +578,43 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
      công cụ hoặc MicroStation, nghỉ 20 phút không lập hồ sơ cũng tự tắt cho nhẹ máy.
    - Sổ đăng ký biến động lấy nội dung thay đổi ghi trong tệp .gtp (trang sổ địa chính, thửa tách, hợp);
      tệp chưa có biến động thì công cụ báo rõ.
-   - Sơ đồ thửa đất (DGN): cả tờ hoặc một thửa, đúng toạ độ VN-2000; ranh thửa lớp 10, số thửa lớp 13,
-     loại đất lớp 2, diện tích lớp 4; mở trong MicroStation trùng khít bản đồ.
+   - Sơ đồ thửa đất (DGN): cả tờ hoặc một thửa, đúng toạ độ VN-2000; ranh thửa lớp 10 (đường ranh, cạnh chung
+     vẽ một lần, hoặc hình khép kín từng thửa); mỗi nhãn thửa là một ô N_THUA chuẩn 3 lớp 3 màu: số thửa và gạch
+     ngang lớp 13 màu 1, loại đất lớp 2 màu 2 bên trái gạch, diện tích lớp 4 màu 3 dưới gạch (cùng bố cục với Vẽ
+     nhãn ở mục 4.4: gạch đúng giữa số thửa và diện tích, chữ mang canh lề chuẩn; đặt trọn trong thửa, xoay theo
+     hướng thửa; thửa nhỏ vẫn đủ 3 phần). Thửa chưa có số chỉ ghi loại đất lớp 2.
+     DGN V7: mỗi nhãn gom thành một nhóm đồ hoạ (tên ô V7 không có dấu gạch dưới). Mở chồng lên bản đồ gốc thấy
+     trùng khít.
    - Máy không có Edge / Chrome, hoặc tắt Thiết lập → 5 → "Lập hồ sơ chạy ngầm": công cụ mở cửa sổ hồ sơ
      riêng như M8 Mobile (tệp tải về thư mục Tải xuống). Gõ M8PRO HOSO CUASO để mở cửa sổ này khi cần.
 
+5b. HỒ SƠ TOÀN XÃ (menu Hồ sơ toàn xã) – LẬP TỪ TỆP THUỘC TÍNH TOÀN XÃ (.gtp), KHÔNG CẦN BẢN ĐỒ
+   - TỆP THUỘC TÍNH TOÀN XÃ: tệp .gtp gộp từ các tờ (Hồ sơ toàn xã / Hệ thống → Gộp CSDL bản đồ và thuộc tính
+     toàn xã – mục 7) hoặc tệp toàn xã có sẵn. Chọn tệp: Hồ sơ toàn xã → Chọn tệp thuộc tính toàn xã (.gtp)…
+     (công cụ nhớ cho lần sau). Đang kết nối tệp .gtp có từ 2 tờ trở lên thì dùng luôn tệp đó; gộp xong thì
+     tệp toàn xã vừa gộp được chọn sẵn.
+   - CÁC MẪU: Sổ địa chính (Mẫu số 01/ĐK – mỗi tờ một tệp PDF) · Sổ mục kê đất đai (Phụ lục 18 – mỗi tờ một
+     phần có đầu trang "Tờ bản đồ số", kèm bảng tổng hợp các tờ; Excel mỗi tờ một trang) · Sổ cấp Giấy chứng
+     nhận (Mẫu số 02/ĐK) · Sổ đăng ký biến động đất đai · Kê khai đăng ký (Excel đủ các trang của mẫu) · Danh
+     sách công khai (Mẫu số 06/ĐK) · Bảng tổng hợp diện tích, số thửa, số người sử dụng đất (Phụ lục 16) ·
+     Danh sách thửa và thống kê (Excel: danh sách thửa, tổng hợp loại đất, tổng hợp theo tờ, theo tờ và loại
+     đất). Thửa xếp theo tờ rồi theo số thửa.
+   - Lập hoàn toàn theo dữ liệu trong tệp .gtp (số thửa, diện tích, loại đất, chủ, giấy chứng nhận, hình thửa) –
+     không đọc bản đồ DGN, không cần mở tờ nào. Tệp đang kết nối có thay đổi chưa lưu thì công cụ hỏi lưu trước.
+   - Tệp kết quả lưu vào thư mục hồ sơ như mục 5. Sổ địa chính toàn xã nhiều trang: mỗi tờ một tệp PDF cho
+     nhẹ, dễ in.
+
 6. NÚT ĐỘC LẬP TRÊN THANH CÔNG CỤ (rê chuột lên nút để xem tên)
-   Kết nối / Ngắt · Chọn thửa · Thông tin thửa · Tách thửa · Gộp thửa · Chia thửa theo diện tích ·
-   Cập nhật thửa sau khi tự vẽ đường chia · Đánh số thửa tự động · Vẽ nhãn thửa chọn · Xoá nhãn thửa ·
+   Kết nối / Ngắt · Chọn thửa · Thông tin thửa · Bảng hồ sơ thửa đất (mục 5) · Tách thửa · Hợp thửa ·
+   Chia thửa theo diện tích ·
+   Bản vẽ tách thửa, hợp thửa đất (Mẫu số 22) · Đánh số thửa tự động · Vẽ nhãn thửa chọn · Xoá nhãn thửa ·
    Ghi kích thước cạnh · Đánh số hiệu đỉnh · Vẽ khung bản đồ · Tô màu theo loại đất · Ghi tên chủ ·
    Triển điểm đo · Nối điểm thành ranh · Đối chiếu nhãn với .gtp · Cập nhật lại nhãn theo .gtp ·
    Thửa chênh lệch diện tích · Diện tích trong / ngoài quy hoạch · Diện tích theo loại đất ·
    Mở / Cập nhật / Lưu tệp thuộc tính · Xuất / Nhập Excel (CSV) · Đổi phông TCVN3 ↔ Unicode ·
-   Tìm và thay chữ · Thiết lập · Xem ảnh vệ tinh Google Maps tại thửa · Chỉ đường tới thửa.
-   GOOGLE MAPS (như M8 Mobile): thửa đang chọn (chưa chọn thì chạm thửa) → toạ độ VN-2000 đổi sang vĩ độ,
-   kinh độ WGS84 (kinh tuyến trục theo Thiết lập đơn vị hành chính, 7 tham số chuyển đổi chuẩn) → mở Google
-   Maps ảnh vệ tinh tại thửa, hoặc chỉ đường từ vị trí hiện tại tới thửa. Cần mạng.
+   Tìm và thay chữ · Thiết lập · Ảnh vệ tinh nền (bật / tắt, nút quả địa cầu – mục 6a) · Nền màu loại đất
+   (bật / tắt, nút ô thửa nhiều màu – mục 6c) · Chỉ đường tới thửa.
+   CHỈ ĐƯỜNG TỚI THỬA: thửa đang chọn (chưa chọn thì chạm thửa) → Google Maps chỉ đường tới thửa.
    ĐO ĐẠC
    - Triển điểm đo từ tệp toạ độ: tệp .txt/.csv mỗi dòng "tên X Y H" (cách nhau dấu cách, tab, phẩy hoặc
      chấm phẩy; dòng tiêu đề tự bỏ qua). Mặc định X là toạ độ Bắc theo VN-2000. Điểm vẽ trên lớp
@@ -294,9 +623,89 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
      Sau đó Bản đồ → Tạo thửa.
    - Chia thửa theo diện tích: chạm thửa → nhập diện tích cần tách → chọn 2 điểm chỉ hướng đường chia
      (ví dụ 2 đầu một cạnh: đường chia song song cạnh đó) → chạm vào phía phần cần tách → xem diện tích
-     2 phần, đồng ý thì vẽ đường chia và tạo thửa mới (thửa giữ số cũ, phần mới số lớn nhất + 1).
-   - Tự vẽ đường chia trong MicroStation trên lớp ranh: bấm "Cập nhật thửa sau khi tự vẽ đường chia"
-     (thửa giữ số cũ, phần mới lấy số lớn nhất + 1, tự vẽ nhãn).
+     2 phần, đồng ý thì vẽ đường chia trên lớp ranh và TÁCH THỬA như lệnh Tách thửa (mục 6b): phần vừa
+     chạm là thửa mới thứ nhất.
+   - Tự vẽ đường chia trong MicroStation trên lớp ranh: dùng lệnh Tách thửa (mục 6b).
+
+6a. ẢNH VỆ TINH NỀN DƯỚI BẢN ĐỒ DGN (nút quả địa cầu · Bản đồ → Ảnh vệ tinh nền (bật / tắt) · M8PRO ANHNEN)
+   - BẬT: bấm nút quả địa cầu – nút chuyển sang trạng thái đang bấm. Lần đầu công cụ hỏi nguồn ảnh (Esri dùng
+     ngay; Google cần khoá – xem dưới) và kinh tuyến trục của tờ. Ảnh vệ tinh hiện ngay dưới nền bản đồ trong
+     MicroStation, đúng toạ độ VN-2000, ở mọi khung nhìn; đường nét, chữ của bản đồ nằm trên ảnh.
+     TẮT: bấm nút lần nữa – ảnh tự gỡ khỏi bản vẽ.
+   - THU PHÓNG, DI CHUYỂN: dừng tay khoảng nửa giây là ảnh tự dựng lại theo khung nhìn mới, đúng độ nét màn
+     hình (vùng đã xem: dưới 1 giây; vùng mới: vài giây tuỳ mạng). Ảnh cũ vẫn hiện tới khi ảnh mới xong – việc
+     tải, ghép ảnh chạy trên luồng nền nên MicroStation không bị đơ, vẫn vẽ, sửa bình thường. Thanh trạng thái
+     ghi nguồn ảnh, mức ảnh, số ô ảnh và thời gian dựng.
+   - ĐỘ NÉT: ảnh nét tới mức chi tiết nhất mà nguồn ảnh có ở vùng đang xem (ảnh Esri ở nhiều vùng Việt Nam
+     khoảng 0,3–0,6 m một điểm ảnh, đô thị thường chi tiết hơn). Phóng quá mức đó ảnh được nội suy mượt – không
+     vỡ ô vuông, không gãy, không lộ đường ghép giữa các ô – nhưng không thể chi tiết hơn ảnh gốc.
+   - TOẠ ĐỘ: VN-2000 → WGS84 theo phép chiếu UTM, KINH TUYẾN TRỤC của tờ (mặc định 105°00′), MÚI CHIẾU 3°
+     (k0 = 0,9999), 7 tham số chuyển đổi chuẩn. Tờ dùng kinh tuyến trục khác: Hệ thống → Thiết lập đơn vị hành
+     chính → Kinh tuyến trục (ghi 105 cho 105°00′, 104,75 cho 104°45′), rồi tắt, bật lại ảnh. Bản thân ảnh vệ
+     tinh có thể lệch vài mét (độ chính xác nắn ảnh của nhà cung cấp, nhà cao, đồi núi) – dùng để đối chiếu,
+     không thay số liệu đo.
+   - KHÔNG IN, KHÔNG NẰM LẠI TRONG TỆP DGN: ảnh đặt ở lớp nền (Background) của Raster Manager, tắt in; tự gỡ khi
+     tắt ảnh, ngắt kết nối, đóng công cụ, đóng hoặc đổi tệp bản đồ. Ảnh tạm ở C:\ProgramData\M8Pro\AnhVeTinh,
+     tự xoá. Máy tắt đột ngột lúc đang bật ảnh: lần sau mở tệp đó, ảnh sót được tự gỡ. Ảnh raster khác của
+     bản vẽ (ảnh quét, ảnh nắn…) không bị đụng tới.
+   - UNDO: mỗi lần ảnh dựng lại, MicroStation ghi một bước gắn / gỡ ảnh, nên Undo (Ctrl+Z) có thể hoàn tác
+     bước đổi ảnh trước – bấm thêm Undo để hoàn tác thao tác vẽ. Muốn tránh: tắt ảnh nền trước khi Undo, hoặc
+     tắt "Tự dựng lại ảnh khi di chuyển, thu phóng" trong Thiết lập ảnh vệ tinh (ảnh chỉ dựng lại khi tắt, bật).
+   - THIẾT LẬP (Bản đồ → Thiết lập ảnh vệ tinh…): nguồn ảnh, khoá Google, tự dựng lại ảnh.
+     · Esri World Imagery: miễn phí, không cần khoá. Ghi nguồn "Esri, Maxar, Earthstar Geographics…" ở góc
+       dưới phải khung nhìn.
+     · Google Maps: cần khoá Google Maps Platform có bật Map Tiles API. Tạo khoá: vào console.cloud.google.com
+       (tài khoản Google) → tạo dự án, gắn tài khoản thanh toán (Google yêu cầu) → APIs & Services → Library →
+       tìm "Map Tiles API" → Enable → APIs & Services → Credentials → Create credentials → API key → chép
+       khoá dán vào ô "Khoá Google Maps Platform (Map Tiles API)". Nên giới hạn khoá: Edit API key → API
+       restrictions → chỉ chọn Map Tiles API (không đặt giới hạn HTTP referrer – công cụ không chạy trong
+       trình duyệt). Google miễn phí 100.000 ô ảnh 2D mỗi tháng, quá mức tính phí theo bảng giá Google; mỗi
+       lần dựng ảnh khoảng 30–150 ô, ô đã tải được dùng lại trong phiên làm việc. Khoá sai hoặc bị từ chối:
+       công cụ báo và tạm dùng ảnh Esri.
+     · Ảnh Google chỉ để XEM, ĐỐI CHIẾU: điều khoản của Google không cho số hoá, vẽ ranh theo ảnh. Ảnh có chữ
+       "Google Maps" và dòng bản quyền ở góc khung nhìn như Google yêu cầu.
+   - CẦN MẠNG INTERNET. Mạng cơ quan chặn services.arcgisonline.com (Esri) hoặc tile.googleapis.com (Google)
+     thì ảnh không tải được – thanh trạng thái báo, công cụ tự thử lại sau ít giây.
+   - Gắn ảnh vào MicroStation không được: công cụ ghi tệp chẩn đoán
+     C:\ProgramData\M8Pro\AnhVeTinh\AnhVeTinh_ChanDoan.txt – gửi tệp này cho tác giả.
+   - MỞ GOOGLE MAPS TRONG TRÌNH DUYỆT (như bản trước): Bản đồ → Mở Google Maps tại thửa (trình duyệt) → chạm
+     vào trong thửa hoặc điểm bất kỳ → Google Maps mở ảnh vệ tinh, ghim đúng điểm, phóng vừa thửa; máy có
+     Google Earth Pro thì mở thêm tệp ranh thửa (.kml, lưu ở thư mục hồ sơ\Google) chồng đúng lên ảnh.
+
+6b. TÁCH THỬA, HỢP THỬA TRÊN BẢN ĐỒ
+   CHỌN THỬA: nhấp chuột trái VÀO BÊN TRONG RANH thửa (không cần trúng nhãn); thửa đã chọn sáng lên, nhấp
+   lại để bỏ chọn; chọn xong nhấp CHUỘT PHẢI. Thanh trạng thái MicroStation ghi các thửa đang chọn.
+   TÁCH THỬA
+     1) Vẽ ranh tách bằng công cụ vẽ của MicroStation trên LỚP RANH THỬA (mặc định 10), đầu và cuối bắt
+        đúng vào ranh thửa (Snap) – có thể vẽ nhiều đường, tách một thửa thành nhiều thửa một lần.
+     2) Bấm Tách thửa → chạm vào bên trong từng thửa mới theo thứ tự muốn đánh số → chuột phải.
+     3) Hộp thoại ghi thửa gốc (số, diện tích, loại đất, chủ) và các thửa mới (diện tích). SỐ THỬA MỚI tự
+        đánh tiếp theo số lớn nhất của tờ – kể cả số của các thửa cũ đã huỷ (Điều 17 Thông tư 26/2024/
+        TT-BTNMT: thửa mới đánh số tiếp theo, số thửa gốc không dùng lại); cần số tạm thì ghi dạng 45-1,
+        45-2. Loại đất mặc định theo thửa gốc, sửa được.
+     4) Đồng ý → công cụ: ghi số, loại đất cho thửa mới; ghi vào tệp .gtp (thêm thửa mới – chép chủ sử
+        dụng, địa chỉ, loại đất chi tiết chia theo diện tích; thửa gốc chuyển vào THỬA CŨ của từng thửa mới
+        kèm hình thửa, chủ, số phát hành GCN; xoá thửa gốc khỏi danh sách thửa hiện hành; lưu tệp); cắt
+        ranh thửa đúng tại đầu ranh tách (và các giao điểm khác trong thửa gốc), ghi lại liên kết thửa – đường
+        ranh của thửa liền kề; nhãn cũ của thửa gốc chuyển sang lớp 49 (luôn làm, kể cả khi bỏ tích vẽ nhãn
+        mới), vẽ nhãn thửa mới chuẩn 3 lớp 3 màu nếu để dấu; lập Bản vẽ tách thửa (Mẫu số 22) nếu để dấu.
+        Nhãn cũ dạng ô (cell N_THUA: gạch ngang + số thửa, diện tích, loại đất) chuyển cả ô cùng mọi thành
+        phần; thành phần nào chưa sang được lớp 49 thì ô được dựng lại trên lớp 49 (ô cũ xoá). Thông báo kết
+        quả ghi số phần tử nhãn cũ đã chuyển; phần tử nào chưa chuyển được thì báo để đổi lớp bằng tay.
+   HỢP THỬA
+     1) Bấm Hợp thửa → chạm vào bên trong các thửa cần hợp (liền nhau, có ranh chung; thửa chạm đầu tiên
+        giữ chủ, địa chỉ) → chuột phải.
+     2) Hộp thoại ghi các thửa, cảnh báo nếu khác chủ sử dụng; số thửa sau hợp tự đánh tiếp theo số lớn
+        nhất của tờ; loại đất gộp các loại của các thửa (ví dụ ONT+CLN).
+     3) Đồng ý → các ĐOẠN RANH CHUNG chuyển sang LỚP 49 (giữ nguyên nét, màu – ranh thửa cũ; đường ranh chỉ
+        một phần là ranh chung thì tách đúng tại điểm nút, phần còn lại giữ lớp ranh); dựng lại thửa; ghi
+        vào tệp .gtp (thửa mới, loại đất cộng diện tích theo từng loại, chủ sử dụng không trùng, các thửa cũ
+        vào thửa cũ); nhãn các thửa cũ chuyển sang lớp 49 (luôn làm), vẽ nhãn thửa mới nếu để dấu; lập Mẫu
+        số 22 nếu để dấu.
+   Đổi lớp ranh thửa cũ: Hệ thống → Thiết lập → 4. Biên tập → "Ranh thửa cũ khi hợp thửa – lớp".
+   Hoàn tác: Undo của MicroStation cho bản vẽ; tệp .gtp có bản lưu .gtp.bak trước lần ghi đầu.
+   Chưa kết nối tệp .gtp: chỉ sửa bản đồ và nhãn; thửa cũ lưu trên máy (%APPDATA%\M8Pro\tachhop) để lập
+   Mẫu số 22.
    KIỂM TRA
    - Đối chiếu nhãn với tệp thuộc tính: thửa có số thửa, loại đất, diện tích trên nhãn khác tệp .gtp; thửa
      chưa có nhãn; thửa có trong tệp nhưng không có trên bản đồ. Nhấp dòng để phóng tới.
@@ -308,6 +717,42 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
    - Diện tích trong / ngoài quy hoạch: vẽ vùng quy hoạch KHÉP KÍN trên lớp "Ranh quy hoạch – lớp"
      (mặc định 50) → bảng diện tích từng thửa trong và ngoài quy hoạch.
 
+6c. NỀN MÀU LOẠI ĐẤT DƯỚI BẢN ĐỒ DGN (nút ô thửa nhiều màu · Bản đồ → Nền màu loại đất (bật / tắt) · M8PRO NENMAU)
+   - BẬT: bấm nút ô thửa nhiều màu – nút chuyển sang trạng thái đang bấm. Chưa tạo thửa thì công cụ tự tạo thửa
+     từ ranh (hoặc theo hình thửa trong tệp .gtp). Mỗi thửa được tô đúng màu loại đất (mã cũ như BHK, NHK, COC,
+     LUN, DTS, SKX, TSN, SMN, mã rừng RSM, RPN, RDN… tự quy về mã mới), ở mọi khung nhìn; thửa gần giữa khung
+     nhìn được tô trước. Thửa nhiều mục đích (ONT+CLN) tô theo mục đích ghi đầu.
+   - BỘ MÀU: mặc định là MÀU DỊU, dễ nhìn – lúa vàng nhạt, cây hằng năm cam nhạt, cây lâu năm xanh lá nhạt, rừng
+     xanh lá, thủy sản – làm muối xanh nước, đất ở hồng, giao thông xám, thủy lợi – sông – mặt nước xanh trời,
+     nghĩa trang tím nhạt, đất chưa sử dụng be, loại khác xám rất nhạt. Muốn màu chuẩn bản đồ hiện trạng theo bảng
+     ký hiệu loại đất (TT 08/2024/TT-BTNMT): Bảng màu loại đất → ô "Bộ màu" → "Màu chuẩn bản đồ hiện trạng".
+     TẮT: bấm nút lần nữa.
+   - LỚP HIỂN THỊ: nền gán lớp Default (đổi ở Thiết lập → 4 → "Nền màu loại đất – lớp hiển thị"; tên lớp không có
+     trong bản vẽ thì dùng Default). Nền chỉ hiển thị, không tạo lớp mới, không vẽ phần tử nào vào bản đồ.
+   - KHÔNG ẢNH HƯỞNG BẢN ĐỒ: nền là lớp hiển thị tạm trên khung nhìn, vẽ trước mọi đối tượng – đường ranh,
+     nhãn, chữ luôn nằm trên nền. Nền không phải phần tử của bản vẽ: không thêm, sửa, xoá phần tử nào trong tệp
+     DGN, không vào Undo, không chọn, không bắt điểm, không tính vào Fit View, không in. Vẽ, sửa, Undo trên bản
+     đồ không làm mất hay xê dịch nền. Tự gỡ khi tắt, ngắt kết nối, đóng công cụ, đóng / đổi tệp bản đồ (tệp
+     mới tự tạo thửa và tô lại nếu nền còn bật).
+   - CẬP NHẬT LOẠI ĐẤT ĐẾN ĐÂU, NỀN TÔ LẠI ĐẾN ĐÓ: sửa loại đất ở Bảng thông tin thuộc tính, Thông tin thửa đất,
+     nhập từ Excel, cập nhật nhãn theo tệp .gtp, tách / hợp thửa, tạo lại thửa… – chỉ thửa thay đổi được tô lại,
+     trong chưa tới một giây. Sửa ranh, sửa chữ nhãn trực tiếp bằng lệnh vẽ: bấm Tạo thửa (hoặc tắt, bật lại
+     nền) để tô theo hình, nhãn mới.
+   - THỬA CHƯA CÓ LOẠI ĐẤT, KÝ HIỆU LẠ: để trống (không tô); thanh trạng thái ghi số thửa để trống và các ký hiệu
+     chưa có trong bảng màu. Thửa có lỗ (bao quanh thửa khác): chỉ tô phần đất của thửa, không đè thửa bên trong.
+   - CÙNG ẢNH VỆ TINH NỀN: màu tô trong mờ để vẫn thấy ảnh.
+   - BẢNG MÀU LOẠI ĐẤT (Bản đồ → Bảng màu loại đất (chú giải, đổi màu)…): mã, tên loại đất, màu (R, G, B), số
+     thửa từng loại trên tờ đang mở – loại có trên tờ chữ đậm; ký hiệu lạ, thửa chưa có loại đất ở cuối danh
+     sách. Ô "Bộ màu": màu dịu (mặc định) hoặc màu chuẩn bản đồ hiện trạng – chọn bộ khác thì bỏ các màu đã đổi
+     riêng. Bấm đúp một dòng (hoặc "Đổi màu…") để đổi màu mã đó – nền đổi theo ngay; "Màu mặc định mã này",
+     "Màu mặc định cho tất cả" để trả về màu của bộ màu đang chọn. Bộ màu và màu đã đổi lưu riêng trên máy
+     (%APPDATA%\M8Pro\bangmau.txt).
+   - KHÔNG THẤY MÀU: bật Fill trong View Attributes (Ctrl+B) của khung nhìn. Máy không đặt được màu thật thì
+     công cụ dùng màu gần nhất trong bảng màu của tệp và báo trên thanh trạng thái. Để hiện đúng màu,
+     bảng màu mở rộng của tệp có thể được ghi thêm vài màu (không đổi đối tượng nào). Màu sai hoặc
+     nền đè lên đường nét: gửi tệp C:\ProgramData\M8Pro\NenMau_ChanDoan.txt cho tác giả.
+   - Lệnh "Tô màu theo loại đất" (thanh công cụ) vẫn giữ: vẽ vùng tô thật vào lớp 63 khi cần in bản đồ màu.
+
 7. TỆP THUỘC TÍNH .GTP – KẾT NỐI TRỰC TIẾP, LƯU THẲNG
    - Mở bản đồ DC208.dgn: hiện bảng kết nối, chọn sẵn DC208.gtp nếu có cùng thư mục (mục 2b); số tờ lấy
      theo tệp.
@@ -316,31 +761,125 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
      địa chỉ chủ, toạ độ tâm và HÌNH THỬA lưu trong tệp.
    - Tạo thửa từ ranh trên bản đồ rồi tự liên kết với tệp theo tâm thửa / số thửa. Nếu chưa đọc được ranh:
      thửa được dựng theo hình trong tệp (vẫn chọn thửa, phóng tới, trích lục, sơ đồ… được).
+   - KẾT NỐI ĐỘC LẬP (tệp toàn xã đã gộp, hoặc tệp bất kỳ – không cần tờ bản đồ ứng với tệp): Hệ thống → "Kết nối
+     tệp thuộc tính độc lập – mọi tờ, không theo bản đồ (.gtp)…", hoặc Hồ sơ toàn xã → "Bảng thuộc tính toàn xã"
+     (mở tệp toàn xã đã chọn / vừa gộp); gộp CSDL toàn xã xong công cụ hỏi kết nối độc lập luôn.
+       • Bảng thông tin thuộc tính hiện đủ mọi tờ, mọi thửa trong tệp, xếp theo tờ rồi số thửa (bấm tiêu đề cột
+         Số tờ / Số thửa để đảo chiều). Nút "Mọi tờ": chọn một tờ để lọc, hoặc chuyển sang kết nối tệp theo tờ
+         bản đồ đang mở, hoặc ngắt kết nối. Chân bảng ghi số tờ, số thửa, tổng diện tích trong tệp.
+       • Sửa số thửa, loại đất, diện tích pháp lý, địa chỉ, chủ… ngay trong bảng: lưu thẳng vào đúng dòng của tờ đó
+         (kiểm tra trùng số thửa trong cùng tờ). Thông tin chi tiết, Toàn bộ thông tin mở được cho mọi dòng (cả dòng
+         không có hình thửa). Phóng tới: thửa có hình trong tệp thì bản vẽ phóng tới và tô sáng hình đó. Xuất dữ liệu
+         → CSV: xuất đúng các dòng đang hiện (mọi tờ).
+       • Không liên kết thửa trên bản đồ và KHÔNG GHI GÌ TỪ BẢN ĐỒ VÀO TỆP: tạo thửa, cập nhật từ bản đồ, đối chiếu
+         nhãn, tách / hợp thửa, cắt ranh đều không chạm vào tệp đang kết nối độc lập (công cụ báo rõ). Mở tờ bản đồ
+         khác vẫn giữ kết nối độc lập. Muốn làm việc theo tờ: Hệ thống → Kết nối tệp thuộc tính (.gtp).
+       • Hồ sơ toàn xã dùng luôn tệp đang kết nối độc lập (tệp có từ 2 tờ trở lên).
    - SỬA ĐẾN ĐÂU LƯU THẲNG VÀO TỆP .GTP ĐẾN ĐÓ (giữ nguyên mã hoá như tệp gốc). Bản gốc trước khi sửa được
      giữ lại một lần mỗi lần mở: DC208.gtp.bak. Tắt tự lưu: Thiết lập → 7 → "Lưu thẳng…" (khi đó, lúc lập
      hồ sơ công cụ hỏi lưu tệp thuộc tính, vì bộ mẫu hồ sơ đọc tệp đã lưu trên đĩa).
-   - Bảng thông tin thuộc tính: sửa trực tiếp số thửa, mục đích, DT pháp lý, địa chỉ thửa, tên chủ, năm
-     sinh, địa chỉ chủ, ghi chú. Thửa chưa có chủ: gõ tên chủ là tự thêm chủ vào tệp. Nhấp dòng để phóng
-     tới thửa.
+   - BẢNG THÔNG TIN THUỘC TÍNH: sửa trực tiếp số thửa, loại đất, DT pháp lý, địa chỉ thửa, tên chủ, năm sinh,
+     địa chỉ chủ, ghi chú (ô diện tích gõ dấu phẩy hay dấu chấm thập phân đều được, xoá trắng là bỏ giá trị).
+     Thửa chưa có chủ: gõ tên chủ là tự thêm chủ vào tệp. Nhấp dòng để phóng tới thửa.
+       • Thanh lệnh: Tờ … · Thông tin chi tiết (bảng Thông tin thửa đất) · Toàn bộ thông tin · Hồ sơ thửa (lập
+         ngay mẫu hồ sơ cho thửa đang chọn, không phải chạm lại thửa; mục cuối mở Bảng hồ sơ thửa đất) · Tiện
+         ích (vẽ nhãn, ghi kích thước cạnh, đánh số hiệu đỉnh cho thửa đang chọn) · Phóng tới · Lấy lại dữ liệu
+         (đọc lại thửa từ bản đồ) · Xuất dữ liệu (danh sách thửa ra Excel CSV, sổ mục kê xem nhanh) · Tìm (tìm
+         nhanh trong mọi cột) · ✕ bỏ mọi điều kiện lọc.
+       • HÀNG LỌC dưới tiêu đề từng cột: gõ một phần nội dung để lọc theo cột đó (lọc nhiều cột thì dòng phải
+         khớp đủ các cột). Dòng "Cộng" ở chân bảng cộng DT bản đồ, DT trong tệp, DT pháp lý của các dòng đang
+         hiện.
+       • Thanh chân bảng: về dòng đầu, lùi, tới, về dòng cuối (bản đồ phóng tới thửa); số dòng đang lọc, tổng
+         số thửa và diện tích trên bản đồ. Bấm tiêu đề cột Số thửa để xếp theo số (1, 2, … 10).
+   - CHỌN, CHUYỂN SỐ TỜ: nút "Tờ …" đầu thanh công cụ của bảng – "Theo tên tờ bản đồ" (chữ "Tờ số …" trên
+     bản đồ, không có thì số cuối tên tệp DGN) hoặc một tờ có trong tệp .gtp (kèm số thửa của từng tờ). Chọn
+     tờ là bảng và liên kết thửa trên bản đồ chuyển theo tờ đó; lựa chọn được nhớ riêng cho tệp bản đồ.
+     Chọn nhầm tờ (không thửa nào khớp) thì công cụ báo để kiểm tra lại. Nút này chỉ đổi tờ đang XEM; muốn đổi
+     số tờ GHI TRONG TỆP thì dùng mục "Chuyển số tờ…" ở cuối danh sách của nút (xem ngay dưới).
+   - CHUYỂN SỐ TỜ TRONG TỆP THUỘC TÍNH THEO TÊN TỜ BẢN ĐỒ (Hệ thống → "Chuyển số tờ trong tệp thuộc tính theo
+     tên tờ bản đồ (một / nhiều tệp)…", hoặc nút "Tờ …" của bảng → "⇄ Chuyển số tờ…"):
+       • Dùng khi tờ bản đồ đã đặt tên theo số tờ mới (DC226.dgn; dc101(dc07).dgn – số trong ngoặc là số tờ
+         cũ) mà tệp .gtp vẫn ghi số tờ cũ, thửa tạo mới lại mang số tờ mới (một tệp lẫn hai số tờ).
+       • Danh sách tệp: tệp đang kết nối có sẵn (số tờ mới theo tờ bản đồ đang mở); "Thêm tệp…" chọn một hoặc
+         nhiều tệp .gtp; "Thêm thư mục…" lấy mọi tệp .gtp trong thư mục và các thư mục con một cấp. Số tờ mới
+         của mỗi tệp lấy theo tên tệp (bỏ phần trong ngoặc); tên tệp không có số mà thư mục chỉ có một tờ bản
+         đồ thì theo tờ đó. Mỗi dòng ghi số tờ đang có trong tệp (kèm số thửa), việc sẽ làm, ghi chú.
+       • "Sửa số tờ…" (hoặc nhấp đúp dòng): sửa số tờ mới, chọn những số tờ cũ cần chuyển.
+       • Chuyển: số tờ của thửa đất, của mục đích sử dụng, của hạn chế sử dụng và số hiệu bản đồ của tệp; tuỳ
+         chọn: số tờ trên trang sổ địa chính, sổ mục kê của thửa; ghi số tờ cũ vào cột số tờ cũ của thửa (khi
+         cột còn trống). Giữ nguyên: số tờ cũ / gốc, bản sao lưu, lịch sử thửa, giấy chứng nhận đã cấp, hồ sơ
+         quét, quá trình xử lý, biến động.
+       • Thửa mà đổi sang tờ mới sẽ trùng số thửa đã có của tờ mới: giữ số tờ cũ, báo các số thửa đó để xử lý
+         tay. Mỗi tệp giữ bản gốc <tên>.gtp.bak. Chạy lại không đổi gì thêm. Nên đóng tệp ở phần mềm khác trước
+         khi chuyển. Tệp đang kết nối: bảng thuộc tính và liên kết thửa chuyển ngay sang số tờ mới.
+   - GỘP CSDL BẢN ĐỒ VÀ THUỘC TÍNH TOÀN XÃ (Hệ thống → "Gộp CSDL bản đồ và thuộc tính toàn xã (nhiều tờ, nhiều
+     thư mục)…"):
+       • Danh sách tờ: "Thêm tệp…" chọn một hoặc nhiều tệp .dgn, .gtp (bấm nhiều lần để lấy ở từng thư mục);
+         "Thêm thư mục…" lấy mọi tệp .dgn, .gtp trong thư mục và MỌI thư mục con. Bản đồ và tệp thuộc tính cùng
+         tên ghép vào một dòng (ưu tiên cùng thư mục; khác thư mục vẫn ghép khi tên chỉ có một). Mỗi dòng: số
+         tờ (theo tên tệp), số thửa, thư mục, ghi chú – thiếu bản đồ / thuộc tính, trùng số tờ, tệp ghi số tờ
+         khác tên, tệp thuộc tính giống hệt tệp khác (bản sao lưu – tự bỏ chọn). Bỏ tích để không gộp tờ đó;
+         ▲ ▼ đổi thứ tự, "Xếp theo số tờ". TỜ ĐẦU DANH SÁCH LÀM NỀN (giữ thiết lập, danh mục, cách mã hoá của
+         tờ đó).
+       • Lưu vào thư mục + Tên CSDL gộp: tạo <tên>.dgn và <tên>.gtp (cùng tên để kết nối như các tờ khác).
+       • Gộp bản đồ (cần đang kết nối bản vẽ): tờ đầu chép nguyên tệp, các tờ sau chép từng phần tử vào bản
+         đồ gộp (giữ lớp, màu, nét, ô, chữ; nhóm phần tử đánh lại theo từng tờ). "Bỏ các lớp (không gộp)":
+         ví dụ 63 hoặc 60-63 để bỏ khung, lưới, chú thích ngoài khung của các tờ.
+       • Gộp thuộc tính: mọi thửa, chủ sử dụng, mục đích sử dụng, đăng ký, giấy chứng nhận, đơn, sổ… của các
+         tờ chép vào một tệp; mã của từng tờ được dời để không trùng nhau, liên kết giữa các bảng giữ đúng
+         (thửa ↔ chủ ↔ mục đích ↔ đăng ký…); danh mục (DM75…) và thông tin chung của tệp lấy theo tờ nền,
+         không nhân bản; tổng số thửa, tổng diện tích của tệp cập nhật. Liên kết thửa – đường ranh, nhãn –
+         phần tử bản đồ đổi theo mã phần tử mới của bản đồ gộp (không gộp bản đồ thì bỏ các liên kết này –
+         tạo thửa / vẽ nhãn lại trên bản đồ gộp sẽ ghi lại). Tệp gộp được kiểm tra trước khi lưu.
+       • "Đặt số tờ theo tên tờ bản đồ trong tệp gộp" (DC12 → tờ 12): dùng khi tệp .gtp của các tờ còn ghi
+         số tờ cũ / cùng một số tờ; chỉ đổi trong tệp gộp. Xong báo số tờ, số thửa, số người sử dụng và các
+         thửa trùng số tờ + số thửa (nếu có).
+       • Tệp gốc chỉ đọc, không bị sửa; tệp gộp đã có thì ghi đè (tệp thuộc tính cũ giữ bản .bak). Xong hỏi
+         mở bản đồ toàn xã. Trong công cụ, tệp thuộc tính toàn xã có nhiều tờ: bảng thuộc
+         tính chọn tờ để xem (nút "Tờ …").
    - CHỌN QUA LẠI: chọn dòng trong bảng thì thửa sáng lên trên bản đồ (viền màu theo Thiết lập → 4 → "Màu tô
      sáng thửa đang chọn"); chọn nhãn, chữ hoặc vùng của một thửa trong MicroStation thì bảng tự chuyển tới
      dòng thửa đó. Chạm thửa bằng lệnh của công cụ cũng chọn luôn dòng trong bảng.
-   - BẢNG THÔNG TIN THỬA ĐẤT (nút Thông tin thửa, nhấp đúp dòng, hoặc "Sửa thông tin thửa…" sau khi tạo thửa):
-       • Thẻ Thửa đất: tờ, số thửa, diện tích bản đồ, diện tích pháp lý, địa chỉ, ghi chú.
-       • Loại đất chi tiết: mỗi dòng một mục đích sử dụng – ký hiệu (chọn trong danh mục), tên, diện tích,
-         mục đích chính, thời hạn, sử dụng chung; + Thêm, − Xoá, "Chia đủ DT" chia phần còn lại; dòng kiểm
-         tra cộng diện tích các mục đích so với diện tích thửa.
-       • Chủ sử dụng: tên, năm sinh, địa chỉ; + Thêm chủ.
+   - BẢNG THÔNG TIN THỬA ĐẤT (nút Thông tin thửa, nút Thông tin chi tiết của bảng thuộc tính, nhấp đúp dòng, hoặc
+     "Sửa thông tin thửa…" sau khi tạo thửa):
+       • CHỌN THỬA TIẾP THEO TRÊN BẢN ĐỒ: hộp đang mở thì nhấp vào bên trong thửa khác trên bản đồ là hộp chuyển
+         sang thửa đó (nút "Chọn trên bản đồ" ở chân hộp đang bấm); thửa đang sửa dở chưa ghi thì hỏi ghi trước.
+         Chuột phải trên bản đồ, chọn lệnh khác của MicroStation hoặc bấm lại nút là thôi chọn.
+       • Thẻ Thửa đất – nhóm "Thông tin thửa đất": tờ, số thửa, diện tích bản đồ, diện tích pháp lý, mã định
+         danh và liên kết (chỉ xem), địa chỉ, ghi chú.
+       • Nhóm "Mục đích sử dụng (loại đất chi tiết)": bảng bên trái (loại đất, diện tích, mục đích chính), chi
+         tiết mục đang chọn bên phải – ký hiệu loại đất (chọn trong danh mục hoặc gõ), tên, diện tích, "Là mục
+         đích chính", thời hạn, sử dụng chung (khi tệp có các cột này). Thanh dưới bảng: + Thêm, − Xoá, chuyển
+         về đầu / lùi / tới / về cuối giữa các mục đích, "Chia đủ DT" chia phần còn lại; dòng kiểm tra cộng
+         diện tích các mục đích so với diện tích thửa.
+       • Nhóm "Chủ sử dụng": tên, năm sinh, địa chỉ; + Thêm chủ.
        • Thẻ Tọa độ đỉnh, cạnh của thửa.
-       • GHI: cập nhật ngay vào tệp .gtp (thửa chưa có trong tệp thì thêm mới); tích "Vẽ lại nhãn thửa sau khi
-         ghi" để nhãn trên bản đồ theo thông tin mới. Phóng tới: đưa MicroStation tới thửa.
-   - Nút "Toàn bộ thông tin trong tệp" (hoặc nhấp đúp dòng): xem/sửa MỌI trường của thửa, của từng chủ sử
+       • GHI: cập nhật ngay vào tệp .gtp (thửa chưa có trong tệp thì thêm mới); tích "Vẽ lại nhãn sau khi ghi"
+         để nhãn trên bản đồ theo thông tin mới (nhãn cũ chuyển sang lớp 49). Phóng tới: đưa MicroStation
+         tới thửa.
+   - Nút "Toàn bộ thông tin" (hoặc nhấp đúp dòng): xem/sửa MỌI trường của thửa, của từng chủ sử
      dụng và từng mục đích sử dụng trong tệp.
    - Mục đích sử dụng trong tệp lưu bằng mã số; công cụ tự học mã ↔ ký hiệu (ONT, CLN, LUC…) từ chính tệp
      và từ nhãn trên bản đồ. Mã chưa biết hiện dạng #156 – khi tạo thửa từ bản đồ có nhãn, mã sẽ được
      học và hiện đúng ký hiệu.
    - Không mở cùng lúc tệp .gtp trong chương trình khác khi đang sửa bằng công cụ này (công cụ sẽ báo,
      không ghi đè).
+   - GHI THEO ĐÚNG CÁCH CỦA phần mềm địa chính gốc (để phần mềm địa chính gốc mở bảng thuộc tính bình thường sau khi sửa bằng công cụ):
+       • cột nào trong tệp luôn có giá trị thì công cụ không bao giờ ghi để trống (xoá trống số thửa, diện
+         tích… thì ghi 0);
+       • chủ mới thêm có loại đối tượng sử dụng (loại dùng nhiều nhất trong tệp, thường là hộ gia đình, cá
+         nhân – GDC); mỗi chủ có một dòng đăng ký trên TỪNG loại đất chi tiết của thửa;
+       • thửa luôn có ít nhất một loại đất chi tiết, đủ mã loại đất và diện tích; tổng diện tích các loại đất
+         bằng diện tích thửa (thửa một loại đất: đổi diện tích thửa là diện tích loại đất đổi theo);
+       • tách, hợp thửa: chủ sử dụng, nguồn gốc sử dụng của thửa cũ chép sang đúng loại đất chi tiết của thửa
+         mới; mã uid sinh đúng định dạng của từng bảng.
+     Ký hiệu loại đất chưa có mã số trong tệp (tệp chưa có thửa nào mang ký hiệu đó, ví dụ NTS lần đầu): công
+     cụ tạm ghi mã loại đất dùng nhiều nhất của tệp và báo ra – kiểm tra lại loại đất chi tiết của các thửa
+     đó trong phần mềm địa chính gốc.
+   - KẾT NỐI TỆP ĐÃ BỊ BẢN TRƯỚC GHI THIẾU: công cụ tự sửa (chủ thiếu loại đối tượng, đăng ký thiếu loại đất
+     chi tiết, loại đất chi tiết thiếu mã / diện tích, thửa thiếu loại đất chi tiết, thửa thiếu diện tích /
+     tâm / hình thửa – hình lấy theo ranh trên bản đồ đang mở), báo những gì đã sửa, rồi lưu (bản trước khi
+     sửa giữ ở .gtp.bak). Chỉ sửa những chỗ phần mềm địa chính gốc không bao giờ để trống; dữ liệu khác giữ nguyên.
 
 8. QUY TRÌNH THƯỜNG DÙNG
    1) Mở tờ bản đồ trong MicroStation → bảng kết nối tệp thuộc tính → Kết nối. Hệ thống → Thiết lập đơn vị
@@ -351,11 +890,15 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
    3) Bản đồ → Tạo thửa, xem bảng tổng hợp.
    4) Bản đồ → Bảng thông tin thuộc tính (thửa đã liên kết với tệp .gtp).
    5) Nút Đánh số thửa tự động (nếu cần) → Bản đồ → Vẽ nhãn.
-   6) Tách, gộp, chia thửa (nút trên thanh công cụ) → Bản đồ → Tạo thửa để cập nhật.
+   6) Tách thửa, hợp thửa, chia thửa (mục 6b): chạm vào trong thửa, số thửa mới, thửa cũ, nhãn và Mẫu số 22
+      làm tự động.
    7) Đăng ký / Hồ sơ / Kết xuất: chạm thửa, tệp kết quả lưu ở thư mục HoSo cạnh bản đồ và tự mở.
    8) Lưu bản đồ trong MicroStation như thường lệ (File → Save hoặc tự lưu).
 
 9. KHI CÓ LỖI
+   - phần mềm địa chính gốc báo “Object cannot be cast from DBNull to other types” khi mở bảng thuộc tính: cập nhật công cụ lên
+     bản 2026.11.19 trở lên, kết nối lại tệp .gtp đó bằng công cụ (công cụ tự sửa và báo), rồi mở lại bằng
+     phần mềm địa chính gốc.
    - Hệ thống → Chẩn đoán kết nối và đọc dữ liệu → Sao chép → gửi tác giả.
    - Nhật ký lỗi: %APPDATA%\M8Pro\log.txt
    - Báo thiếu BienTapBDDC.html, hoặc công cụ không nạp sau khi cài lại MicroStation: mở Biên Tập BĐĐC →
@@ -370,10 +913,13 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy – ĐT 0972839747
    - Bộ máy chạy ngầm không khởi động được (chính sách máy cơ quan chặn Edge chạy không cửa sổ…): sau
      khoảng 45 giây công cụ tự mở cửa sổ hồ sơ để lập. Cài Microsoft Edge hoặc Google Chrome nếu máy chưa có.
    - Khởi động lại MicroStation: bộ máy cũ tự tắt, lệnh sau tự mở bộ máy mới.
+   - Ảnh vệ tinh nền không hiện: xem dòng báo trên thanh trạng thái của công cụ (mạng, khoá Google…); báo
+     "Không gắn được ảnh vệ tinh vào MicroStation" thì gửi tệp
+     C:\ProgramData\M8Pro\AnhVeTinh\AnhVeTinh_ChanDoan.txt cho tác giả (mục 6a).
 
 10. LƯU Ý
    - Mọi chữ, đường do công cụ vẽ đều nằm trong tệp DGN đang mở; dùng Undo của MicroStation nếu cần
-     hoàn tác.
+     hoàn tác (sửa nhiều chỗ một lần: Edit → Set Mark trước, rồi Undo Other → To Mark).
    - Tô màu loại đất: vẽ trên lớp riêng (mặc định 63), tô lại sẽ thay vùng tô cũ; tắt lớp đó khi in nếu
      không cần.
    - Thuộc tính nhập khi chưa có tệp .gtp được lưu tại %APPDATA%\M8Pro\thuoctinh\.

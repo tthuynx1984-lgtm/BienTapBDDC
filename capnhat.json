@@ -1,16 +1,14 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.17",
-  "ngay": "17/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.17.exe",
-  "kichthuoc": 1862335,
-  "sha256": "e2e1caa3d3ca9e9b5929b778f8f45e8e7336c99bc11d03eb6066e151bc607001",
+  "phienban": "2026.11.26",
+  "ngay": "26/11/2026",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.exe",
+  "kichthuoc": 1990208,
+  "sha256": "f25af0f4f47c053ec6c57b8d5d7164376213359d8a9c18d6a1e411003fd926d8",
   "thaydoi": [
-    "Bộ cài đặt CaiDat_BienTapBDDC_….exe: biểu tượng Biên Tập BĐĐC trên màn hình nền và menu Start, gỡ cài đặt trong Cài đặt của Windows.",
-    "Mở Biên Tập BĐĐC → chọn tờ bản đồ: MicroStation V8i mở tờ đó và nạp sẵn công cụ; MicroStation đang mở thì mở tờ trong phiên đang chạy.",
-    "Nút Cập nhật phiên bản mới (cửa sổ Biên Tập BĐĐC và menu Hệ thống của công cụ): tải bản mới, kiểm tra tệp, cài rồi hiện báo cáo cập nhật.",
-    "Biểu tượng lệnh dưới menu chính vẽ lại nét mảnh, hai tông màu; mỗi lệnh trên thanh công cụ có biểu tượng riêng.",
-    "Logo Biên Tập Bản Đồ mới cho ứng dụng, bộ cài và cửa sổ công cụ.",
-    "Chuột phải tệp .dgn → Mở bằng Biên Tập BĐĐC."
+    "Kích hoạt bản quyền giống bản M8 Mobile (mã MAPDGN-): bộ cài có trang Mã kích hoạt, ứng dụng có menu Hệ thống → Kích hoạt bản quyền; bản dùng thử đủ chức năng, chỉ mở tệp thuộc tính dưới 1 MB.",
+    "Thông tin thửa đất: người thứ hai cùng hồ sơ (vợ/chồng) có dòng riêng với đủ trường và giấy tờ; dòng người không sửa thì không ghi gì vào tệp; giới tính chỉ ghi khi đổi.",
+    "Bảng thông tin thuộc tính: giấy tờ tuỳ thân của chủ sử dụng; người thứ 2 trở đi có nhóm cột riêng, tự hiện khi có thửa nhiều người.",
+    "Thông tin thửa đất chia hai nửa với hình thức sử dụng; \"Lớp\" đổi thành \"Level\"; hộp thoại dùng chung một kiểu nút, nền và chữ như Windows."
   ]
 }
