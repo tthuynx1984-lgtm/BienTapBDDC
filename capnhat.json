@@ -1,12 +1,12 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.13",
+  "phienban": "2026.11.26.14",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.13.exe",
-  "kichthuoc": 2036872,
-  "sha256": "7032b13de286640a35e5ba4bff8b8fb95db7c122fc3ac3c13056cf2ab16d7553",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.14.exe",
+  "kichthuoc": 2037174,
+  "sha256": "c39afd2f6147b9ea9f7025f62050ea0ad272021e4ccf9cc1089a4eb05d80e460",
   "thaydoi": [
-    "Sửa tận gốc lỗi “Failed to fetch” khi đọc tờ bản đồ DGN V8: khối dữ liệu có 120 phần tử bị nhận nhầm chỗ bắt đầu dữ liệu nén; nay đọc đủ mọi đối tượng của tờ.",
-    "Sơ đồ in trên Giấy chứng nhận: nhãn thửa chính đặt trọn trong thửa (dời, xoay theo thửa, nhỏ chữ khi cần), không chạm ranh và tên đường, số thửa liền kề."
+    "Nhãn thửa chính và số thửa liền kề luôn là ô (cell) N_THUA 3 level 3 màu: số thửa và gạch ngang Level 13 màu 1, loại đất Level 2 màu 2, diện tích Level 4 màu 3 – trong Sơ đồ GCN, Trích đo, Phiếu đo đạc chỉnh lý (DGN V8, V7).",
+    "Tệp DGN V8 xuất ra: Level 2, Level 4 mang tên chuẩn; chữ của phiếu chuyển sang level 7 “CHU PHIEU”, số hiệu đỉnh sang level 8 “DINH THUA” – chép nhãn sang bản đồ vào đúng level."
   ]
 }
