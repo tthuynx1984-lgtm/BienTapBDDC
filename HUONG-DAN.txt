@@ -112,7 +112,8 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy
      bản đồ như ảnh vệ tinh nền; bật / tắt một chạm. Nền không phải phần tử của bản vẽ: không thêm, sửa, xoá
      phần tử nào trong tệp DGN, không vào Undo, không chọn, không bắt điểm, không tính vào Fit View, không in.
      Cập nhật loại đất đến đâu nền tô lại đến đó (chỉ thửa thay đổi). Có bảng màu (chú giải, số thửa từng loại,
-     đổi màu từng mã) – mục 6c.
+     đổi màu từng mã) – mục 6c. Đường ranh thửa luôn vẽ đè lên màu nền (theo màu, nét hay dùng của đường ranh trên
+     level ranh thửa trong Thiết lập); màu nền hơi trong để vẫn thấy các đường nằm trong thửa.
    - HỒ SƠ TOÀN XÃ (menu mới): lập sổ địa chính, sổ mục kê, sổ cấp GCN, sổ biến động, kê khai đăng ký (Excel),
      danh sách công khai, bảng tổng hợp PL16, danh sách thửa và thống kê (Excel) cho cả xã – lấy thẳng từ tệp
      thuộc tính toàn xã (.gtp), không cần mở bản đồ DGN – mục 5b.

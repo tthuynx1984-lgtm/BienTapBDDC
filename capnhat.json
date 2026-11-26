@@ -1,11 +1,13 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.7",
+  "phienban": "2026.11.26.8",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.7.exe",
-  "kichthuoc": 2003007,
-  "sha256": "b6815e6cf68cd29f833f1bd6784dc593fa59663f801eb50afc1ad21b95a46710",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.8.exe",
+  "kichthuoc": 2028965,
+  "sha256": "8c3fac746f0fd631b473cabee5481c279bc17b60ab1f674b771f4ecffae9e765",
   "thaydoi": [
-    "Thông tin thửa đất: phần Người sử dụng đất (bên phải) rộng hơn để nhập đủ họ tên, địa chỉ, giấy tờ; phần thông tin thửa, hình thức, mục đích sử dụng (bên trái) gọn lại. Kéo rộng hộp thì phần người sử dụng đất rộng theo."
+    "Sổ địa chính (Mẫu 01/ĐK): Quốc huy theo mẫu chuẩn, đặt giữa đầu trang trên tên sổ, không chạm chữ và bảng.",
+    "Nền màu loại đất: đường ranh thửa luôn vẽ đè lên màu nền (đúng màu, nét của đường ranh), màu nền hơi trong để vẫn thấy các đường nằm trong thửa.",
+    "Thông tin thửa đất: phần Người sử dụng đất (bên phải) rộng hơn để nhập đủ họ tên, địa chỉ, giấy tờ; phần thông tin thửa, hình thức, mục đích sử dụng (bên trái) gọn lại."
   ]
 }
