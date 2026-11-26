@@ -402,11 +402,10 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy
      vào ô nội dung → "Submit new issue". "Sao chép báo cáo" / "Lưu tệp báo cáo": gửi cho tác giả qua kênh khác.
    - Kho GitHub công khai: không ghi họ tên, số giấy tờ, số GCN của người dân vào báo lỗi.
    - Lỗi sửa xong có bản mới trên kho: Hệ thống → "Cập nhật phiên bản mới…".
-   - "Lưu tệp báo cáo": lưu báo cáo trên máy và tự gửi về chủ kho (kho báo cáo riêng tư). Máy cần có mã gửi báo cáo:
-     chủ kho nhập một lần trên mỗi máy (hộp Báo lỗi → Ctrl+Shift+B, hoặc khi bấm "Lưu tệp báo cáo" lần đầu). Máy chưa có
-     mã: báo cáo chỉ lưu trên máy – gửi tệp đó cho chủ kho.
-   - Chủ kho: trong hộp Báo lỗi bấm Ctrl+Shift+G, dán mã truy cập GitHub của tài khoản chủ kho → hiện nút
-     "Xem đề xuất sửa": hộp tổng hợp báo cáo của mọi máy (và tệp báo cáo thêm bằng "Thêm tệp…"). Chọn báo cáo, sửa
+   - "Lưu tệp báo cáo": lưu báo cáo trên máy và tự gửi về chủ kho (cần có mạng, không cần nhập gì thêm). Không gửi
+     được thì báo cáo vẫn lưu trên máy – gửi tệp đó cho chủ kho.
+   - Chủ kho: lần đầu, trong hộp Báo lỗi bấm Ctrl+Shift+G, dán mã truy cập GitHub của tài khoản chủ kho → hiện nút
+     "Xem đề xuất sửa": hộp tự tổng hợp báo cáo của mọi máy (và tệp báo cáo thêm bằng "Thêm tệp…"). Chọn báo cáo, sửa
      tiêu đề / nội dung → "Gửi lên GitHub" (thành báo lỗi đang mở để sửa) hoặc "Sao chép báo cáo" để dán vào trò chuyện.
      Máy khác không thấy nút này. Bấm lại Ctrl+Shift+G để đăng xuất chủ kho.
 
