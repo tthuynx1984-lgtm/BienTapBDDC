@@ -1,13 +1,12 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.18",
+  "phienban": "2026.11.26.19",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.18.exe",
-  "kichthuoc": 2039403,
-  "sha256": "73c4625b56d8fe24a1be67dbdb22974b69faca3f9bcaaf575f26dfb7dc3aaf45",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.19.exe",
+  "kichthuoc": 2039441,
+  "sha256": "8db55831277a29f3fe154a26d6c6dac79d09aac3f3a7326e09e42cd5d4835a73",
   "thaydoi": [
-    "Nền màu loại đất: sửa lỗi tô sai màu (thửa bị tô đen / màu ranh) – vùng tô lại đúng màu loại đất như bản trước, viền vẫn theo màu đường ranh.",
-    "Sửa lỗi tự động, Duyệt lỗi: sửa lỗi báo \"Không có đường nét nào trên level…\" dù bản đồ vẫn có ranh – đọc đỉnh đường ranh theo cách khác khi cách cũ không đọc được trên máy.",
-    "Bản vẽ tách thửa, hợp thửa (Mẫu số 22): vẽ ranh tách trong thửa rồi chạm các phần của thửa đó nay lập đúng phương án TÁCH thửa (trước đây nhầm thành hợp thửa); số thửa mới đánh tiếp số lớn nhất của tờ. Chạm hai thửa có số khác nhau vẫn lập phương án hợp như cũ."
+    "Nền màu loại đất: màu nhạt, trong mờ như các bản trước (bản 2026.11.26.18 tô quá đậm).",
+    "Nền màu loại đất: thêm viền riêng đúng màu, nét đường ranh thửa (các level ranh) nằm trên màu nền – ranh thửa luôn nổi rõ. Chỉ hiển thị, không vẽ gì vào bản đồ."
   ]
 }
