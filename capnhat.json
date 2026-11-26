@@ -1,12 +1,13 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.22",
+  "phienban": "2026.11.26.23",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.22.exe",
-  "kichthuoc": 2039909,
-  "sha256": "b974347c7b3215410caf1e30475df5cdcbe0c7f38b175541c74f3b0f0891a728",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.23.exe",
+  "kichthuoc": 2040034,
+  "sha256": "e5177348cb35fe6dba79e56a469bc9bd1c4cb486f80b2f52771575d6e8635d53",
   "thaydoi": [
-    "Nền màu loại đất: thửa có đất ở (ONT, ODT) – ví dụ ONT+CLN, hoặc tệp thuộc tính ghi CLN mà nhãn bản đồ ghi ONT+CLN – tô màu đất ở.",
-    "Nền màu loại đất: đất trồng cây lâu năm (CLN) đổi sang màu nâu đất nhạt (trước là xanh lá nhạt, dễ lẫn với đất rừng). Máy đã tự đổi màu CLN trong Bảng màu loại đất thì giữ màu đã đổi; muốn dùng màu mới bấm \"Màu mặc định cho tất cả\" trong Bảng màu loại đất."
+    "Nền màu loại đất: đất trồng cây lâu năm (CLN) màu cam pha nâu nhạt.",
+    "Nền màu loại đất: thửa có đất ở ở bất kỳ vị trí nào (ONT+CLN, CLN+ONT…, trong tệp thuộc tính hoặc trên nhãn bản đồ) đều tô màu đất ở.",
+    "Nền màu loại đất: thửa hẹp có chữ loại đất trên nhãn lấn ra ngoài ranh thửa nay vẫn nhận đúng loại đất của nhãn (trước bị tô theo CLN)."
   ]
 }
