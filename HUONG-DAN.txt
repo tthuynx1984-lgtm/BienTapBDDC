@@ -1,8 +1,17 @@
 ﻿﻿﻿BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH – công cụ biên tập bản đồ địa chính chạy trong MicroStation V8i
-Phiên bản 26/11/2026 (2026.11.26.4) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
+Phiên bản 26/11/2026 (2026.11.26.5) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
 Tác giả, bản quyền: Nguyễn Xuân Thủy
 
-0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26.4)
+0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26.5)
+   - KẾT XUẤT → TRÍCH ĐO BẢN ĐỒ ĐỊA CHÍNH (Thông tư 26): chạm thửa trên bản đồ (hoặc chọn trong bảng Hồ sơ thửa,
+     bảng thuộc tính) → chọn định dạng PDF / DGN V8 / DGN V7 / DXF. Mảnh trích đo A4 ngang theo mẫu đang dùng:
+     tên xã, "TRÍCH ĐO BẢN ĐỒ ĐỊA CHÍNH SỐ …", hệ toạ độ VN-2000, khung đôi có lưới toạ độ (10 cm trên giấy), thửa
+     đúng toạ độ có số hiệu đỉnh, thửa liền kề gạch chân, nhãn loại đất – số thửa / diện tích, tỷ lệ, thước tỷ lệ,
+     ô ký Người sử dụng đất – Đơn vị đo đạc – Xác nhận đo vẽ đúng hiện trạng; bên phải: người sử dụng đất, địa chỉ
+     thửa, bảng toạ độ đỉnh X, Y và kích thước cạnh. Số mảnh, thôn, số hiệu mảnh để dòng chấm, ghi tay.
+   - Một mã kích hoạt cho cả công cụ và bộ mẫu hồ sơ (không hỏi lại khi lập hồ sơ).
+
+0c. BẢN 2026.11.26.4
    - Sửa lỗi "Method not found: System.String.Split…" khi mở cửa sổ chọn tờ bản đồ (bản 2026.11.26 – 26.3).
    - Rà soát mọi hộp thoại: hộp lập hồ sơ (Đăng ký, Hồ sơ, Kết xuất) không còn mất nút Lập hồ sơ – Đóng, ô nhập
      không tràn mép; cột Họ tên trong Thông tin thửa đất đủ rộng; chữ "lớp" trên giao diện đổi thành "level".

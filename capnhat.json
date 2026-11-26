@@ -1,16 +1,17 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.4",
+  "phienban": "2026.11.26.5",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.4.exe",
-  "kichthuoc": 1993860,
-  "sha256": "1bb7b267dd490b4daf2565e67036b3fbdfe5cc669d6e99bc789f0b2e38d26751",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.5.exe",
+  "kichthuoc": 1996197,
+  "sha256": "3ac1d4ad13943de943594e5435441fc4bd54aad1ee08f483d4d95c9a59ebc0aa",
   "thaydoi": [
+    "Kết xuất → Trích đo bản đồ địa chính (Thông tư 26): mảnh trích đo A4 ngang theo mẫu đang dùng – tên xã, tiêu đề, hệ toạ độ VN-2000, khung đôi có lưới toạ độ, thửa đúng toạ độ với số hiệu đỉnh và thửa liền kề, tỷ lệ, thước tỷ lệ, ô ký; bảng người sử dụng đất, địa chỉ, toạ độ đỉnh và kích thước cạnh; xuất PDF, DGN V8, DGN V7, DXF.",
+    "Một mã kích hoạt cho cả công cụ và bộ mẫu hồ sơ: đã kích hoạt thì không hỏi lại khi lập hồ sơ.",
+    "Nhãn thửa nằm ngang trên các mẫu có yêu cầu (lỗi cũ làm tuỳ chọn này không có tác dụng).",
     "Sửa lỗi \"Method not found: System.String.Split\" khi mở Biên Tập BĐĐC: cửa sổ chọn tờ bản đồ, trình cài và gỡ cài đặt dựng lại đúng thư viện .NET Framework 4 của Windows.",
     "Hộp lập hồ sơ (Đăng ký, Hồ sơ, Kết xuất) không còn mất nút \"Lập hồ sơ\" – \"Đóng\" và ô nhập tràn mép; hộp nhập chuỗi không tràn mép.",
     "Rà soát 23 hộp thoại: giữ đúng vùng trong khi hộp chuyển sang co giãn (không hụt dòng cuối); cột Họ tên trong Thông tin thửa đất đủ rộng; mọi chữ \"lớp\" trên giao diện đổi thành \"level\".",
-    "Sửa lỗi hộp thoại bị cắt chữ, mất nút trên màn hình đặt phóng to (125 %, 150 %): ô, nút, khoảng cách phóng theo tỷ lệ màn hình; hộp thoại không vượt quá màn hình nên hàng nút dưới (Chấp nhận, Ghi lại, Đóng…) luôn thấy.",
-    "Vẽ nhãn địa chính: hộp thoại mới – Cấu hình (tỷ lệ, chiều cao, loại nhãn, màu và level số thửa / diện tích / loại đất, level nhãn cũ) và Tuỳ chọn (vẽ từ thửa đến thửa, chỉ thửa chưa có nhãn, chọn thửa trên bản đồ, số lẻ, diện tích pháp lý, vẽ loại đất, dấu phẩy, chữ TCVN3); nút Xoá nhãn – Vẽ nhãn – Đóng.",
-    "Sửa lỗi tự động, Tìm lỗi dữ liệu, Tạo thửa đất: bố cục, tên nhóm và nút Chấp nhận – Đóng như mẫu; \"Độ chính xác dữ liệu\", \"Giới hạn thửa nhỏ\", \"Phục hồi định dạng kiểm tra\"."
+    "Sửa lỗi hộp thoại bị cắt chữ, mất nút trên màn hình đặt phóng to (125 %, 150 %): ô, nút, khoảng cách phóng theo tỷ lệ màn hình; hộp thoại không vượt quá màn hình nên hàng nút dưới (Chấp nhận, Ghi lại, Đóng…) luôn thấy."
   ]
 }
