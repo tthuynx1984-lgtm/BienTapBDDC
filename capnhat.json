@@ -1,11 +1,12 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.15",
+  "phienban": "2026.11.26.16",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.15.exe",
-  "kichthuoc": 2037298,
-  "sha256": "803a468675307219c7effd47681dde626de60bebaa223d353c905af3eacb09d6",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.16.exe",
+  "kichthuoc": 2038067,
+  "sha256": "6c8c724a6dd75d25cbe4b0b308027844660705fb555e0ae7da3b6a24af85f47f",
   "thaydoi": [
-    "Báo lỗi cần sửa: hộp thoại có mục Quy trình báo lỗi – sửa – cập nhật (ghi lỗi, gửi lên GitHub, để báo lỗi mở, tự sửa và phát hành bản mới, cập nhật trên máy)."
+    "Sửa lỗi tự động: gộp một trang – danh sách level bên trái, tuỳ chọn sửa bên phải.",
+    "Kết xuất → Sơ đồ thửa đất in trên Giấy chứng nhận: hộp tuỳ chọn (định dạng, khung, tên công trình, nhãn thửa, lệch in) hiện trước, chọn xong mới chạm thửa trên bản đồ và lập ngay. Phiếu đo đạc, trích lục, trích đo vẫn chọn định dạng trước rồi chạm thửa."
   ]
 }
