@@ -882,7 +882,8 @@ Tác giả, bản quyền: Nguyễn Xuân Thủy
          đích chính", thời hạn, sử dụng chung (khi tệp có các cột này). Thanh dưới bảng: + Thêm, − Xoá, chuyển
          về đầu / lùi / tới / về cuối giữa các mục đích, "Chia đủ DT" chia phần còn lại; dòng kiểm tra cộng
          diện tích các mục đích so với diện tích thửa.
-       • Nhóm "Chủ sử dụng": tên, năm sinh, địa chỉ; + Thêm chủ.
+       • Nhóm "Người sử dụng đất" (bên phải, rộng hơn phần thửa): danh sách người, chi tiết người đang chọn – họ tên,
+         năm sinh, giới tính, địa chỉ, giấy tờ (loại, số, ngày cấp, nơi cấp, ngày hết hạn); + Thêm người, Xoá người.
        • Thẻ Tọa độ đỉnh, cạnh của thửa.
        • GHI: cập nhật ngay vào tệp .gtp (thửa chưa có trong tệp thì thêm mới); tích "Vẽ lại nhãn sau khi ghi"
          để nhãn trên bản đồ theo thông tin mới (nhãn cũ chuyển sang lớp 49). Phóng tới: đưa MicroStation

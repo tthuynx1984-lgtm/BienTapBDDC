@@ -1,21 +1,11 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.6",
+  "phienban": "2026.11.26.7",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.6.exe",
-  "kichthuoc": 2003167,
-  "sha256": "b018210d72f36c75c8b8315c94289ac4475cd743b61b1370f5bf90cf5a270ba7",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.7.exe",
+  "kichthuoc": 2003007,
+  "sha256": "b6815e6cf68cd29f833f1bd6784dc593fa59663f801eb50afc1ad21b95a46710",
   "thaydoi": [
-    "Sổ địa chính (Mẫu 01/ĐK) có Quốc huy màu ở đầu trang như mẫu; Sổ mục kê đất đai theo mẫu trang nội dung mới (A4, 9 cột: tờ, thửa, tên, mã đối tượng, loại đất và diện tích theo hiện trạng, theo giấy tờ pháp lý, ghi chú; dòng ghi thay đổi khi biên tập lại tờ bản đồ).",
-    "Sổ địa chính, Sổ mục kê, Sổ cấp Giấy chứng nhận, Sổ đăng ký biến động: chọn xuất PDF, Excel hoặc cả hai.",
-    "Vẽ nhãn: nhãn luôn nằm trọn trong thửa; thửa dưới 50 m² hoặc dạng tuyến quá hẹp thì nhãn đủ cỡ đặt ngoài thửa, có mũi tên chỉ vào thửa.",
-    "Vẽ nhãn mới: nhãn cũ chuyển sang level 49 và co lại 1/2 để nhường chỗ cho nhãn mới.",
-    "Ô nhãn N_THUA đúng 3 level: số thửa và gạch ngang level 13, loại đất level 2, diện tích level 4 (cả khi vẽ trong MicroStation và khi xuất sơ đồ hình thể).",
-    "Sơ đồ in trên Giấy chứng nhận: số thửa liền kề có gạch chân.",
-    "Bảng thuộc tính: dòng lọc dưới tiêu đề cột giống các dòng dữ liệu, mỗi ô có nút sổ chọn giá trị hoặc gõ trực tiếp để tìm; bỏ ô Tìm trên thanh công cụ.",
-    "Lấy lại dữ liệu: khôi phục tệp thuộc tính từ bản sao lưu .gtp.bak gần nhất (tệp hiện tại giữ lại thành .truoc-lay-lai).",
-    "Kết nối tệp .gtp tổng nhiều tờ không có tờ của bản đồ đang mở: không hỏi nữa – bảng thuộc tính hiện mọi tờ, chọn tờ cần xem ở ô lọc cột Số tờ.",
-    "Hệ thống → Báo lỗi cần sửa…: ghi lỗi, kèm ảnh chụp màn hình và nhật ký lỗi (đã ẩn tên máy, tên người dùng), gửi lên kho GitHub để tác giả sửa và phát hành bản mới.",
-    "Thông tin thửa đất: không còn cắt chữ ở ô Hình thức sử dụng, nút Chọn trên bản đồ, ô Liên kết, cột Năm sinh."
+    "Thông tin thửa đất: phần Người sử dụng đất (bên phải) rộng hơn để nhập đủ họ tên, địa chỉ, giấy tờ; phần thông tin thửa, hình thức, mục đích sử dụng (bên trái) gọn lại. Kéo rộng hộp thì phần người sử dụng đất rộng theo."
   ]
 }
