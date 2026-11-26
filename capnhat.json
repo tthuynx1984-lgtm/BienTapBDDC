@@ -1,11 +1,11 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.11",
+  "phienban": "2026.11.26.12",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.11.exe",
-  "kichthuoc": 2035969,
-  "sha256": "4a23db47f5ef4daa86d70389295368b3b98544120e8d1e85c92c1d2f7d4f1610",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.12.exe",
+  "kichthuoc": 2036252,
+  "sha256": "dadf80ee862a44044056b286f378a1eb0ee2bdc916a5277c05eb14d26ef2ad20",
   "thaydoi": [
-    "Mọi hộp thoại: nền màu be nhạt, chữ đen như ảnh mẫu giao diện – giống nhau trên mọi máy, không theo màu xám/trắng của Windows (cả các thẻ Thửa đất, Toạ độ đỉnh, cạnh)."
+    "Sửa lỗi “Failed to fetch” khi cửa sổ hồ sơ đọc tờ bản đồ DGN V8 (lập Sơ đồ GCN, hồ sơ…): khối dữ liệu có vài byte thừa sau dòng nén nay vẫn đọc được; khối hỏng thật thì bỏ qua và báo, không dừng cả tờ."
   ]
 }
