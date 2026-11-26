@@ -1,12 +1,12 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.16",
+  "phienban": "2026.11.26.17",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.16.exe",
-  "kichthuoc": 2038067,
-  "sha256": "6c8c724a6dd75d25cbe4b0b308027844660705fb555e0ae7da3b6a24af85f47f",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.17.exe",
+  "kichthuoc": 2039361,
+  "sha256": "c645c32b87554a708f7c4b7825a9c081dcea564b6bc8d011d4c94219feee5656",
   "thaydoi": [
-    "Sửa lỗi tự động: gộp một trang – danh sách level bên trái, tuỳ chọn sửa bên phải.",
-    "Kết xuất → Sơ đồ thửa đất in trên Giấy chứng nhận: hộp tuỳ chọn (định dạng, khung, tên công trình, nhãn thửa, lệch in) hiện trước, chọn xong mới chạm thửa trên bản đồ và lập ngay. Phiếu đo đạc, trích lục, trích đo vẫn chọn định dạng trước rồi chạm thửa."
+    "Sửa lỗi tự động, Duyệt lỗi: sửa lỗi báo \"Không có đường nét nào trên level…\" dù bản đồ vẫn có ranh – đọc đỉnh đường ranh theo cách khác khi cách cũ không đọc được trên máy.",
+    "Bản vẽ tách thửa, hợp thửa (Mẫu số 22): vẽ ranh tách trong thửa rồi chạm các phần của thửa đó nay lập đúng phương án TÁCH thửa (trước đây nhầm thành hợp thửa); số thửa mới đánh tiếp số lớn nhất của tờ. Chạm hai thửa có số khác nhau vẫn lập phương án hợp như cũ."
   ]
 }
