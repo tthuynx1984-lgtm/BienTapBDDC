@@ -2,3 +2,4 @@ Biên Tập BĐĐC – bản dùng trên điện thoại (trình duyệt Chrome 
 Chép từ bộ mẫu của bản 2026.11.26.23 ngày 26/11/2026. Bản này giữ nguyên, KHÔNG sửa theo các bản sửa lỗi của bản chính (máy tính).
 Mở: https://tthuynx1984-lgtm.github.io/BienTapBDDC/dien-thoai/  – Chrome: ⋮ → Thêm vào màn hình chính; Safari: Chia sẻ → Thêm vào MH chính.
 Kích hoạt bằng mã MAPDGN-… như bản máy tính (chưa kích hoạt chỉ mở tệp bản đồ dưới 1 MB). Phần chạy trong MicroStation không dùng được trên điện thoại.
+26/11/2026: theo yêu cầu người dùng, thanh nút gọn 2 hàng trên điện thoại (hàng nút chức năng vuốt ngang); ẩn các nút chỉ dùng với MicroStation.
