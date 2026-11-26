@@ -1,12 +1,12 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.20",
+  "phienban": "2026.11.26.21",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.20.exe",
-  "kichthuoc": 2039966,
-  "sha256": "27fad3557fbe3b1b7ae161fd103271a7708342f9df87bfec164b0ab6ea3cbc8c",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.21.exe",
+  "kichthuoc": 2039386,
+  "sha256": "fd878eb4160aed034c1be959f30145fe3409fe6ce211a24e47e675271217b049",
   "thaydoi": [
-    "Nền màu loại đất: tô bằng màu thật (màu nhạt đúng bảng màu loại đất) thay vì màu gần nhất trong bảng màu của tệp bản đồ – hết bị vàng, đỏ, xanh đậm.",
-    "Nền màu loại đất: hiện đủ các level nhãn thửa (số thửa, loại đất, diện tích, gạch ngang, ô nhãn) nổi trên màu nền, cùng với viền ranh thửa. Chỉ hiển thị, không vẽ gì vào bản đồ."
+    "Nền màu loại đất: bỏ phần vẽ lại nhãn thửa (bản .20 vẽ chồng lên nhãn đang có) – nhãn thửa hiện đúng như trên bản đồ, không vẽ thêm.",
+    "Nền màu loại đất: vẫn tô màu thật (nhạt, đúng loại đất) và viền ranh thửa nổi trên màu nền như bản .20."
   ]
 }
