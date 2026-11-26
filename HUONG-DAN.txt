@@ -1,8 +1,12 @@
 ﻿﻿﻿BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH – công cụ biên tập bản đồ địa chính chạy trong MicroStation V8i
-Phiên bản 26/11/2026 (2026.11.26.12) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
+Phiên bản 26/11/2026 (2026.11.26.13) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
 Tác giả, bản quyền: Nguyễn Xuân Thủy
 
-0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26.12)
+0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26.13)
+   - Sửa tận gốc lỗi “Failed to fetch” khi đọc tờ bản đồ DGN V8: khối dữ liệu có 120 phần tử bị nhận nhầm chỗ bắt đầu dữ liệu nén; nay đọc đủ mọi đối tượng của tờ.
+   - Sơ đồ in trên Giấy chứng nhận: nhãn thửa chính đặt trọn trong thửa (dời, xoay theo thửa, nhỏ chữ khi cần), không chạm ranh và tên đường, số thửa liền kề.
+
+0----. BẢN 2026.11.26.12
    - Sửa lỗi “Failed to fetch” khi cửa sổ hồ sơ đọc tờ bản đồ DGN V8 (lập Sơ đồ GCN, hồ sơ…): khối dữ liệu có vài byte thừa sau dòng nén nay vẫn đọc được; khối hỏng thật thì bỏ qua và báo, không dừng cả tờ.
 
 0---. BẢN 2026.11.26.11

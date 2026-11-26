@@ -1,11 +1,12 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.12",
+  "phienban": "2026.11.26.13",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.12.exe",
-  "kichthuoc": 2036252,
-  "sha256": "dadf80ee862a44044056b286f378a1eb0ee2bdc916a5277c05eb14d26ef2ad20",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.13.exe",
+  "kichthuoc": 2036872,
+  "sha256": "7032b13de286640a35e5ba4bff8b8fb95db7c122fc3ac3c13056cf2ab16d7553",
   "thaydoi": [
-    "Sửa lỗi “Failed to fetch” khi cửa sổ hồ sơ đọc tờ bản đồ DGN V8 (lập Sơ đồ GCN, hồ sơ…): khối dữ liệu có vài byte thừa sau dòng nén nay vẫn đọc được; khối hỏng thật thì bỏ qua và báo, không dừng cả tờ."
+    "Sửa tận gốc lỗi “Failed to fetch” khi đọc tờ bản đồ DGN V8: khối dữ liệu có 120 phần tử bị nhận nhầm chỗ bắt đầu dữ liệu nén; nay đọc đủ mọi đối tượng của tờ.",
+    "Sơ đồ in trên Giấy chứng nhận: nhãn thửa chính đặt trọn trong thửa (dời, xoay theo thửa, nhỏ chữ khi cần), không chạm ranh và tên đường, số thửa liền kề."
   ]
 }
