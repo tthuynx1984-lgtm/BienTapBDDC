@@ -1,8 +1,10 @@
 ﻿﻿﻿BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH – công cụ biên tập bản đồ địa chính chạy trong MicroStation V8i
-Phiên bản 26/11/2026 (2026.11.26.2) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
+Phiên bản 26/11/2026 (2026.11.26.3) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
 Tác giả, bản quyền: Nguyễn Xuân Thủy
 
-0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26.2)
+0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26.3)
+   - Rà soát mọi hộp thoại: hộp lập hồ sơ (Đăng ký, Hồ sơ, Kết xuất) không còn mất nút Lập hồ sơ – Đóng, ô nhập
+     không tràn mép; cột Họ tên trong Thông tin thửa đất đủ rộng; chữ "lớp" trên giao diện đổi thành "level".
    - HỘP THOẠI KHÔNG CÒN CẮT CHỮ, MẤT NÚT khi màn hình đặt phóng to (125 %, 150 %) hay màn hình thấp: ô, nút,
      khoảng cách phóng theo tỷ lệ màn hình; hộp thoại tự thu vừa màn hình, hàng nút dưới luôn thấy.
    - VẼ NHÃN ĐỊA CHÍNH (Bản đồ → Vẽ nhãn): hộp thoại mới. Cấu hình: tỷ lệ, chiều cao chữ, loại nhãn, màu và level của

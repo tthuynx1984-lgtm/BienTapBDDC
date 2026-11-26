@@ -1,15 +1,16 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.2",
+  "phienban": "2026.11.26.3",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.2.exe",
-  "kichthuoc": 1993276,
-  "sha256": "b95aa60363696c7444ed95e479bfd623287299f7006284e1d585f39f2ab185ee",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.3.exe",
+  "kichthuoc": 1993601,
+  "sha256": "ad856a1b130e828cfb4f467ed5e55ca7358788eb2e2fddde20b7310fd321e378",
   "thaydoi": [
+    "Hộp lập hồ sơ (Đăng ký, Hồ sơ, Kết xuất) không còn mất nút \"Lập hồ sơ\" – \"Đóng\" và ô nhập tràn mép; hộp nhập chuỗi không tràn mép.",
+    "Rà soát 23 hộp thoại: giữ đúng vùng trong khi hộp chuyển sang co giãn (không hụt dòng cuối); cột Họ tên trong Thông tin thửa đất đủ rộng; mọi chữ \"lớp\" trên giao diện đổi thành \"level\".",
     "Sửa lỗi hộp thoại bị cắt chữ, mất nút trên màn hình đặt phóng to (125 %, 150 %): ô, nút, khoảng cách phóng theo tỷ lệ màn hình; hộp thoại không vượt quá màn hình nên hàng nút dưới (Chấp nhận, Ghi lại, Đóng…) luôn thấy.",
     "Vẽ nhãn địa chính: hộp thoại mới – Cấu hình (tỷ lệ, chiều cao, loại nhãn, màu và level số thửa / diện tích / loại đất, level nhãn cũ) và Tuỳ chọn (vẽ từ thửa đến thửa, chỉ thửa chưa có nhãn, chọn thửa trên bản đồ, số lẻ, diện tích pháp lý, vẽ loại đất, dấu phẩy, chữ TCVN3); nút Xoá nhãn – Vẽ nhãn – Đóng.",
     "Sửa lỗi tự động, Tìm lỗi dữ liệu, Tạo thửa đất: bố cục, tên nhóm và nút Chấp nhận – Đóng như mẫu; \"Độ chính xác dữ liệu\", \"Giới hạn thửa nhỏ\", \"Phục hồi định dạng kiểm tra\".",
-    "Tạo thửa đất: ô Loại đất trong \"Gán thông tin mặc định\" – gán cho thửa không đọc được loại đất từ nhãn.",
-    "Kích hoạt bản quyền giống bản M8 Mobile (mã MAPDGN-): trang Mã kích hoạt khi cài, menu Hệ thống → Kích hoạt bản quyền; bản dùng thử đủ chức năng, chỉ mở tệp thuộc tính dưới 1 MB."
+    "Tạo thửa đất: ô Loại đất trong \"Gán thông tin mặc định\" – gán cho thửa không đọc được loại đất từ nhãn."
   ]
 }
