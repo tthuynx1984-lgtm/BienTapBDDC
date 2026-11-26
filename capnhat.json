@@ -1,13 +1,20 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.8",
+  "phienban": "2026.11.26.9",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.8.exe",
-  "kichthuoc": 2028965,
-  "sha256": "8c3fac746f0fd631b473cabee5481c279bc17b60ab1f674b771f4ecffae9e765",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.9.exe",
+  "kichthuoc": 2032899,
+  "sha256": "22adf7d43ffab2bed0fab7f8d7c3789478b594a9a2efe02ab0d6c2363321638c",
   "thaydoi": [
-    "Sổ địa chính (Mẫu 01/ĐK): Quốc huy theo mẫu chuẩn, đặt giữa đầu trang trên tên sổ, không chạm chữ và bảng.",
-    "Nền màu loại đất: đường ranh thửa luôn vẽ đè lên màu nền (đúng màu, nét của đường ranh), màu nền hơi trong để vẫn thấy các đường nằm trong thửa.",
-    "Thông tin thửa đất: phần Người sử dụng đất (bên phải) rộng hơn để nhập đủ họ tên, địa chỉ, giấy tờ; phần thông tin thửa, hình thức, mục đích sử dụng (bên trái) gọn lại."
+    "Sổ địa chính (Mẫu 01/ĐK): Quốc huy mẫu chuẩn đặt phía trên bên trái theo quy định, không chạm chữ và bảng.",
+    "Kết nối tệp thuộc tính (.gtp) lần đầu: tự tạo thửa và liên kết ngay, dùng được luôn, không phải bấm kết nối lại.",
+    "Thông tin thửa đất: phần thửa đất gọn còn một phần ba hộp, phần Người sử dụng đất rộng; thêm nút Ghi thửa đất, Ghi thông tin chủ (ghi riêng từng phần), nút chân hộp đổi thành Ghi tất cả.",
+    "Sơ đồ hình thể từng thửa (gộp tờ, ILIS): nhãn đủ 4 level – ranh thửa level 10, số thửa và gạch ngang level 13, loại đất level 2, diện tích level 4.",
+    "Vẽ nhãn mới: nhãn cũ chuyển sang level 49 cả khi nhãn đã bị phá ô (chữ, gạch ngang rời).",
+    "Vẽ nhãn: thêm kiểu 1 dòng; tuỳ chọn tự động theo hình thể thửa (xoay theo thửa, không đè ranh), vẽ có mũi tên, vẽ cả thửa nhỏ, xoay theo chuột (chạm chỗ đặt rồi chạm hướng).",
+    "Sơ đồ in trên Giấy chứng nhận: thửa lân cận chỉ ghi số thửa trên gạch ngang như phân số; thửa chính đủ nhãn 3 level 3 màu (số thửa, loại đất, diện tích).",
+    "Bảng thuộc tính: cuộn ngang mượt; cột diện tích đứng trước cột chi tiết mục đích; dòng lọc mảnh, chỉ có mũi tên đen nhỏ để chọn; cột Số thửa chọn được thửa trống (chưa có số).",
+    "Duyệt và sửa lỗi: chọn dòng nào thì thửa đó sáng (nét vừa phải) và phóng tới đúng chỗ; đóng hộp thì thôi sáng.",
+    "Nền màu loại đất: đường ranh thửa luôn vẽ đè lên màu nền."
   ]
 }
