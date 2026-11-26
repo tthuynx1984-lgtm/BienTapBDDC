@@ -1,20 +1,17 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.9",
+  "phienban": "2026.11.26.10",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.9.exe",
-  "kichthuoc": 2032899,
-  "sha256": "22adf7d43ffab2bed0fab7f8d7c3789478b594a9a2efe02ab0d6c2363321638c",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.10.exe",
+  "kichthuoc": 2035418,
+  "sha256": "3d20c124a9ddf56c94b722441a9beccd1e4b465ce12fd8b029a4119a9b64a710",
   "thaydoi": [
-    "Sổ địa chính (Mẫu 01/ĐK): Quốc huy mẫu chuẩn đặt phía trên bên trái theo quy định, không chạm chữ và bảng.",
-    "Kết nối tệp thuộc tính (.gtp) lần đầu: tự tạo thửa và liên kết ngay, dùng được luôn, không phải bấm kết nối lại.",
-    "Thông tin thửa đất: phần thửa đất gọn còn một phần ba hộp, phần Người sử dụng đất rộng; thêm nút Ghi thửa đất, Ghi thông tin chủ (ghi riêng từng phần), nút chân hộp đổi thành Ghi tất cả.",
-    "Sơ đồ hình thể từng thửa (gộp tờ, ILIS): nhãn đủ 4 level – ranh thửa level 10, số thửa và gạch ngang level 13, loại đất level 2, diện tích level 4.",
-    "Vẽ nhãn mới: nhãn cũ chuyển sang level 49 cả khi nhãn đã bị phá ô (chữ, gạch ngang rời).",
-    "Vẽ nhãn: thêm kiểu 1 dòng; tuỳ chọn tự động theo hình thể thửa (xoay theo thửa, không đè ranh), vẽ có mũi tên, vẽ cả thửa nhỏ, xoay theo chuột (chạm chỗ đặt rồi chạm hướng).",
-    "Sơ đồ in trên Giấy chứng nhận: thửa lân cận chỉ ghi số thửa trên gạch ngang như phân số; thửa chính đủ nhãn 3 level 3 màu (số thửa, loại đất, diện tích).",
-    "Bảng thuộc tính: cuộn ngang mượt; cột diện tích đứng trước cột chi tiết mục đích; dòng lọc mảnh, chỉ có mũi tên đen nhỏ để chọn; cột Số thửa chọn được thửa trống (chưa có số).",
-    "Duyệt và sửa lỗi: chọn dòng nào thì thửa đó sáng (nét vừa phải) và phóng tới đúng chỗ; đóng hộp thì thôi sáng.",
-    "Nền màu loại đất: đường ranh thửa luôn vẽ đè lên màu nền."
+    "Thông tin thửa đất: phần người sử dụng đất chia hai bên – bên trái người sử dụng đất (chủ), bên phải người liên quan (vợ/chồng, thành viên hộ, người cùng sử dụng), mỗi người có ô Vai trò; danh sách người có cột Vai trò.",
+    "Thông tin thửa đất: thêm ô Là cá nhân và Đồng sử dụng (vợ chồng); Là cá nhân và Thuộc hộ gia đình loại trừ nhau.",
+    "Thông tin thửa đất: ô Thời hạn sử dụng nằm một hàng riêng, không còn chen ô tích Sử dụng chung.",
+    "Thông tin thửa đất – thẻ Toạ độ đỉnh, cạnh: nút Xuất Excel (bảng toạ độ đỉnh X, Y, chiều dài cạnh, chu vi).",
+    "Nhãn thửa vào đúng level tên “Level 2”, “Level 4”, “Level 13”… (không vào level CHU PHIEU, DINH THUA của phiếu bị chép vào bản đồ).",
+    "Sơ đồ hình thể (DGN V8): dùng bảng level của chính tờ bản đồ – loại đất ở Level 2, diện tích ở Level 4, số thửa và gạch ngang ở Level 13, ranh ở Level 10.",
+    "Bảng thuộc tính: dòng lọc kẻ mờ như các dòng dữ liệu."
   ]
 }
