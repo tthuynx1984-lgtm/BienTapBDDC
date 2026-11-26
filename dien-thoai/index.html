@@ -485,18 +485,20 @@ html[data-app=btb] #fns>#sl{margin-left:8px}
 </style>
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="apple-mobile-web-app-title" content="Biên Tập BĐĐC"><meta name="apple-mobile-web-app-capable" content="yes">
 <style id="dien-thoai">
-/* Bản điện thoại: thanh công cụ gọn 2 hàng – hàng 1: Mở, Thư viện, tìm, Kích hoạt; hàng 2: các nút chức năng, vuốt ngang để xem thêm */
+/* Bản điện thoại: thanh công cụ gọn 2 hàng – hàng 1: Mở, Thư viện, tìm, Kích hoạt; hàng 2: đủ các nút chức năng (2 dòng nhỏ), không phải vuốt */
 @media (max-width:760px){
  .bar{gap:3px!important;padding:3px 4px!important}
  #brand small,#btbchip{display:none!important}
  #brand{flex:0 0 auto!important;min-width:0!important}
  .bar>.btn,.bar>button{min-height:30px!important;padding:2px 7px!important;font-size:13px!important}
  #q{flex:1 1 60px!important;min-width:0!important;width:auto!important;height:30px!important}
- #fns{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;flex:1 1 100%!important;max-width:none!important;gap:3px!important;padding-bottom:2px!important;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
- #fns button{flex:0 0 auto!important;min-height:36px!important;height:36px!important;min-width:46px!important;padding:1px 5px!important;font-size:9.5px!important;border-radius:6px!important}
- #fns i{font-size:14px!important}
- #fns span{white-space:nowrap!important;word-break:normal!important}
+ #fns{display:grid!important;grid-template-columns:repeat(9,minmax(0,1fr))!important;overflow:visible!important;flex:1 1 100%!important;max-width:none!important;gap:2px!important}
+ #fns button{min-height:38px!important;height:auto!important;min-width:0!important;padding:1px 0!important;font-size:8.5px!important;line-height:1.05!important;border-radius:6px!important;gap:0!important}
+ #fns i{font-size:13px!important}
+ #fns span{white-space:normal!important;word-break:normal!important;overflow-wrap:anywhere}
  #fns span br{display:none!important}
+ #fns>*{grid-column:auto!important;grid-row:auto!important;width:auto!important;margin:0!important}
+ #fns .grb::after{right:1px!important;bottom:1px!important}
  #btbms,#sym,#syg{display:none!important}
 }
 </style>
