@@ -1,11 +1,11 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.27.2",
+  "phienban": "2026.11.27.3",
   "ngay": "27/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.27.2.exe",
-  "kichthuoc": 2044687,
-  "sha256": "9150d8c336ce500f1190088b431b90fffd0ce1d00bcb9efe97330f5fbd9b64ad",
+  "tep": "CaiDat_BienTapBDDC_2026.11.27.3.exe",
+  "kichthuoc": 2045197,
+  "sha256": "05ee734a9d9b2dabeb4fcabea9de73b47c184e94cf73579612cdd4fbe3243668",
   "thaydoi": [
-    "Báo lỗi cần sửa: chỉ còn “Lưu tệp báo cáo” (tự gửi đi), “Sao chép báo cáo”, “Đóng”; hướng dẫn trong hộp gọn lại."
+    "Xem đề xuất sửa (chủ kho): tích ô trước nhiều báo cáo để gộp thành một báo lỗi tổng khi “Gửi lên GitHub”; “Sao chép báo cáo”, “Bỏ báo cáo” cũng làm cho mọi báo cáo đã tích."
   ]
 }
