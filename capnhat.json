@@ -1,12 +1,11 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.26.14",
+  "phienban": "2026.11.26.15",
   "ngay": "26/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.26.14.exe",
-  "kichthuoc": 2037174,
-  "sha256": "c39afd2f6147b9ea9f7025f62050ea0ad272021e4ccf9cc1089a4eb05d80e460",
+  "tep": "CaiDat_BienTapBDDC_2026.11.26.15.exe",
+  "kichthuoc": 2037298,
+  "sha256": "803a468675307219c7effd47681dde626de60bebaa223d353c905af3eacb09d6",
   "thaydoi": [
-    "Nhãn thửa chính và số thửa liền kề luôn là ô (cell) N_THUA 3 level 3 màu: số thửa và gạch ngang Level 13 màu 1, loại đất Level 2 màu 2, diện tích Level 4 màu 3 – trong Sơ đồ GCN, Trích đo, Phiếu đo đạc chỉnh lý (DGN V8, V7).",
-    "Tệp DGN V8 xuất ra: Level 2, Level 4 mang tên chuẩn; chữ của phiếu chuyển sang level 7 “CHU PHIEU”, số hiệu đỉnh sang level 8 “DINH THUA” – chép nhãn sang bản đồ vào đúng level."
+    "Báo lỗi cần sửa: hộp thoại có mục Quy trình báo lỗi – sửa – cập nhật (ghi lỗi, gửi lên GitHub, để báo lỗi mở, tự sửa và phát hành bản mới, cập nhật trên máy)."
   ]
 }

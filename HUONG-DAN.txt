@@ -1,8 +1,14 @@
 ﻿﻿﻿BIÊN TẬP BẢN ĐỒ ĐỊA CHÍNH – công cụ biên tập bản đồ địa chính chạy trong MicroStation V8i
-Phiên bản 26/11/2026 (2026.11.26.14) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
+Phiên bản 26/11/2026 (2026.11.26.15) · nền M8 Pro Địa chính, bộ mẫu hồ sơ kế thừa M8 Mobile
 Tác giả, bản quyền: Nguyễn Xuân Thủy
 
-0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26.14)
+0. ĐIỂM MỚI CỦA BẢN NÀY (2026.11.26.15)
+   - Báo lỗi cần sửa: hộp thoại có mục Quy trình báo lỗi – sửa – cập nhật (ghi lỗi, gửi lên GitHub, để báo lỗi mở, tự sửa và phát hành bản mới, cập nhật trên máy).
+     Quy trình: (1) ghi tiêu đề, chức năng, mô tả, các bước làm – mỗi lỗi một báo cáo; (2) Gửi lên GitHub, kéo thả ảnh, bấm
+     “Submit new issue”, KHÔNG bấm “Close issue”; (3) báo lỗi đang mở được kiểm tra theo lịch, sửa, phát hành bản mới, ghi
+     “Đã sửa trong bản …” rồi đóng; cần thêm thông tin thì hỏi lại trong báo lỗi; (4) Hệ thống → Cập nhật phiên bản mới.
+
+0------. BẢN 2026.11.26.14
    - Nhãn thửa chính và số thửa liền kề luôn là ô (cell) N_THUA 3 level 3 màu: số thửa và gạch ngang Level 13 màu 1, loại đất Level 2 màu 2, diện tích Level 4 màu 3 – trong Sơ đồ GCN, Trích đo, Phiếu đo đạc chỉnh lý (DGN V8, V7).
    - Tệp DGN V8 xuất ra: Level 2, Level 4 mang tên chuẩn; chữ của phiếu chuyển sang level 7 “CHU PHIEU”, số hiệu đỉnh sang level 8 “DINH THUA” – chép nhãn sang bản đồ vào đúng level.
 
