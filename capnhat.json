@@ -1,11 +1,11 @@
 {
   "ten": "Biên Tập BĐĐC",
-  "phienban": "2026.11.27.3",
+  "phienban": "2026.11.27.4",
   "ngay": "27/11/2026",
-  "tep": "CaiDat_BienTapBDDC_2026.11.27.3.exe",
-  "kichthuoc": 2045197,
-  "sha256": "05ee734a9d9b2dabeb4fcabea9de73b47c184e94cf73579612cdd4fbe3243668",
+  "tep": "CaiDat_BienTapBDDC_2026.11.27.4.exe",
+  "kichthuoc": 2044996,
+  "sha256": "9f0df76b2dd7b28175ae517f12edb2c38cca402092980ceaf4efa7ca5504be8e",
   "thaydoi": [
-    "Xem đề xuất sửa (chủ kho): tích ô trước nhiều báo cáo để gộp thành một báo lỗi tổng khi “Gửi lên GitHub”; “Sao chép báo cáo”, “Bỏ báo cáo” cũng làm cho mọi báo cáo đã tích."
+    "Báo lỗi cần sửa: đăng nhập chủ kho bằng cách bấm đúp vào dòng tiêu đề “Quy trình báo lỗi – sửa – cập nhật” (Ctrl+Shift+G bị MicroStation bắt mất, mở bản đồ mới)."
   ]
 }
